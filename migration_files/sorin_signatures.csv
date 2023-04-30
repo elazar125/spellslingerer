@@ -1,0 +1,6 @@
+Legendary,Reminders,Rarity,Title,Color,Cost,Charges,Power,SubType,Text,Health,Type,Exp,Land Average Percentage to Hit,Artist
+,,S,Noble Bloodline,B,,,,,Your deck can have up to 4 cards of a second color and any number of Vampire cards of that color.,,Deckbuilding,SOR,,
+,Finale,S,Bloodline Creator,B,1,,2,Vampire,Finale: Add a random Vampire to your hand.,1,Creature,SOR,,Angelo Bortolini
+,Flying,S,Rowdy Reveler,B,4,,5,Vampire,"After you summon a Vampire, this gets flying this turn.",4,Creature,SOR,,Felipe Martini
+,,S,Sorin's Feast,B,3,,,,Steal 3 health from an enemy creature and give it to a random friendly Vampire.,,Spell,SOR,,Emrah Elmasli
+,Drain,S,Endless Indulgence,B,,,,,"After one or more friendly Vampires attack, drain 1 from your opponent. Then if their health is 10 or less, give attacking creatures +1/+0 this turn.",,Special,SOR,,

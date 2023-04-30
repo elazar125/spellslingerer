@@ -1,0 +1,324 @@
+Rarity,Color,Cost,Title,Power,Health,Type,SubType,Text,Exp,Legendary,Land Average Percentage to Hit,Charges,Generates,Artist,Reminders
+C,W,1,Faithful Caracal,2,2,Creature,Cat,Attack: Heal yourself for 2.,Opening Ceremony,,,,,David Kegg,Attack
+C,W,1,Untested Rookie,2,2,Creature,Soldier,"The first time this survives a fight, it gets +2/+2.",Opening Ceremony,,,,,Aron Elekes,
+C,W,2,Shieldsmith,2,2,Creature,Dwarf Artificer,Debut: Add a Sturdy Shield to your hand.,Opening Ceremony,,,,Sturdy Shield,Zoltan Boros,Debut
+C,W,2,Silver Griffin,1,3,Creature,Monster,Flying,Opening Ceremony,,,,,Brian Valeza,Flying
+C,W,3,Swordsmith,4,3,Creature,Dwarf Artificer,Debut: Add a Sharp Sword to your hand.,Opening Ceremony,,,,Sharp Sword,Zoltan Boros,Debut
+C,W,3,Vainglorious Hero,2,2,Creature,Soldier,Debut: Gets +1/+1 for each other friendly creature.,Opening Ceremony,,,,,Zoltan Boros,Debut
+C,W,4,Angel of Mercy,3,2,Creature,Angel,"Flying
+Debut: Heal 3.",Opening Ceremony,,,,,Yangtian Li,"Flying;Debut"
+C,W,5,Canny Knight,6,6,Creature,Soldier,Can't be stunned.,Opening Ceremony,,,,,Armand Serrano,Stun
+C,W,5,Watchful Giant,4,7,Creature,Giant Soldier,"After this blocks, heal yourself for 2.",Opening Ceremony,,,,,Quentin de Warren,
+C,W,6,Pearl Dragon,4,8,Creature,Dragon,Flying,Opening Ceremony,,,,,Emrah Elmasli,Flying
+C,W,2,Retaliate,,,Spell,,Deal 4 damage to an enemy creature that attacked last turn.,Opening Ceremony,,,,,Dariya Genrih (Room 8),
+C,W,2,Revoke,,,Spell,,Stun an enemy creature or destroy an enemy artifact.,Opening Ceremony,,,,,Brian Valeza,Stun
+C,W,3,Holy Armor,,,Spell,,Give a friendly creature armor and heal yourself for 3.,Opening Ceremony,,,,,Aron Elekes,Armor
+C,W,1,Beginner's Luck,,,Trap,,"After a friendly creature survives a fight, give it +3/+3.",Opening Ceremony,,,,,Aron Elekes,Trap
+C,W,2,Ready to Rumble,,,Trap,,"Before a friendly creature fights, give all friendly creatures +0/+1.",Opening Ceremony,,,,,Brian Valeza,Trap
+C,W,2,Weapon Rack,,,Artifact,,Activate: Give a friendly creature +1/+1.,Opening Ceremony,,,2,,Brian Valeza,Activate
+R,W,1,Daughter of Runes,1,2,Creature,Cleric,Debut: Give the next creature you draw armor.,Opening Ceremony,,,,,Tomas Muir,"Debut;Armor"
+R,W,2,Sun Empire Brawler,3,1,Creature,Warrior,Attack: Gets +1/+1.,Opening Ceremony,,,,,Arash Radkia,Attack
+R,W,3,Leonin Warleader,4,3,Creature,Cat Soldier,Attack: Add a random white creature that costs 2 or less to your hand.,Opening Ceremony,,,,,Emrah Elmasli,Attack
+R,W,3,Pinpoint Avenger,3,4,Creature,Mystic,Debut: Deal 1 damage to each enemy creature that attacked you last turn.,Opening Ceremony,,,,,Arthur Bozonnet,Debut
+R,W,4,Aven Tour Guide,2,3,Creature,Bird Soldier,"Flying
+Debut: Give another friendly creature flying this turn.",Opening Ceremony,,,,,Arthur Bozonnet,"Flying;Debut"
+R,W,4,Windborne Roc,2,5,Creature,Bird,"Flying
+Attack: Heal yourself 1 for each attacker.",Opening Ceremony,,,,,David Cserkuti,"Flying;Attack"
+R,W,6,Stronghold Commander,6,5,Creature,Soldier,Debut: Give all other friendly creatures +0/+2.,Opening Ceremony,,,,,Emrah Elmasli,Debut
+R,W,2,Drum Up Support,,,Spell,,"Add a Soldier, a Sharp Sword, and a Sturdy Shield to your hand.",Opening Ceremony,,,,"Soldier;Sharp Sword;Sturdy Shield",Room 8 Studio,
+R,W,3,Path to Exile,,,Spell,,Destroy an enemy creature. Your opponent gets an empty mana gem.,Opening Ceremony,,,,,Arthur Bozonnet,
+R,W,1,Champion's Grit,,,Trap,,"After a friendly creature dies, return it to your hand and give it +1/+1.",Opening Ceremony,,,,,Halil Ural,Trap
+R,W,2,Under My Watch,,,Trap,,"If your opponent targets a friendly creature, summon a Knight as the new target.",Opening Ceremony,,,,Knight,Zoltan Boros,Trap
+R,W,3,Immolating Glare,,,Trap,,"After your opponent attacks, destroy the strongest attacking creature.",Opening Ceremony,,,,,Ekaterina Anashenkova (Room 8),"Strongest;Trap"
+R,W,3,Spirit Vial,,,Artifact,,Activate: Summon a Lingering Spirit.,Opening Ceremony,,,2,Lingering Spirit,Maria Poliakova,Activate
+R,W,,Training Yard,,,Land,,"Starting turn 5, you have a chance to add a random white creature that costs 2 or less to your hand and give it +1/+1 instead of getting a mana gem.",Opening Ceremony,,30,,,Alex Heath,
+E,W,3,Paragon of Balance,3,3,Creature,Soldier,Debut: Set the power of all other creatures to their current health.,Opening Ceremony,,,,,Wayne Wu,Debut
+E,W,3,"Regna, Redeemer",3,1,Creature,Angel,"Flying
+Prevent all damage Regna would take during your turn.",Opening Ceremony,Y,,,,Alexandra Frantseva,"Flying;Legendary"
+E,W,3,Sparkling Unicorn,3,3,Creature,Mystic Beast,Your healing effects heal +1.,Opening Ceremony,,,,,Maria Poliakova,
+E,W,3,Stoneforge Mystic,2,3,Creature,Mystic,Debut: Draft a Mystic Weapon and add it to your hand.,Opening Ceremony,,,,Mystic Weapon,Arthur Bozonnet,"Debut;Draft"
+E,W,5,Eminent Archangel,3,4,Creature,Angel,"Flying
+Debut: Heal yourself equal to the damage you were dealt last turn. Max 7.",Opening Ceremony,,,,,Maria Poliakova,"Flying;Debut"
+E,W,5,Sylvia Brightspear,4,6,Creature,Soldier,Debut: Set the health of each enemy creature to 1.,Opening Ceremony,Y,,,,Arthur Bozonnet,"Debut;Legendary"
+E,W,5,Team Captain,4,3,Creature,Soldier,"Armor
+Attack: Give all friendly creatures +1/+1.",Opening Ceremony,,,,,Zoltan Boros,"Armor;Attack"
+E,W,7,Celestial Protector,6,6,Creature,Angel,"Flying
+Debut: Give all other friendly creatures armor.",Opening Ceremony,,,,,Ben Maier,"Flying;Debut;Armor"
+E,W,3,Blessed Rebirth,,,Spell,,Summon from your graveyard all friendly creatures that died this turn.,Opening Ceremony,,,,,Quentin de Warren,
+E,W,7,Day of Judgment,,,Spell,,Destroy all creatures.,Opening Ceremony,,,,,Aron Elekes,
+E,W,,Sacred Sanctum,,,Land,,"Before the game starts, heal yourself for 2.
+Starting turn 5, you have a chance to heal yourself for 2. If so, this turn's mana gem is empty.",Opening Ceremony,,30,,,Alex Heath,Empty
+M,W,4,Danitha Capashen,5,4,Creature,Soldier,"After you target a friendly creature, that creature gets +1/+1.",Opening Ceremony,Y,,,,Zoltan Boros,Legendary
+M,W,6,Sun Titan,6,6,Creature,Giant,Debut and Attack: Draw the creature from your deck with the lowest cost.,Opening Ceremony,,,,,Kudaman,"Debut;Attack"
+M,W,9,"Akroma, Angel of Wrath",8,8,Creature,Angel,"Flying, Trample, Armor, Haste",Opening Ceremony,Y,,,,Zoltan Boros,"Flying;Trample;Armor;Haste;Legendary"
+M,W,6,Second Sun's Dawn,,,Spell,,Heal yourself for 7 and add a Second Sun to your deck.,Opening Ceremony,,,,Second Sun,Arthur Bozonnet,
+C,U,1,Li'l Foggie,1,3,Creature,Elemental,"Sneak
+Ward",Opening Ceremony,,,,,John Thacker,"Sneak;Ward"
+C,U,1,Spawning Arowana,0,2,Creature,Beast Illusion,Debut: Summon a copy of this.,Opening Ceremony,,,,,Alex Heath,Debut
+C,U,2,Lorekeeper,2,1,Creature,Wizard,Debut: Add a random spell to your hand.,Opening Ceremony,,,,,Aron Elekes,Debut
+C,U,2,Prodigal Student,2,3,Creature,Wizard,"After you play a spell, gets +0/+1.",Opening Ceremony,,,,,Kudaman,
+C,U,2,Wintergrip Mage,1,3,Creature,Wizard,Finale: Add a Chill Wind to your hand.,Opening Ceremony,,,,,Aron Elekes,Finale
+C,U,3,Befuddling Merfolk,3,3,Creature,Merfolk Wizard,Debut: Give an enemy creature -2/-0.,Opening Ceremony,,,,,Ani Larmina (Room 8),Debut
+C,U,3,Wielder of Waves,3,4,Creature,Merfolk Wizard,Debut: Give a friendly creature ward.,Opening Ceremony,,,,,Emrah Elmasli,"Debut;Ward"
+C,U,4,Runeshell King,6,6,Creature,Beast,Debut: Give a friendly creature can't attack.,Opening Ceremony,,,,,Emrah Elmasli,Debut
+C,U,5,Mist Raven,3,3,Creature,Bird,"Flying
+Debut: Return an enemy creature to hand.",Opening Ceremony,,,,,Arthur Bozonnet,"Flying;Debut"
+C,U,1,Invert,,,Spell,,Switch any creature's power and health.,Opening Ceremony,,,,,Jana Schirmer,
+C,U,2,Anticipate,,,Spell,,Draft a card from your deck and draw it.,Opening Ceremony,,,,,Quentin de Warren,Draft
+C,U,2,Bubble Shield,,,Spell,,Give a friendly creature +0/+2 and ward.,Opening Ceremony,,,,,Armand Serrano,Ward
+C,U,6,Opportunity,,,Spell,,Draw 4 cards.,Opening Ceremony,,,,,Maria Poliakova,
+C,U,2,Negate,,,Trap,,"If your opponent plays a spell, trap, or artifact, counter it.",Opening Ceremony,,,,,Armand Serrano,"Counter;Trap"
+C,U,4,Mystic Tome,,,Artifact,,Activate: Draw a card.,Opening Ceremony,,,3,,Brian Valeza,Activate
+R,U,1,Inventive Crafter,1,2,Creature,Artificer,Debut: Add a Crafted Glider to your hand.,Opening Ceremony,,,,Crafted Glider,Room 8 Studio,Debut
+R,U,1,Mana Constrictor,2,2,Creature,Snake Illusion,Debut: Raise the cost of the next card your opponent draws by 1.,Opening Ceremony,,,,,Dmitry Klyushkin,Debut
+R,U,2,Stern Artificer,3,2,Creature,Wizard,Debut: Add a charge to a random artifact in your hand.,Opening Ceremony,,,,,Arthur Bozonnet,Debut
+R,U,3,Aether Figment,3,2,Creature,Illusion,Costs 0 if you've drafted this turn.,Opening Ceremony,,,,,Quentin de Warren,
+R,U,3,Phantom Warrior,3,2,Creature,Illusion Warrior,Always has Sneak.,Opening Ceremony,,,,,Dmitry Klyushkin,Sneak
+R,U,4,Cerulean Dragon,2,2,Creature,Dragon,"Flying
+After you draw a card, this gets +1/+1.",Opening Ceremony,,,,,Arthur Bozonnet,Flying
+R,U,4,Confounding Entity,2,4,Creature,Elemental,"Flying
+Debut: Switch any creature's power and health.",Opening Ceremony,,,,,Room 8 Studio,"Flying;Debut"
+R,U,5,Naga Rogue,3,5,Creature,Snake Rogue,"Sneak
+After this damages your opponent, mill them for 2.",Opening Ceremony,,,,,Aron Elekes,"Sneak;Mill"
+R,U,5,Wavelash Viper,5,5,Creature,Snake,Debut: Give each enemy creature -1/-0.,Opening Ceremony,,,,,Zoltan Boros,Debut
+R,U,4,Jolt of Inspiration,,,Spell,,Add 3 random spells to your hand.,Opening Ceremony,,,,,Quentin de Warren,
+R,U,1,Dupe,,,Trap,,"After your opponent plays a spell, add a copy of it to your hand.",Opening Ceremony,,,,,Alexandra Frantseva,Trap
+R,U,2,Mana Short,,,Trap,,"At the end of your opponent's turn, disarm their traps and steal their unused mana.",Opening Ceremony,,,,,Room 8 Studio,Trap
+R,U,3,Millstone,,,Artifact,,Activate: Mill your opponent for 2.,Opening Ceremony,,,2,,Alex Heath,"Activate;Mill"
+R,U,,Fountain of Magic,,,Land,,"Starting turn 6, you have a chance to add a spell that costs 6 or less to your hand instead of getting a mana gem.",Opening Ceremony,,30,,,Arthur Bozonnet,
+E,U,2,"Zndrsplt, the Clever",2,4,Creature,Homunculus Wizard,Attack: Each player draws a card.,Opening Ceremony,Y,,,,David Kegg,"Attack;Legendary"
+E,U,3,"Toothy, the Dream",6,4,Creature,Illusion,"After Toothy survives a fight, return him to your hand.",Opening Ceremony,Y,,,,Zoltan Boros,Legendary
+E,U,4,Clone,1,1,Creature,Illusion,Debut: Transforms into a copy of a friendly creature.,Opening Ceremony,,,,,Arthur Bozonnet,Debut
+E,U,4,Mirror Mage,2,2,Creature,Wizard,Debut: Summon a Mage Mirror.,Opening Ceremony,,,,Mage Mirror,Arash Radkia,Debut
+E,U,5,Sphinx of Riddles,2,5,Creature,Monster,"Flying
+Debut: Draft a trap and add it to your hand.",Opening Ceremony,,,,,David Kegg,"Flying;Debut;Draft"
+E,U,13,Breaching Serpent,6,6,Creature,Snake,"Sneak
+Costs 1 less for each spell and trap you've played this game.",Opening Ceremony,,,,,Wayne Wu,Sneak
+E,U,1,Tinker,,,Spell,,Destroy a friendly artifact to draft an artifact and summon it.,Opening Ceremony,,,,,Zoltan Boros,Draft
+E,U,8,Clear the Field,,,Spell,,Return all creatures to hand.,Opening Ceremony,,,,,Aron Elekes,
+E,U,2,Isochron Scepter,,,Artifact,,Activate: Draft a spell that costs 2 or less and add it to your hand.,Opening Ceremony,,,2,,John Donahue,"Activate;Draft"
+E,U,7,Energy Extractor,,,Artifact,,Activate: Refill your mana gems.,Opening Ceremony,,,1,,Zoltan Boros,Activate
+E,U,,Tolarian Academy,,,Land,,"The first artifact you play each turn costs 1 less. Starting turn 5, you have a chance to add a random artifact to your deck instead of getting a mana gem.",Opening Ceremony,,20,,,Yangtian Li,
+M,U,6,Alhammarret,3,5,Creature,Monster,"Flying, Ward
+After Alhammarret damages your opponent, draw a card and change its cost to 1.",Opening Ceremony,Y,,,,Maria Poliakova,"Flying;Ward;Legendary"
+M,U,6,Frost Titan,6,6,Creature,Giant,Debut and Attack: Stun a random enemy creature.,Opening Ceremony,,,,,Kudaman,"Debut;Attack;Stun"
+M,U,6,Master of Possibilities,4,4,Creature,Wizard,"Debut: Draft a temporary spell that costs 6 or less, change its cost to 0, and add it to your hand.",Opening Ceremony,,,,,David Kegg,"Debut;Draft;Temporary"
+M,U,8,"Arcanis, the Archmage",5,5,Creature,Wizard,Debut: Add a Mystical Arcana to your hand and the remaining two to your deck.,Opening Ceremony,Y,,,"Concealing Arcana;Possessing Arcana;Riddling Arcana;Skymaster Sphinx",Aron Elekes,"Debut;Legendary"
+C,B,1,Shadow Weaver,1,3,Creature,Wizard,Finale: Mill a creature from your opponent's deck.,Opening Ceremony,,,,,Yangtian Li,"Finale;Mill"
+C,B,1,Silent Prowler,2,1,Creature,Rogue,Sneak,Opening Ceremony,,,,,Quentin de Warren,Sneak
+C,B,2,Infectious Scorpion,2,3,Creature,Pest,Finale: Add a Fatal Infection to your hand.,Opening Ceremony,,,,Fatal Infection,Zoltan Boros,Finale
+C,B,2,Vengeful Brute,3,2,Creature,Warrior Monster,Debut: Deal 2 damage to each player.,Opening Ceremony,,,,,Aron Elekes,Debut
+C,B,3,Bloodletter,2,2,Creature,Vampire,"Flying
+Debut: Drain 1 from your opponent.",Opening Ceremony,,,,,Brian Valeza,"Flying;Debut;Drain"
+C,B,3,Captain of the Dead,3,3,Creature,Zombie Warrior,Debut: Give all other friendly Zombies +1/+0.,Opening Ceremony,,,,,Rudy Siswanto,Debut
+C,B,3,Mausoleum Witch,2,2,Creature,Wizard,Debut: Give a friendly creature relentless.,Opening Ceremony,,,,,Jana Schirmer,"Debut;Relentless"
+C,B,3,Undead Striker,3,1,Creature,Zombie,Relentless,Opening Ceremony,,,,,Tomas Muir,Relentless
+C,B,5,Shadow Operative,5,4,Creature,Rogue,Debut: Gets +2/+0 and sneak if a creature died this turn.,Opening Ceremony,,,,,Ben Maier,"Debut;Sneak"
+C,B,3,Incapacitate,,,Spell,,"Halve an enemy creature's power and health, rounded down.",Opening Ceremony,,,,,Armand Serrano,
+C,B,4,Unholy Recruitment,,,Spell,,Draft a creature that costs 3 and summon it. Give it relentless.,Opening Ceremony,,,,,Arthur Bozonnet,"Draft;Relentless"
+C,B,1,Envenom,,,Trap,,"After an enemy creature survives a fight, destroy it.",Opening Ceremony,,,,,Devin Law,Trap
+C,B,3,Crippling Bolt,,,Trap,,"After your opponent summons a creature, give it -4/-4.",Opening Ceremony,,,,,Robert Kim,Trap
+C,B,2,Abyssal Chain,,,Artifact,,Activate: Destroy a friendly creature to draw a card.,Opening Ceremony,,,3,,Ben Maier,Activate
+R,B,1,Cranial Consultant,2,2,Creature,Zombie,"After this is blocked, your opponent discards a random spell.",Opening Ceremony,,,,,David Kegg,
+R,B,2,Counterfeiter,2,1,Creature,Rogue,"Sneak
+After this damages your opponent, add a copy of a random card from their deck to your hand.",Opening Ceremony,,,,,David Kegg,Sneak
+R,B,2,Dead-onator,4,4,Creature,Zombie,Finale: Deal 4 damage to yourself.,Opening Ceremony,,,,,Emrah Elmasli,Finale
+R,B,2,Vampire Ritualist,1,2,Creature,Vampire,Debut: Gets +1/+0 for each damage dealt to your opponent this turn.,Opening Ceremony,,,,,Ani Larmina (Room 8),Debut
+R,B,3,Lurking Horror,0,4,Creature,Monster,Debut: Discard the creature in your hand with the highest cost. This gets power equal to that cost.,Opening Ceremony,,,,,Aron Elekes,Debut
+R,B,4,Bone Collector,4,4,Creature,Giant Warrior,Debut: Raise the cost of a random creature in your opponent's hand by 2.,Opening Ceremony,,,,,Robert Kim,Debut
+R,B,4,Nightsoul Dragon,2,5,Creature,Dragon,"Flying
+Attack: Give a random enemy creature -1/-1.",Opening Ceremony,,,,,Armand Serrano,"Flying;Attack"
+R,B,5,Crazed Ripper,0,5,Creature,Vampire,Debut: Steal 4 power from an enemy creature.,Opening Ceremony,,,,,Halil Ural,Debut
+R,B,6,Sinister Southpaw,5,4,Creature,Wizard,Debut: Destroy another friendly creature to destroy an enemy creature.,Opening Ceremony,,,,,David Kegg,Debut
+R,B,7,Ravenous Pit Lord,7,5,Creature,Demon,Debut: Raise the cost of all cards in your opponent's hand by 1.,Opening Ceremony,,,,,Quentin de Warren,Debut
+R,B,1,Get Ahead,,,Spell,,Draw the bottom card of your opponent's deck.,Opening Ceremony,,,,,Armand Serrano,
+R,B,4,Infest,,,Spell,,Give all creatures -2/-2.,Opening Ceremony,,,,,John Donahue,
+R,B,2,Pep Talk,,,Trap,,"After a friendly creature dies, resummon it from your graveyard.",Opening Ceremony,,,,,Kudaman,Trap
+R,B,,Hellmouth Cave,,,Land,,"Starting turn 4, you have a chance to give each friendly creature and each creature you summon this turn +1/+0 instead of getting a mana gem.",Opening Ceremony,,30,,,Ani Larmina (Room 8),
+E,B,2,Dark Confidant,3,2,Creature,Wizard,Attack: Deal 2 damage to yourself and draw a card.,Opening Ceremony,,,,,David Cserkuti,Attack
+E,B,4,"Krav, Unredeemed",7,7,Creature,Demon,"Trample
+Debut: Deal 6 damage to another friendly creature or yourself.",Opening Ceremony,Y,,,,Alexandra Frantseva,"Trample;Debut;Legendary"
+E,B,4,Virtus the Veiled,3,4,Creature,Azra Rogue,"Sneak
+After Virtus damages your opponent, add a Silent Strike to your hand.",Opening Ceremony,Y,,,,Emrah Elmasli,"Sneak;Legendary"
+E,B,5,Daggerclaw Lord,3,5,Creature,Vampire,"At the end of your turn, if a creature died this turn, summon a Daggerclaw Imp.",Opening Ceremony,,,,Daggerclaw Imp,Robert Kim,
+E,B,6,Caller of the Cursed,6,4,Creature,Zombie Wizard,"Debut: Give friendly Zombies ""Finale: Deal 2 damage to your opponent.""",Opening Ceremony,,,,,Ani Larmina (Room 8),"Debut;Finale"
+E,B,6,Fallen Angel,4,4,Creature,Angel,"Flying
+Debut: Destroy an enemy creature with power 3 or less.",Opening Ceremony,,,,,Jana Schirmer,"Flying;Debut"
+E,B,8,Grave Pharaoh,6,6,Creature,Zombie,Debut: Doom all enemy creatures.,Opening Ceremony,,,,,Kudaman,"Debut;Doom"
+E,B,2,Eldritch Tutor,,,Spell,,Draft a mythic card and add it to your hand.,Opening Ceremony,,,,,David Cserkuti,Draft
+E,B,6,Scour the Void,,,Spell,,Add a copy of 4 random cards in your opponent's graveyard to your hand.,Opening Ceremony,,,,,Yangtian Li,
+E,B,10,Shadows of the Past,,,Spell,,Summon the strongest creature from your graveyard. Repeat as many times as you can.,Opening Ceremony,,,,,Sam Burley,Strongest
+E,B,,Old Graveyard,,,Land,,"Starting turn 7, you have a chance to add a random Zombie to your hand instead of getting a mana gem.",Opening Ceremony,,30,,,David Cserkuti,
+M,B,3,Blood Queen Drana,2,3,Creature,Vampire,"Flying
+After Drana damages your opponent, she gets that much health.",Opening Ceremony,Y,,,,Maria Poliakova,"Flying;Legendary"
+M,B,6,Grave Titan,6,6,Creature,Zombie Giant,Debut and Attack: Summon a Zombie.,Opening Ceremony,,,,Zombie,Kudaman,"Debut;Attack"
+M,B,6,Kothophed,6,6,Creature,Demon,"Flying
+Debut: ""Of course we can make a deal. Choose wisely.""",Opening Ceremony,Y,,,"Promise of Knowledge;Promise of Power;Promise of Victory",Arthur Bozonnet,"Flying;Debut;Legendary"
+M,B,9,Soulsever Lich,9,4,Creature,Zombie Wizard,"Relentless
+Attack: Deal damage to your opponent equal to half their health, rounded up.",Opening Ceremony,,,,,Quentin de Warren,"Relentless;Attack"
+C,R,2,Electromage,3,2,Creature,Wizard,"After you play a spell, gets +1/+0.",Opening Ceremony,,,,,Brandon Liao,
+C,R,2,Overgrown Iguana,4,2,Creature,Beast,Trample,Opening Ceremony,,,,,Robert Kim,Trample
+C,R,3,Enraged Elemental,1,6,Creature,Elemental,"After this survives damage, gets +3/+0.",Opening Ceremony,,,,,Anastasia Shevchenko (Room 8),
+C,R,3,Ghitu Archer,3,2,Creature,Warrior,"Reach
+Debut: Deal 1 damage to an enemy.",Opening Ceremony,,,,,Aron Elekes,"Reach;Debut"
+C,R,3,Lightning Catcher,3,3,Creature,Wizard,Finale: Deal 2 damage to your opponent.,Opening Ceremony,,,,,John Thacker,Finale
+C,R,4,Goblin Fieldrusher,2,2,Creature,Goblin,"Haste
+Debut: Summon a Raging Goblin.",Opening Ceremony,,,,Raging Goblin,Carlos Ruiz,"Haste;Debut"
+C,R,4,Rampaging Ogre,5,5,Creature,Monster,Debut: All enemy creatures lose armor.,Opening Ceremony,,,,,Ahmed Aldoori,"Debut;Armor"
+C,R,5,Azra Challenger,5,5,Creature,Azra Warrior,Debut: Fight a random enemy creature.,Opening Ceremony,,,,,David Cserkuti,Debut
+C,R,5,Firespout Elemental,6,6,Creature,Elemental,"Haste
+At the start of your turn, deal 2 damage to yourself.",Opening Ceremony,,,,,Zoltan Boros,Haste
+C,R,6,Volcanic Dragon,4,4,Creature,Dragon,"Flying
+Haste",Opening Ceremony,,,,,John Donahue,"Flying;Haste"
+C,R,1,Burn Through,,,Spell,,Deal 1 damage to an enemy creature. Give it can't block this turn.,Opening Ceremony,,,,,Room 8 Studio,
+C,R,1,Fling,,,Spell,,Destroy a friendly creature to deal 3 damage to an enemy.,Opening Ceremony,,,,,Halil Ural,
+C,R,2,Abrade,,,Spell,,Deal 2 damage to an enemy creature or remove 2 charges from an enemy artifact.,Opening Ceremony,,,,,Aron Elekes,
+C,R,1,Opening Salvo,,,Trap,,"Before a friendly creature fights, deal 3 damage to the creature it's fighting.",Opening Ceremony,,,,,Aron Elekes,Trap
+C,R,1,Scattershot Crossbow,,,Artifact,,Activate: Deal 3 damage randomly split among all creatures and players.,Opening Ceremony,,,2,,Ani Larmina (Room 8),Activate
+C,R,2,War Horn,,,Artifact,,Activate: Give a friendly creature +2/+0.,Opening Ceremony,,,2,,Jana Schirmer,Activate
+R,R,1,Azra Pyromancer,2,2,Creature,Azra Wizard,Debut: Your opponent can't heal until your next turn.,Opening Ceremony,,,,,Emrah Elmasli,Debut
+R,R,1,Pouncing Lemur,3,2,Creature,Beast,Can't Block,Opening Ceremony,,,,,Brian Valeza,
+R,R,2,Two-Hit Wonder,2,3,Creature,Goblin Warrior,"Before this fights, deal 1 damage to the creature it's fighting.",Opening Ceremony,,,,,Aron Elekes,
+R,R,3,Dragonspeaker,2,4,Creature,Mystic,"Haste
+Attack: Give a random Dragon in your hand +2/+0.",Opening Ceremony,,,,,Dmitry Klyushkin,"Haste;Attack"
+R,R,3,Ghitu Embermage,2,4,Creature,Wizard,"After you play a spell, deal 1 damage to your opponent.",Opening Ceremony,,,,,Arash Radkia,
+R,R,4,Ragebeast,7,7,Creature,Monster,"Trample
+Debut: Gets -1/-1 for each other card in your hand.",Opening Ceremony,,,,,Kudaman,"Trample;Debut"
+R,R,5,Hoarding Dragon,3,5,Creature,Dragon,"Flying
+Debut: Add a random artifact to your hand.",Opening Ceremony,,,,,Zoltan Boros,"Flying;Debut"
+R,R,6,Stadium Shaker,6,4,Creature,Monster,Debut: Deal 3 damage to an enemy creature.,Opening Ceremony,,,,,John Donahue,Debut
+R,R,7,Clumsy Torchbearer,7,7,Creature,Giant,Finale: Deal 7 damage to a random enemy.,Opening Ceremony,,,,,Emrah Elmasli,Finale
+R,R,2,Mana Surge,,,Spell,,Get 3 mana until your next turn.,Opening Ceremony,,,,,Quentin Regnes,
+R,R,3,Flame Coil,,,Spell,,Deal 4 damage to an enemy creature.,Opening Ceremony,,,,,Kudaman,
+R,R,3,Pyroclasm,,,Spell,,Deal 2 damage to each creature.,Opening Ceremony,,,,,Arthur Bozonnet,
+R,R,5,Lava Axe,,,Spell,,Deal 5 damage to your opponent.,Opening Ceremony,,,,,Arthur Bozonnet,
+R,R,,Active Volcano,,,Land,,"Starting turn 6, there's a chance this erupts and spits fire instead of getting a mana gem.",Opening Ceremony,,30,,,Brian Valeza,Spit Fire
+E,R,1,Two-Headed Hellhound,1,2,Creature,Dog,This deals double damage.,Opening Ceremony,,,,,Arthur Bozonnet,
+E,R,3,Ball Lightning,6,1,Creature,Elemental,"Trample, Haste, Fleeting",Opening Ceremony,,,,,Arthur Bozonnet,"Trample;Haste;Fleeting"
+E,R,3,"Okaun, the Crusher",4,4,Creature,Monster Warrior,"After an opponent draws a card, gets +1/+0.",Opening Ceremony,Y,,,,David Kegg,Legendary
+E,R,4,Looting Lizard,4,4,Creature,Beast Rogue,"Debut: Discard your hand, then draw 3 cards.",Opening Ceremony,,,,,Yangtian Li,Debut
+E,R,5,Hellrider,4,3,Creature,Devil Warrior,"Haste
+Attack: Deal 1 damage to your opponent for each attacker.",Opening Ceremony,,,,,Aron Elekes,"Haste;Attack"
+E,R,6,Khorvath Brightflame,5,5,Creature,Dragon,"Flying
+Debut: Deal 1 damage to all enemies.",Opening Ceremony,Y,,,,Arthur Bozonnet,"Flying;Debut;Legendary"
+E,R,7,Shivan Dragon,7,7,Creature,Dragon,"Flying
+Attack: Spend all your mana. Deal that much damage to a random enemy.",Opening Ceremony,,,,,Kudaman,"Flying;Attack"
+E,R,9,Spawning Hellion,9,7,Creature,Monster,"Trample, Haste
+After this damages your opponent, add a Spawning Hellion to your deck.",Opening Ceremony,,,,,Zoltan Boros,"Trample;Haste"
+E,R,1,Pick Teams,,,Spell,,Draft a creature and add it to your hand. Add this card to your opponent's hand and raise its cost by 1.,Opening Ceremony,,,,,Ani Larmina (Room 8),Draft
+E,R,8,Lava Wave,,,Spell,,Deal 6 damage to each enemy creature.,Opening Ceremony,,,,,Quentin Regnes,
+E,R,,Molten Monastery,,,Land,,"Starting turn 5, you have a chance to draw an extra temporary card instead of getting a mana gem.",Opening Ceremony,,40,,,Emrah Elmasli,Temporary
+M,R,4,Zo-Zu,0,4,Creature,Goblin,"Haste
+Attack: Gets +1/+0 for each of your opponent's mana gems.",Opening Ceremony,Y,,,,John Thacker,"Haste;Attack;Legendary"
+M,R,6,Inferno Titan,6,6,Creature,Giant,Debut and Attack: Deal 3 damage to a random enemy.,Opening Ceremony,,,,,Kudaman,"Debut;Attack"
+M,R,10,Darigaaz,10,7,Creature,Dragon,"Flying
+At the end of your turn, Darigaaz breathes fire.",Opening Ceremony,Y,,,,Quentin de Warren,"Flying;Breathe Fire;Legendary"
+M,R,9,Draconic Transformation,,,Spell,,Transform all friendly creatures into random Dragons. Replace your deck with 15 random Dragons.,Opening Ceremony,,,,,Alex Heath,
+C,G,1,Venom Archer,1,2,Creature,Elf Warrior,"Reach
+Destroys any creature with flying it fights.",Opening Ceremony,,,,,Aron Elekes,"Reach;Flying"
+C,G,2,Anaconda Hatchling,2,3,Creature,Snake,Destroys any creature it fights during your turn.,Opening Ceremony,,,,,John Donahue,
+C,G,2,Baby Mammoth,2,2,Creature,Beast,Finale: Add a Mama Mammoth to the top 5 cards of your deck.,Opening Ceremony,,,,Mama Mammoth,Anastasia Shevchenko (Room 8),Finale
+C,G,3,Grove Protector,3,4,Creature,Elemental,Debut: Fully heal a friendly creature.,Opening Ceremony,,,,,Kudaman,"Debut;Fully heal"
+C,G,3,Vinewhip Druid,2,2,Creature,Elf Mystic,"After you get a mana gem, this gets +1/+1.",Opening Ceremony,,,,,John Donahue,
+C,G,4,Hungry Goat,4,4,Creature,Beast,"Debut: Destroy an enemy artifact. If there are none, this gets +2/+0.",Opening Ceremony,,,,,Karina Khoroshaylo (Room 8),Debut
+C,G,4,Spearcrown Stag,3,4,Creature,Beast,Debut: Fight an enemy creature.,Opening Ceremony,,,,,Tomas Muir,Debut
+C,G,4,Vicious Mongrel,4,5,Creature,Beast,Haste,Opening Ceremony,,,,,Kudaman,Haste
+C,G,5,Angler Wurm,5,6,Creature,Monster,"At the end of your turn, fully heal this.",Opening Ceremony,,,,,Alexandra Frantseva,Fully heal
+C,G,5,Fungal Beast,5,5,Creature,Beast,Debut: Draft an upgrade for this creature.,Opening Ceremony,,,,,Yangtian Li,"Debut;Draft;Upgrade"
+C,G,2,Oakenhide,,,Spell,,Give a friendly creature +2/+2.,Opening Ceremony,,,,,John Donahue,
+C,G,1,Step Over,,,Trap,,"If a friendly creature is blocked, give it trample.",Opening Ceremony,,,,,Pablo Carpio,"Trample;Trap"
+C,G,3,Wurm's Wake,,,Trap,,"At the end of your opponent's turn, summon a Wurm.",Opening Ceremony,,,,Wurm,Brian Valeza,Trap
+C,G,2,Staff of Fortitude,,,Artifact,,Activate: Give a friendly creature +0/+2.,Opening Ceremony,,,2,,Quentin Regnes,Activate
+R,G,1,Birds of Paradise,0,1,Creature,Bird,"Flying
+Debut: Get a fragile mana gem.",Opening Ceremony,,,,,Maria Poliakova,"Flying;Debut;Fragile"
+R,G,1,Channeler of Might,2,2,Creature,Mystic,Debut: Gets +1/+1 if you have a creature in hand with power 5 or greater.,Opening Ceremony,,,,,Dmitry Klyushkin,Debut
+R,G,1,Mysterious Cocoon,0,1,Creature,???,"Finale: At the end of this turn, summon a random 1-cost creature.",Opening Ceremony,,,,,Zoltan Boros,Finale
+R,G,2,Treetop Lookout,3,2,Creature,Elf,Debut: Disarm all traps in your opponent's hand.,Opening Ceremony,,,,,Robert Kim,Debut
+R,G,3,Briarfox,3,3,Creature,Elemental,Attack: Gets a random upgrade.,Opening Ceremony,,,,,John Donahue,"Attack;Upgrade"
+R,G,3,Elite Forest Guard,3,2,Creature,Elf,"Debut: Draft a Naturalize, a Plummet, or a Nuzzle and add it to your hand.",Opening Ceremony,,,,"Naturalize;Plummet;Nuzzle",Mariya Smirnova (Room 8),"Debut;Draft"
+R,G,4,Elvish Explorer,4,4,Creature,Elf Mystic,"After this fights during your turn, get an empty mana gem.",Opening Ceremony,,,,,Rudy Siswanto,Empty
+R,G,5,Barreling Hippo,5,5,Creature,Beast,"Trample
+Debut: Give all other friendly creatures trample.",Opening Ceremony,,,,,Izzy,"Trample;Debut"
+R,G,7,Brawling Behemoth,5,8,Creature,Monster,"Reach
+Debut: Fight an enemy creature.",Opening Ceremony,,,,,Izzy,"Reach;Debut"
+R,G,9,Crush of Wurms,6,6,Creature,Monster,Debut: Summon 2 copies of this creature.,Opening Ceremony,,,,,Quentin Regnes,Debut
+R,G,3,Blindside,,,Spell,,Deal damage to an enemy creature equal to the power of the strongest friendly creature.,Opening Ceremony,,,,,Arthur Bozonnet,Strongest
+R,G,4,Animalgamate,,,Spell,,Give a friendly creature 3 random upgrades.,Opening Ceremony,,,,,Kudaman,Upgrade
+R,G,4,Beast Mode,,,Spell,,Transform a friendly creature into an Inner Beast.,Opening Ceremony,,,,Inner Beast,Aron Elekes,
+R,G,,Deep-Forest Arena,,,Land,,"Starting turn 5, you have a chance to give the first creature you summon this turn +1/+1 and ward instead of getting a mana gem.",Opening Ceremony,,30,,,David Kegg,Ward
+E,G,1,"Pir, the Dreamer",0,2,Creature,Warrior,"After you summon a creature, add its power to Pir's power this turn.",Opening Ceremony,Y,,,,Zoltan Boros,Legendary
+E,G,2,Tarmogoyf,0,1,Creature,Monster,Debut: Gets +2/+2 for each card type in your graveyard.,Opening Ceremony,,,,,Arash Radkia,Debut
+E,G,3,Gladecover Warden,3,4,Creature,Elf Mystic,"After you summon a creature, give it ward.",Opening Ceremony,,,,,Dmirty Klyushkin,Ward
+E,G,3,Predator Ooze,2,2,Creature,Ooze Monster,"Attack: Gets +1/+1.
+If this is blocked, summon a Predator Ooze after combat.",Opening Ceremony,,,,,John Thacker,Attack
+E,G,5,Force of the Wild,8,6,Creature,Elemental Spirit,"Trample, Reach
+At the start of your turn, empty 2 of your mana gems.",Opening Ceremony,,,,,Arthur Bozonnet,"Trample;Reach"
+E,G,5,Gorm the Great,6,5,Creature,Warrior,"Trample
+After Gorm damages your opponent, add a Grudge Match to your hand.",Opening Ceremony,Y,,,Grudge Match,Emrah Elmasli,"Trample;Legendary"
+E,G,6,Centaur Sage,5,5,Creature,Beast Wizard,"After you summon a creature, draw a card.",Opening Ceremony,,,,,Yangtian Li,
+E,G,7,Ravenous Hydra,7,9,Creature,Monster,"Haste
+After this survives damage, it gets that much power.",Opening Ceremony,,,,,Anastasia Shevchenko (Room 8),Haste
+E,G,8,Carnage Tyrant,10,8,Creature,Dinosaur,"Ward, Trample
+Can't be countered.",Opening Ceremony,,,,,Kudaman,"Ward;Trample;Counter"
+E,G,6,Survivor's Regalia,,,Artifact,,Activate: Draft a legendary creature and add it to your hand.,Opening Ceremony,,,2,,John Thacker,"Activate;Draft"
+E,G,,Gaea's Cradle,,,Land,,"Starting turn 7, you get 1 mana until your next turn for each friendly creature instead of getting a mana gem.",Opening Ceremony,,,,,Ben Maier,
+M,G,4,General Eladamri,5,4,Creature,Elf Soldier,Attack: Add an Elf to your hand. Then give all creatures in your hand +1/+1.,Opening Ceremony,Y,,,Elf,Zoltan Boros,"Attack;Legendary"
+M,G,6,Omnath,3,7,Creature,Elemental,"Ward
+After you get a mana gem, double Omnath's power.",Opening Ceremony,Y,,,,John Thacker,"Ward;Legendary"
+M,G,6,Primeval Titan,6,6,Creature,Giant,Debut and Attack: Get an empty mana gem.,Opening Ceremony,,,,,Kudaman,"Debut;Attack;Empty"
+M,G,10,Epitome of Might,10,10,Creature,Plant Monster,"Reach
+Debut: Set all creatures in your deck to 10/10.",Opening Ceremony,,,,,Yangtian Li,"Reach;Debut"
+C,WU,3,Martial Aerialist,2,4,Creature,Mystic Warrior,"Flying
+Ward",Opening Ceremony,,,,,Arash Radkia,"Flying;Ward"
+R,WU,5,Fair Fight,,,Spell,,Set all creatures to 4/4.,Opening Ceremony,,,,,David Kegg,
+M,WU,5,Arrester Lavinia,4,4,Creature,Soldier,"Armor, Sneak
+Debut: Stun all enemy creatures with power 5 or greater.",Opening Ceremony,Y,,,,Aron Elekes,"Armor;Sneak;Debut;Stun;Legendary"
+C,UB,3,Agony Warp,,,Spell,,Give an enemy creature -3/-0 and add an Agony Twist to your hand.,Opening Ceremony,,,,Agony Twist,Emrah Elmasli,
+R,UB,6,Evil Twin,3,3,Creature,Rogue,Debut: Transforms into a copy of an enemy creature. Then give the enemy creature -3/-3.,Opening Ceremony,,,,,Arash Radkia,Debut
+M,UB,4,Mastermind Lazav,3,3,Creature,Rogue,"Sneak
+While in hand, Lazav disguises himself each turn.",Opening Ceremony,Y,,,,Halil Ural,"Sneak;Disguise;Legendary"
+C,BR,2,Takedown,,,Spell,,Destroy an enemy creature with power 3 or less.,Opening Ceremony,,,,,Arthur Bozonnet,
+R,BR,2,Ragerunner,3,1,Creature,Dog,Debut: Give this haste or sneak.,Opening Ceremony,,,,"Ragerunner (Sneak);Ragerunner (Haste)",Arthur Bozonnet,"Debut;Haste;Sneak"
+M,BR,7,"Rakdos, the Showstopper",7,6,Creature,Demon,"Flying, Trample
+Debut: Flip a coin for each other creature. Destroy each creature whose coin came up tails.",Opening Ceremony,Y,,,,Zoltan Boros,"Flying;Trample;Debut;Legendary"
+C,RG,4,Ground Assault,,,Spell,,Deal 1 damage to an enemy creature for each of your mana gems.,Opening Ceremony,,,,,John Donahue,
+R,RG,4,Slateclaw,2,2,Creature,Elemental,"Debut: Gets +X/+X, where X is the power of the strongest friendly creature.",Opening Ceremony,,,,,Aron Elekes,"Debut;Strongest"
+M,RG,7,"Ilharg, the Raze-Boar",7,6,Creature,Beast God,"Trample, Haste
+Finale: Summon a Boar God's Skull.",Opening Ceremony,Y,,,Boar God's Skull,Zoltan Boros,"Trample;Haste;Finale;Legendary"
+C,GW,2,Watchwolf,3,4,Creature,Beast,,Opening Ceremony,,,,,Ben Maier,
+R,GW,3,Armadillo Cloak,,,Spell,,Give a friendly creature +2/+2 and ward. Fully heal it.,Opening Ceremony,,,,,Brian Valeza,"Ward;Fully heal"
+M,GW,5,Trostani,5,5,Creature,Mystic,Debut: Choose a blessing.,Opening Ceremony,Y,,,"Nature's Bounty;Nature's Might;Nature's Vigor",Brian Valeza,"Debut;Legendary"
+C,WB,4,Vampiric Knight,2,4,Creature,Vampire Soldier,"Armor
+Attack: Drain 2 from your opponent.",Opening Ceremony,,,,,Dmitry Klyushkin,"Armor;Attack;Drain"
+R,WB,2,Scathing Glare,,,Spell,,Give all friendly creatures +1/+0 and all enemy creatures -1/-0.,Opening Ceremony,,,,,Ani Larmina (Room 8),
+M,WB,7,The Obzedat,5,5,Creature,Spirit,"Sneak
+Debut: Summon Lingering Spirits until your side is full.",Opening Ceremony,Y,,,Lingering Spirit,Quentin de Warren,"Sneak;Debut;Legendary"
+C,UR,4,Firemind Bolt,,,Spell,,Deal 3 damage to an enemy. Draw a card.,Opening Ceremony,,,,,Aron Elekes,
+R,UR,4,Spasmodic Weird,0,1,Creature,Elemental,Debut: Gets +1/+0 or +0/+1 at random 11 times.,Opening Ceremony,,,,,Jana Schirmer,Debut
+M,UR,7,"Niv-Mizzet, the Firemind",5,5,Creature,Dragon Wizard,"Flying
+Debut: Draw 2 cards.
+After you draw a card, deal 1 damage to your opponent.",Opening Ceremony,Y,,,,Alex Heath,"Flying;Debut;Legendary"
+C,BG,2,Boneclub Shambler,3,3,Creature,Zombie Warrior,Finale: Give a random creature in your hand +1/+1.,Opening Ceremony,,,,,Ani Larmina (Room 8),Finale
+R,BG,4,Gluttonous Goo,5,5,Creature,Ooze Monster,Debut: Gets +2/+2 and ward if a creature died this turn.,Opening Ceremony,,,,,Kudaman,"Debut;Ward"
+M,BG,8,Sisters of Stone Death,7,7,Creature,Monster,"Trample
+Before the Sisters fight, transform the creature they're fighting into a Statue.",Opening Ceremony,Y,,,Statue,Quentin de Warren,"Trample;Legendary"
+C,RW,3,Skyknight Legionnaire,2,2,Creature,Soldier,"Flying
+Haste",Opening Ceremony,,,,,Alex Heath,"Flying;Haste"
+R,RW,4,Lightning Helix,,,Spell,,Deal 4 damage to an enemy creature. Heal 4.,Opening Ceremony,,,,,Arthur Bozonnet,
+M,RW,4,"Tajic, Legion's Edge",5,3,Creature,Soldier,"Haste
+Attack: Prevent all damage enemy spells and traps would deal to all friendly creatures until your next turn.",Opening Ceremony,Y,,,,Zoltan Boros,"Haste;Attack;Legendary"
+C,GU,6,Plot,,,Spell,,Draw 2 cards. Get 2 empty mana gems.,Opening Ceremony,,,,,Brian Valeza,Empty
+R,GU,7,Sky Swallower,7,7,Creature,Monster,"Flying
+Trample",Opening Ceremony,,,,,Armand Serrano,"Flying;Trample"
+M,GU,4,Momir Vig,3,3,Creature,Elf Wizard,"Debut: Summon Kraj.
+At the end of your turn, give your Kraj +1/+1 and a random upgrade.",Opening Ceremony,Y,,,Kraj,Zoltan Boros,"Debut;Upgrade;Legendary"
+C,C,2,Neurobot,2,1,Creature,Construct,Debut: Add a random blue card to your hand.,Opening Ceremony,,,,,Zoltan Boros,Debut
+C,C,3,Herobot,3,2,Creature,Construct,Debut: Add a random white card to your hand.,Opening Ceremony,,,,,Zoltan Boros,Debut
+C,C,3,Necrobot,2,3,Creature,Construct,Debut: Add a random black card to your hand.,Opening Ceremony,,,,,Zoltan Boros,Debut
+C,C,3,Pyrobot,4,1,Creature,Construct,Debut: Add a random red card to your hand.,Opening Ceremony,,,,,Zoltan Boros,Debut
+C,C,4,Gear Mender,4,4,Creature,Construct,Debut: Add a charge to a friendly artifact.,Opening Ceremony,,,,,Rudy Siswanto,Debut
+C,C,4,Gear Render,4,4,Creature,Construct,Debut: An enemy artifact loses a charge.,Opening Ceremony,,,,,Rudy Siswanto,Debut
+C,C,4,Growbot,4,3,Creature,Construct,Debut: Add a random green card to your hand.,Opening Ceremony,,,,,Zoltan Boros,Debut
+R,C,4,Mobile Armory,3,3,Creature,Construct,"At the end of your turn, give a random friendly creature a random upgrade.",Opening Ceremony,,,,,Sam Burley,Upgrade
+M,C,3,Panharmonicon,,,Artifact,,Activate: Trigger the Debut of a creature you summoned this turn.,Opening Ceremony,,,2,,John Donahue,"Activate;Debut"
+M,C,,Refreshment Stand,,,Land,,"At the start of each player's first turn, add a random multicolor card to their hand.",Opening Ceremony,,,,,Brian Valeza,

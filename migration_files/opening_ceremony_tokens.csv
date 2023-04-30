@@ -1,0 +1,30 @@
+Rarity,Color,Cost,Title,Power,Health,Type,SubType,Text,Exp,Legendary,Land Average Percentage to Hit,Charges,Generates,Artist,Reminders
+T,W,2,Knight,2,3,Creature,Soldier,,Opening Ceremony,,,,,,
+T,W,1,Mystic Weapon,,,Spell,,Give a friendly creature +1/+1 and a drafted upgrade.,Opening Ceremony,,,,,,
+T,W,1,Sharp Sword,,,Spell,,Give a friendly creature +2/+0.,Opening Ceremony,,,,,,
+T,W,1,Sturdy Shield,,,Spell,,Give a friendly creature +0/+2.,Opening Ceremony,,,,,,
+C,U,6,Skymaster Sphinx,4,5,Creature,Monster,"Flying
+Attack: Mill your opponent for 1.",Opening Ceremony,,,,,Zoltan Boros,"Flying;Attack;Mill"
+T,U,5,Concealing Arcana,,,Spell,,Give all friendly creatures sneak.,Opening Ceremony,,,,,,
+T,U,5,Possessing Arcana,,,Spell,,Gain control of an enemy creature.,Opening Ceremony,,,,,,
+T,U,5,Riddling Arcana,,,Spell,,Summon 3 Skymaster Sphinxes.,Opening Ceremony,,,,Skymaster Sphinx,,
+T,U,3,Mage Mirror,,,Artifact,,Activate: Add a copy of a random spell from your opponent's starting deck to your hand.,Opening Ceremony,,,2,,,
+C,B,1,Fatal Infection,,,Spell,,Doom an enemy creature.,Opening Ceremony,,,,,Jana Schirmer,Doom
+C,B,4,Silent Strike,,,Spell,,Give a friendly creature +2/+0 and sneak.,Opening Ceremony,,,,,Rudy Siswanto,Sneak
+T,B,,Promise of Knowledge,,,Skill,Deal,Deal 4 damage to yourself and draw 2 cards.,Opening Ceremony,Y,,,,,
+T,B,,Promise of Power,,,Skill,Deal,Deal 4 damage to yourself and get 3 mana until your next turn.,Opening Ceremony,Y,,,,,
+T,B,,Promise of Victory,,,Skill,Deal,Deal 4 damage to yourself and give Kothophed +6/+6.,Opening Ceremony,Y,,,,,
+T,B,,Ragerunner (Sneak),,,Skill,,Give sneak.,Opening Ceremony,,,,,,
+T,R,10,Second Sun,,,Spell,,Deal 10 damage to each enemy.,Opening Ceremony,,,,,,
+T,R,,Ragerunner (Haste),,,Skill,,Give haste.,Opening Ceremony,,,,,,
+C,G,1,Nuzzle,,,Spell,,Fully heal a friendly creature.,Opening Ceremony,,,,,Emrah Elmasli,Fully heal
+C,G,2,Plummet,,,Spell,,Destroy an enemy creature with flying.,Opening Ceremony,,,,,Arthur Bozonnet,Flying
+T,G,3,Wurm,5,5,Creature,Monster,,Opening Ceremony,,,,,,
+T,G,4,Inner Beast,6,6,Creature,Beast,Haste,Opening Ceremony,,,,,,
+T,G,4,Mama Mammoth,7,7,Creature,Beast,Trample,Opening Ceremony,,,,,,
+T,UB,3,Agony Twist,,,Spell,,Give an enemy creature -0/-3.,Opening Ceremony,,,,,,
+T,RG,5,Boar God's Skull,,,Artifact,,Activate: Give a friendly creature +2/+0 and trample.,Opening Ceremony,,,2,,,
+T,GW,,Nature's Bounty,,,Skill,Blessing,Get an empty mana gem.,Opening Ceremony,Y,,,,,
+T,GW,,Nature's Might,,,Skill,Blessing,Summon 2 Soldiers.,Opening Ceremony,Y,,,Soldier,,
+T,GW,,Nature's Vigor,,,Skill,Blessing,Heal yourself and all friendly creatures for 4.,Opening Ceremony,Y,,,,,
+T,GU,1,Kraj,1,1,Creature,Ooze Monster,,Opening Ceremony,Y,,,,,

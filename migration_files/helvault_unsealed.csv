@@ -1,0 +1,213 @@
+Legendary,Reminders,Rarity,Title,Color,Cost,Charges,Power,SubType,Text,Health,Type,Exp,Land Average Percentage to Hit,Artist,Generates
+,Armor,C,Thraben Sentry,W,1,,0,Soldier,Armor,3,Creature,Helvault Unsealed,,Alexandra Frantseva,
+,Flying,C,Fledgling Gryff,W,1,,1,Monster,Flying during your turn.,2,Creature,Helvault Unsealed,,Ben Maier,
+,"Flying;Debut",C,Herald of the Host,W,3,,2,Angel,"Flying
+Debut: Reduce the cost of the next Angel you add to your hand by 2.",2,Creature,Helvault Unsealed,,Thomas Chamberlain-Keen,
+,Debut,C,Consecrated Captain,W,4,,3,Soldier,Debut: Give all creatures in your hand +1/+1.,4,Creature,Helvault Unsealed,,Arthur Bozonnet,
+,"Armor;Debut",C,Guardian Geist,W,4,,3,Spirit Warrior,"Armor
+Debut: Give a random creature in your hand armor.",1,Creature,Helvault Unsealed,,Ani Larmina (Room 8),
+,,C,Invoke the Dawn,W,1,,,,"Give a friendly creature, a random creature in your hand, and the next creature you draw +1/+1.",,Spell,Helvault Unsealed,,David Kegg,
+,,C,Desperate Prayer,W,2,,,,Draw a card. Heal yourself equal to its cost.,,Spell,Helvault Unsealed,,David Kegg,
+,"Stun;Miracle",C,Suppress,W,2,,,,"Stun an enemy creature.
+Miracle: Heal yourself for 2.",,Spell,Helvault Unsealed,,Maria Poliakova,
+,"Flying;Armor",C,Heron's Blessing,W,4,,,,Give a friendly creature flying and armor.,,Spell,Helvault Unsealed,,Brian Valeza,
+,Debut,R,Attack Yak,W,2,,2,Beast,Debut: Gets +2/+2 for each other Attack Yak you played this game.,2,Creature,Helvault Unsealed,,Armand Serrano,
+,"Flying;Debut;Draft",R,Snaring Specter,W,2,,2,Spirit,"Flying
+Debut: Draft a trap and add two copies of it to your deck.",1,Creature,Helvault Unsealed,,Aron Elekes,
+,Finale,R,Fiend Fanatic,W,3,,3,Civilian,Finale: Draw a Demon or Devil from your deck.,2,Creature,Helvault Unsealed,,Ani Larmina (Room 8),
+,Debut,R,Parish Exorcist,W,3,,3,Cleric,Debut: Replace all creatures in your opponent's graveyard with Lingering Spirits.,4,Creature,Helvault Unsealed,,Arthur Bozonnet,Lingering Spirit
+,Attack,R,Proud Battlesmith,W,4,,4,Soldier,Attack: Add a charge to each friendly artifact.,5,Creature,Helvault Unsealed,,Anastasia Shevchenko (Room 8),
+,"Flying;Debut",R,Highwind Heron,W,5,,4,Bird,"Flying
+Debut: Give all other friendly creatures with flying +1/+1.",3,Creature,Helvault Unsealed,,Yangtian Li,
+,Activate,R,Alarm Bell,W,2,2,,,Activate: Draw a creature that costs 2 or less from your deck.,,Artifact,Helvault Unsealed,,Zoltan Boros,
+,"Activate;Stun",R,Moonsilver Shackle,W,3,2,,,"Activate: Deal 2 damage to an enemy creature that attacked last turn. If it survives, stun it.",,Artifact,Helvault Unsealed,,Emrah Elmasli,
+Y,"Debut;Legendary",E,"Thalia, Guardian of Thraben",W,2,,3,Soldier,"Debut: During your opponent's next turn, their spells cost 2 more.",2,Creature,Helvault Unsealed,,Zoltan Boros,
+,Finale,E,Devoted Cathar,W,4,,4,Soldier,"Finale: At the end of this turn, summon a Corrupted Cathar.",2,Creature,Helvault Unsealed,,Arash Radkia,Corrupted Cathar
+,"Attack;Miracle",E,Captain of the Guard,W,5,,4,Soldier,"Attack: Summon a Soldier.
+Miracle: Summon a Soldier.",6,Creature,Helvault Unsealed,,Zoltan Boros,Soldier
+,"Flying;Debut",E,Vanquisher Angel,W,6,,4,Angel Warrior,"Flying
+Debut: Destroy an enemy Vampire, Werewolf, or Zombie.",5,Creature,Helvault Unsealed,,Alex Heath,
+,,E,Encore Performance,W,3,,,,Summon the highest cost artifact in your graveyard with 1 charge.,,Spell,Helvault Unsealed,,Karina Khoroshaylo (Room 8),
+,Flying,E,Moorland Haunt,W,,,,,"Starting turn 6, you have a chance to add a 1-cost 1/1 copy of a random creature from your graveyard to your hand instead of getting a mana gem. If you do, give it flying.",,Land,Helvault Unsealed,30,Room 8 Studio,
+,"Flying;Debut",M,Restoration Angel,W,4,,3,Angel,"Flying
+Debut: Return another friendly creature to your hand. Change its cost to 1.",3,Creature,Helvault Unsealed,,Maria Poliakova,
+Y,"Flying;Legendary",M,"Avacyn, Unsealed",W,7,,5,Angel,"Flying
+After you summon a non-Angel creature, transform it into a random Angel and heal yourself for 1.",6,Creature,Helvault Unsealed,,Zoltan Boros,
+,,C,Delver of Secrets,U,1,,1,Wizard,"After you draw a spell, this flips into Insectile Aberration.",1,Creature,Helvault Unsealed,,Arthur Bozonnet,Insectile Aberration
+,Finale,C,Battlefield Merchant,U,2,,2,Rogue,Finale: Draw an artifact from your deck. Set its charges to 1.,2,Creature,Helvault Unsealed,,Brian Valeza,
+,"Sneak;Draft",C,Obsessive Inspector,U,3,,1,Rogue,"Sneak
+After you draft, this gets +2/+0 this turn.",5,Creature,Helvault Unsealed,,Room 8 Studio,
+,Finale,C,Wharf Skaab,U,4,,4,Zombie,Finale: Draw a card plus an additional card for each other Wharf Skaab in your graveyard.,3,Creature,Helvault Unsealed,,Brian Valeza,
+,"Flying;Debut",C,Gryffrider Patrol,U,5,,4,Soldier,"Flying
+Debut: Give a random creature in your hand flying.",3,Creature,Helvault Unsealed,,Arthur Bozonnet,
+,Debut,C,Corpse Trawler,U,6,,6,Zombie,Debut: Give an enemy creature -1/-0 for each Zombie in your graveyard.,7,Creature,Helvault Unsealed,,Emrah Elmasli,
+,Mill,C,Jarring Insight,U,1,,,,"Each player mills a card, then draws a card.",,Spell,Helvault Unsealed,,Emrah Elmasli,
+,Miracle,C,Supply Run,U,3,,,,"Add a charge to each friendly artifact.
+Miracle: Add a random artifact to your hand.",,Spell,Helvault Unsealed,,Brian Valeza,
+,"Sneak;Ward",C,Invisibility Cloak,U,4,,,,Give a friendly creature sneak and ward.,,Spell,Helvault Unsealed,,Dariya Genrih (Room 8),
+,Activate,C,Thought Provoker,U,1,2,,,Activate: Reduce the cost of the top card of your deck by 1.,,Artifact,Helvault Unsealed,,Room 8 Studio,
+,,R,Ambitious Scholar,U,2,,1,Civilian,"After you summon an artifact, this flips into Furious Brute.",1,Creature,Helvault Unsealed,,Emrah Elmasli,Furious Brute
+,"Sneak;Debut;Draft",R,Eerie Prankster,U,3,,3,Spirit,"Sneak
+Debut: Draft a spell and add two copies of it to your deck.",2,Creature,Helvault Unsealed,,Emrah Elmasli,
+,,R,Savvy Chronomancer,U,3,,3,Wizard,"After this damages your opponent, reduce the cost of each spell in your hand by 1.",4,Creature,Helvault Unsealed,,Jana Schirmer,
+,"Flying;Debut",R,Stitched Drake,U,3,,3,Zombie Dragon,"Flying
+Debut: Discard a random creature from your hand.",4,Creature,Helvault Unsealed,,Izzy,
+,Mill,R,Fear the Grave,U,4,,,,Mill your opponent for 1 for each Zombie in your graveyard. Max 10.,,Spell,Helvault Unsealed,,Arthur Bozonnet,
+,,R,Hatch a Plan,U,4,,,,Draw 2 cards. The next trap you arm this turn costs 2 less.,,Spell,Helvault Unsealed,,Ani Larmina (Room 8),
+,Activate,R,Big Switch,U,2,2,,,Activate: Switch the power and health of each creature.,,Artifact,Helvault Unsealed,,Room 8 Studio,
+,,E,Thing in the Ice,U,2,,0,Monster,"After you play your third or more spell in a turn, this flips into Awoken Horror.",3,Creature,Helvault Unsealed,,Kudaman,Awoken Horror
+,"Flying;Debut;Stun",E,Dungeon Geist,U,4,,2,Spirit,"Flying
+Debut: Stun an enemy creature for as long as this remains in the arena.",2,Creature,Helvault Unsealed,,Wayne Wu,
+,Miracle,E,Laboratory Maniac,U,5,,3,Wizard,"If this was played on a previous turn and your deck is empty, you win the game.
+Miracle: Add a random artifact to your deck.",3,Creature,Helvault Unsealed,,Angelo Bortolini,
+,,E,Fatetwist,U,4,,,,Replace your hand with a copy of your opponent's hand.,,Spell,Helvault Unsealed,,Mushk Rizvi,
+,Base copy,E,Clonesplosion,U,5,,,,Add a base copy of each friendly creature to your hand.,,Spell,Helvault Unsealed,,Room 8 Studio,
+,,E,Rooftop Laboratory,U,,,,,"Starting turn 6, you have a chance to draw 2 cards instead of getting a mana gem. Put 2 random cards from your hand into your deck at the end of your turn.",,Land,Helvault Unsealed,30,Room 8 Studio,
+,"Debut;Temporary",M,Snapcaster Mage,U,2,,2,Wizard,"While in hand, marks a spell in your graveyard each turn.
+Debut: Add a temporary copy of the marked spell to your hand.",1,Creature,Helvault Unsealed,,Brian Valeza,
+,"Flying;Ward",M,Moonknight Cavalry,U,6,,4,Spirit Soldier,"Flying, Ward
+After you draw a card, put each card with the same name from your deck into your hand.",4,Creature,Helvault Unsealed,,Arthur Bozonnet,
+,Attack,C,Markov's Chosen,B,1,,1,Vampire,Attack: Gets +1/+0.,2,Creature,Helvault Unsealed,,Maria Poliakova,
+,"Haste;Debut;Flying",C,Bloodseeker Bat,B,2,,1,Vampire,"Haste
+Debut: Give a friendly Vampire flying this turn.",3,Creature,Helvault Unsealed,,Angelo Bortolini,
+,"Debut;Finale",C,Stitcher's Supplier,B,2,,2,Zombie,Debut & Finale: Add 2 random creatures to your graveyard.,3,Creature,Helvault Unsealed,,Karina Khoroshaylo (Room 8),
+,"Flying;Drain",C,Naildropper Imp,B,3,,2,Demon,"Flying
+After you activate an artifact, drain 1 from your opponent.",2,Creature,Helvault Unsealed,,Alexandra Frantseva,
+,Finale,C,Shadeborn Steed,B,4,,3,Demon Beast,Finale: Discard a random card from your opponent's hand.,4,Creature,Helvault Unsealed,,Mushk Rizvi,
+,"Sneak;Debut",C,Stromkirk Mentor,B,4,,4,Vampire Rogue,"Sneak
+Debut: Give a random creature in your hand sneak.",3,Creature,Helvault Unsealed,,Zoltan Boros,
+,"Trample;Relentless;Debut",C,Cruel Flagellant,B,5,,5,Zombie,"Trample, Relentless
+Debut: Deals 5 damage to itself.",6,Creature,Helvault Unsealed,,Room 8 Studio,
+,"Draft;Sneak",C,Join the Family,B,3,,,,Draft a creature that costs 2 and summon it. Give it +1/+0 and sneak.,,Spell,Helvault Unsealed,,Alex Heath,
+,Miracle,C,Wrong Turn,B,6,,,,"Destroy an enemy creature.
+Miracle: Costs 3 less this turn.",,Spell,Helvault Unsealed,,Brian Valeza,
+,,R,Champion of the Perished,B,2,,2,Zombie,"After you summon a Zombie, this gets +1/+1.",1,Creature,Helvault Unsealed,,Carlos Ruiz,
+,"Debut;Draft",R,Ghoulcaller Savant,B,3,,4,Wizard,"Debut: Draft a Grave Disturbance, Poisoned Veins, or Incapacitate and add it to your hand.",1,Creature,Helvault Unsealed,,Zoltan Boros,"Grave Disturbance;Poisoned Veins;Incapacitate"
+,Debut,R,Voldaren Steward,B,4,,2,Vampire,Debut: Destroy another friendly creature to draw 2 cards.,2,Creature,Helvault Unsealed,,Alexandra Frantseva,
+,Finale,R,Plague Hauler,B,5,,5,Zombie,"Finale: If it's your turn, give each enemy creature -1/-1.",3,Creature,Helvault Unsealed,,Anastasia Shevchenko (Room 8),
+,Finale,R,Dodge Death,B,2,,,,Trigger a friendly creature's Finales.,,Spell,Helvault Unsealed,,Emrah Elmasli,
+,Strongest,R,Rival Revival,B,4,,,,Summon the strongest creature in your opponent's graveyard.,,Spell,Helvault Unsealed,,Room 8 Studio,
+,"Activate;Mill",R,Corpse Conveyor,B,3,2,,,Activate: Mill the top creature from your deck and summon a Zombie.,,Artifact,Helvault Unsealed,,Brian Valeza,Zombie
+,"Finale;Base copy",E,Necrotic Ooze,B,4,,5,Ooze Monster,"While in hand, marks a creature in your graveyard each turn.
+Finale: Add a base copy of the marked creature to your hand.",3,Creature,Helvault Unsealed,,John Thacker,
+,"Attack;Drain;Miracle",E,Persecutor Demon,B,7,,6,Demon,"Attack: Drain 2 from the enemy with the least health.
+Miracle: Drain 2 from your opponent.",6,Creature,Helvault Unsealed,,Quentin de Warren,
+,,E,Death's Shadow,B,20,,13,Demon,Costs 1 less for each damage you've taken this game.,13,Creature,Helvault Unsealed,,Maria Poliakova,
+,,E,Triskaidekaphobia,B,3,,,,"At the end of your opponent's next turn, if they have exactly 13 health, they lose the game.",,Spell,Helvault Unsealed,,Yangtian Li LLC,
+,"Activate;Strongest",E,Ghoulcaller's Grimoire,B,6,2,,,Activate: Destroy a friendly creature to summon the strongest creature in your graveyard.,,Artifact,Helvault Unsealed,,Brian Valeza,
+,,E,Westvale Abbey,B,,,,,"At the start of your turn, deal yourself 1 damage.
+Flips into Profane Palace after you've been dealt 13 damage this game.",,Land,Helvault Unsealed,,Yangtian Li,"Profane Palace;Demonic Priest"
+,"Flying;Drain",M,Voldaren Drainlord,B,6,,3,Vampire,"Flying
+Your drain effects are increased by 1.",5,Creature,Helvault Unsealed,,David Kegg,
+Y,"Flying;Trample;Finale;Paincast;Legendary",M,"Griselbrand, Unleashed",B,8,,7,Demon,"Flying, Trample
+Finale: Add 7 random black cards to your hand. Until your turn ends, they have paincast equal to their base cost and cost 0 mana.",7,Creature,Helvault Unsealed,,Dmitry Klyushkin,
+,Trap,C,Raise the Guard,W,3,,,,"At the end of your opponent's turn, summon 3 Soldiers.",,Trap,Helvault Unsealed,,Armand Serrano,Soldier
+,"Strongest;Trap",R,Vindictive Shot,W,2,,,,"At the end of your opponent's turn, destroy the strongest enemy creature that damaged you this turn.",,Trap,Helvault Unsealed,,Arash Radkia,
+,"Counter;Trap",R,Guess Again,U,2,,,,"If your opponent plays a second card during their turn, counter it.",,Trap,Helvault Unsealed,,Armand Serrano,
+,"Upgrade;Trap",R,It's Alive!,U,2,,,,"At the end of your opponent's turn, summon a Stitcher's Skaab and give it an upgrade for each unused mana you have.",,Trap,Helvault Unsealed,,Emrah Elmasli,Stitcher's Skaab
+,Trap,C,Break a Leg,B,1,,,,"After your opponent summons a creature, give it -2/-2.",,Trap,Helvault Unsealed,,Halil Ural,
+,Trap,R,Demonic Edict,B,2,,,,"After your opponent attacks with exactly 1 creature, destroy it.",,Trap,Helvault Unsealed,,Anastasia Shevchenko (Room 8),
+,Trap,C,Dance with Devils,R,4,,,,"At the end of your opponent's turn, summon 2 Gutfire Devils.",,Trap,Helvault Unsealed,,Arthur Bozonnet,Gutfire Devil
+,"Trample;Trap",R,Untamed Rage,R,2,,,,"If a friendly creature is blocked, it gets +3/+0 and trample this turn.",,Trap,Helvault Unsealed,,Kudaman,
+,"Reach;Trap",C,Aim High,G,3,,,,"After your opponent attacks, give all friendly creatures +0/+2 and reach.",,Trap,Helvault Unsealed,,Arthur Bozonnet,
+,"Counter;Trap",R,Tracker's Snare,G,1,,,,"If your opponent summons a creature with a debut, counter the debut and draw a card.",,Trap,Helvault Unsealed,,Arthur Bozonnet,
+,Moonlight,C,Sun Dancer,R,1,,2,Civilian,Moonlight,1,Creature,Helvault Unsealed,,Maria Poliakova,Moon Howler
+,Attack,C,Sinister Host,R,2,,2,Vampire,Attack: Reduce the cost of a random Vampire in your hand by 1.,3,Creature,Helvault Unsealed,,Hendry Igwana,
+,,C,Grindstone Fiend,R,2,,3,Devil,"After you activate an artifact, deal 1 damage to a random enemy creature.",2,Creature,Helvault Unsealed,,Halil Ural,
+,Debut,C,Blundering Brawler,R,2,,4,Devil Warrior,Debut: Deal 3 damage randomly split among other creatures and players.,2,Creature,Helvault Unsealed,,Zoltan Boros,
+,"Trample;Debut",C,Hanweir Brawler,R,3,,4,Warrior,"Trample
+Debut: Give a random creature in your hand trample.",3,Creature,Helvault Unsealed,,Emrah Elmasli,
+,"Haste;Finale",C,Electro-Alchemist,R,4,,4,Artificer,"Haste
+Finale: Add a random spell to your hand.",2,Creature,Helvault Unsealed,,Maria Poliakova,
+,Miracle,C,Warding Flame,R,1,,,,"Deal 1 damage to an enemy.
+Miracle: Deal 1 damage to a random enemy.",,Spell,Helvault Unsealed,,Thomas Chamberlain-Keen,
+,,C,Reckless Strike,R,3,,,,Deal 6 damage to a random enemy creature.,,Spell,Helvault Unsealed,,Armand Serrano,
+,,C,Cage Match,R,5,,,,Choose 2 enemy creatures. Deal damage to each equal to the power of the other.,,Spell,Helvault Unsealed,,Arash Radkia,
+,,R,Cursed Cross-breed,R,3,,3,Vampire Werewolf,"If you end your turn with 2 available mana, gets +1/+1 and then gets flying until your next turn ends.",3,Creature,Helvault Unsealed,,Rafater,
+,,R,Young Pyromancer,R,3,,3,Wizard,"After you play a spell, summon an Emberling.",2,Creature,Helvault Unsealed,,Zoltan Boros,Emberling
+,Moonlight,R,Fangblade Brigand,R,4,,4,Warrior,Moonlight,4,Creature,Helvault Unsealed,,Gabor Szikszai,Fangblade Eviscerator
+,Debut,R,Falkenrath Duchess,R,5,,5,Vampire,Debut: Give each other friendly Vampire +2/+0.,4,Creature,Helvault Unsealed,,Zoltan Boros,
+,,R,Hellfire Rain,R,3,,,,Destroy an enemy mana gem.,,Spell,Helvault Unsealed,,Arthur Bozonnet,
+,"Haste;Fleeting",R,Heat Shimmer,R,4,,,,Summon a copy of a friendly creature and give it haste and fleeting.,,Spell,Helvault Unsealed,,Emrah Elmasli,
+,Counter,R,Born from Lightning,R,7,,,,"Can't be countered.
+Summon a random creature that costs 7 or more.",,Spell,Helvault Unsealed,,Quentin de Warren,
+,"Activate;Temporary",R,Scalper's Stand,R,2,2,,,Activate: Draw a temporary card.,,Artifact,Helvault Unsealed,,Arthur Bozonnet,
+,"Fleeting;Haste;Finale",E,Bloodcrazed Vampire,R,3,,3,Vampire,"Fleeting, Haste
+Finale: Add a Bloodcrazed Vampire to your hand.",1,Creature,Helvault Unsealed,,Zoltan Boros,
+,"Moonlight;Debut;Fragile",E,Gatstaf Agitators,R,3,,3,Civilian,"Moonlight
+Debut: Get a fragile mana gem.",1,Creature,Helvault Unsealed,,Room 8 Studio,Gatstaf Plunderers
+,"Flying;Attack",E,Archwing Ravager,R,5,,3,Dragon,"Flying
+Attack: Destroy a random artifact. If you do, double this creature's power and health.",3,Creature,Helvault Unsealed,,Zoltan Boros,
+,Debut,E,Infernal Broker,R,5,,6,Devil,Debut: Discard the highest-cost card in your opponent's hand and then add a random card of the same type to it.,6,Creature,Helvault Unsealed,,Arash Radkia,
+,"Activate;Haste;Fleeting",E,Erratic Projector,R,6,3,,,Activate: Transform a friendly creature into a random creature with power 5 or greater. Give it haste and fleeting.,,Artifact,Helvault Unsealed,,Emrah Elmasli,
+,Fragile,E,Emberspawn Crags,R,,,,,"Starting turn 5, you have a chance to add 2 Emberlings to your hand. If so, this turn's mana gem is fragile.",,Land,Helvault Unsealed,30,Room 8 Studio,Emberling
+,"Flying;Miracle;Upgrade",M,Eternal Phoenix,R,4,,2,Elemental Bird,"Flying
+Miracle: For the rest of the game, gets a random upgrade.
+At end of turn, if this is in your graveyard, put it into your deck.",2,Creature,Helvault Unsealed,,Emrah Elmasli,
+,,M,Blasphemous Act,R,6,,,,Deal 13 damage randomly split among all creatures.,,Spell,Helvault Unsealed,,Arthur Bozonnet,
+,Finale,C,Tasty Morsel,G,1,,2,Beast,Finale: Give a random creature in your hand +1/+1.,1,Creature,Helvault Unsealed,,Arthur Bozonnet,
+,"Moonlight;Sneak",C,Estwald Outcast,G,2,,2,Civilian,"Moonlight
+Sneak",2,Creature,Helvault Unsealed,,Maria Poliakova,Estwald Prowler
+,"Ward;Debut",C,Geist Hunters,G,2,,3,Ranger,"Ward
+Debut: Give a random creature in your hand ward.",2,Creature,Helvault Unsealed,,Brian Valeza,
+,Debut,C,Pasture Prowler,G,2,,3,Beast,Debut: Your opponent summons a Sheep.,4,Creature,Helvault Unsealed,,Armand Serrano,Sheep
+,"Reach;Miracle",C,Sprouting Vinetooth,G,3,,4,Plant Monster,"Reach
+Miracle: Give a random friendly creature +1/+1.",1,Creature,Helvault Unsealed,,Anastasia Shevchenko (Room 8),
+,"Debut;Keywords;Moonlight",C,Dawnheart Shaman,G,4,,4,Mystic,Debut: Remove all keywords and moonlight from an enemy creature.,5,Creature,Helvault Unsealed,,Arthur Bozonnet,
+,,C,Blighthoof Boar,G,4,,5,Beast,"After this survives a fight, it gets +2/+2.",5,Creature,Helvault Unsealed,,Halil Ural,
+,"Reach;Trample",C,Goliath Spider,G,8,,8,Monster,"Reach
+Trample",8,Creature,Helvault Unsealed,,Kudaman,
+,Activate,C,Traveler's Supplies,G,1,2,,,Activate: Give the next 2 creatures you draw +1/+1.,,Artifact,Helvault Unsealed,,Brian Valeza,
+,"Moonlight;Debut",R,Hermit of the Flock,G,3,,1,Civilian,"Moonlight
+Debut: Summon a Sheep.",4,Creature,Helvault Unsealed,,Ani Larmina (Room 8),"Sheep;Protector of the Meek"
+,,R,Beastkeeper,G,3,,2,Ranger,"After you summon a creature that costs 1 or less, give it +1/+1.",4,Creature,Helvault Unsealed,,Gabor Szikszai,
+,Finale,R,Hapless Trapper,G,3,,2,Ranger,"Finale: At the end of this turn, summon a Hungry Bear.",1,Creature,Helvault Unsealed,,Yangtian Li,Hungry Bear
+,Debut,R,Ulvenwald Tracker,G,3,,3,Warrior,Debut: Choose another friendly creature and an enemy creature. They fight!,2,Creature,Helvault Unsealed,,Karina Khoroshaylo (Room 8),
+,"Trample;Debut;Draft",R,Hollowhenge Avenger,G,4,,5,Spirit,"Trample
+Debut: Draft a creature and add two copies of it to your deck.",4,Creature,Helvault Unsealed,,Yangtian Li,
+,Debut,R,Hunger of the Ulvenwald,G,5,,4,Ooze Monster,Debut: Summon a copy of this creature.,2,Creature,Helvault Unsealed,,Room 8 Studio,
+,"Finale;Empty",R,Monstrous Mole,G,5,,6,Beast,Finale: Get an empty mana gem.,5,Creature,Helvault Unsealed,,Emrah Elmasli,
+,"Draft;Base copy",R,Reclamation,G,2,,,,Draft a card from your graveyard and add a base copy of it to your hand.,,Spell,Helvault Unsealed,,Zoltan Boros,
+,"Moonlight;Reach;Ward;Debut",E,Daybreak Ranger,G,4,,4,Ranger,"Moonlight, Reach, Ward
+Debut: Mark an enemy creature.",3,Creature,Helvault Unsealed,,Thomas Chamberlain-Keen,Nightfall Predator
+,Debut,E,Tree of Redemption,G,5,,0,Plant,Debut: Exchange this creature's health with yours.,13,Creature,Helvault Unsealed,,Kudaman,
+,"Miracle;Trample;Haste;Sneak;Ward",E,Affront to Nature,G,6,,7,Monster,"Miracle: Gets trample and haste or sneak and ward, chosen at random.",4,Creature,Helvault Unsealed,,John Thacker,
+,Upgrade,E,Eldritch Evolution,G,1,,,,Destroy a friendly creature to draw one that costs more from your deck and give it a random upgrade.,,Spell,Helvault Unsealed,,Wayne Wu,
+,Activate,E,Thornhide Gauntlet,G,3,2,,,Activate: Give a friendly creature +2/+0 this turn for each time you targeted it this turn.,,Artifact,Helvault Unsealed,,Emrah Elmasli,
+,,E,Woodland Hermitage,G,,,,,"Starting turn 6, you have a chance to draw a creature from your deck instead of getting a mana gem.",,Land,Helvault Unsealed,30,Thomas Chamberlain-Keen,
+,"Haste;Debut",M,Craterhoof Behemoth,G,8,,5,Beast,"Haste
+Debut: Give other friendly creatures and creatures in your hand +2/+2.",5,Creature,Helvault Unsealed,,Kudaman,
+,,M,Primal Summoning,G,9,,,,Draw 4 cards. The next creature you play this turn costs 0.,,Spell,Helvault Unsealed,,Maria Poliakova,
+,,R,Alabaster Faith,WU,2,,,,"Give a friendly creature +1/+1 and ""Attack: Draw a card.""",,Spell,Helvault Unsealed,,Brian Valeza,
+Y,"Debut;Armor;Legendary",E,Geist of Saint Traft,WU,3,,3,Spirit Warrior,"Debut: Add an Angel to your hand.
+After you summon an Angel, this gets armor.",2,Creature,Helvault Unsealed,,Thomas Chamberlain-Keen,Angel
+,,R,Change Teams,UB,5,,,,Put an enemy creature into your deck.,,Spell,Helvault Unsealed,,Wayne Wu,
+Y,"Relentless;Legendary",E,"Grimgrin, Hulking Skaab",UB,8,,9,Zombie Warrior,"Relentless
+After Grimgrin is summoned from any graveyard, transform the enemy creature with the least power into a Zombie and gain control of it.",8,Creature,Helvault Unsealed,,Halil Ural,Zombie
+,Drain,R,Crimson Raid,BR,4,,,,"Deal 5 damage to an enemy creature. If you control a Vampire, instead drain 5 from it.",,Spell,Helvault Unsealed,,Halil Ural,
+Y,"Flying;Debut;Haste;Legendary",E,Olivia Voldaren,BR,6,,3,Vampire,"Flying
+Debut: Gain control of an enemy creature this turn. Give it haste.",3,Creature,Helvault Unsealed,,David Cserkuti,
+,"Moonlight;Haste",R,Hunter's Moon,RG,1,,,,Flip all friendly creatures with moonlight and give them haste.,,Spell,Helvault Unsealed,,Yangtian Li LLC,
+Y,"Moonlight;Haste;Attack;Legendary",E,Ulrich the Outlander,RG,5,,5,Warrior,"Moonlight, Haste
+Attack: Add a random creature with moonlight to your hand.",5,Creature,Helvault Unsealed,,Zoltan Boros,Ulrich the Huntmaster
+,"Activate;Draft",R,Heron's Charm,GW,3,2,,,Activate: Draft a card that heals and add it to your hand.,,Artifact,Helvault Unsealed,,Emrah Elmasli,
+Y,"Flying;Ward;Legendary",E,"Sigarda, Heron's Grace",GW,5,,4,Angel,"Flying
+At the end of your turn, give your other friendly creatures ward.
+You can't be dealt damage except by attacking creatures.",4,Creature,Helvault Unsealed,,Yangtian Li,
+,,C,Body and Soul,WB,4,,,,Summon an Undead Striker and a Lingering Spirit.,,Spell,Helvault Unsealed,,Yangtian Li,"Undead Striker;Lingering Spirit"
+,Activate,M,Sanguine Bond,WB,3,3,,,"Activate: This turn, healing yourself instead damages your opponent.",,Artifact,Helvault Unsealed,,Emrah Elmasli,
+,Base copy,C,Extract Sample,UR,2,,,,"Deal 2 damage to an enemy creature. If it survives, add a base copy of it to your hand.",,Spell,Helvault Unsealed,,Arthur Bozonnet,
+,"Activate;Temporary",M,Mind Magnifier,UR,5,2,,,Activate: Add a temporary copy of the last spell you played this turn to your hand. Change its cost to 1.,,Artifact,Helvault Unsealed,,Room 8 Studio,
+,Strongest,C,Ghoultree Infusion,BG,4,,,,"Give a friendly creature +X/+X, where X is the power of the strongest creature in your graveyard.",,Spell,Helvault Unsealed,,Brian Valeza,
+,Base copy,M,Grim Echoes,BG,9,,,,Destroy a friendly creature to summon base copies of it until your side is full.,,Spell,Helvault Unsealed,,Wayne Wu,
+,"Armor;Attack;Haste",C,Cathar Charger,RW,5,,4,Soldier,"Armor
+Attack: Give a random creature in your hand haste.",3,Creature,Helvault Unsealed,,Zoltan Boros,
+,"Flying;Debut",M,Goldnight Harbinger,RW,6,,6,Angel Soldier,"Flying
+Debut: Double the power of each creature in your deck.",4,Creature,Helvault Unsealed,,Yangtian Li LLC,
+,"Debut;Draft;Upgrade",C,Adaptable Frill-neck,GU,2,,3,Beast,Debut: Draft an upgrade for this creature.,1,Creature,Helvault Unsealed,,Kudaman,
+,Upgrade,M,Unstable Mutagens,GU,3,,,,"For the rest of the game, after you summon a creature, give it a random upgrade.",,Spell,Helvault Unsealed,,Brian Valeza,
+,Activate,C,Grafdigger's Shovel,C,1,2,,,Activate: Put 3 random creatures from each player's graveyard into their deck.,,Artifact,Helvault Unsealed,,Emrah Elmasli,
+,Finale,R,Caged Construct,C,4,,5,Construct,Finale: Each player draws 2 cards.,4,Creature,Helvault Unsealed,,Konstantin Porubov,
+,Activate,E,Decorative Armor,C,4,3,,,Activate: Summon a Haunted Armor.,,Artifact,Helvault Unsealed,,Brandon Hunt,Haunted Armor
+Y,"Activate;Finale;Sealed;Legendary",M,The Helvault,C,6,3,,,"Activate: Add a random sealed creature to your hand.
+Finale: Change the cost of each sealed creature added to your hand to 1 for this turn.",,Artifact,Helvault Unsealed,,Room 8 Studio,

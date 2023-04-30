@@ -1,0 +1,10 @@
+pb_data
+dist
+.env
+# The following can be found at
+# https://drive.google.com/drive/folders/1FJr1sUdEWAm9lCF3uFCfVGsh5ZU-zxD1?usp=share_link
+# Not committing since it's way too much data
+pb_public/images/cards/text
+pb_public/images/cards/full_art
+pb_public/images/cards/foil_text
+pb_public/images/cards/foil_full_art

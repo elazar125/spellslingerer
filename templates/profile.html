@@ -1,0 +1,109 @@
+{{ define "content" }}
+
+<h1>Profile</h1>
+<section>
+  <form class="inline-form" novalidate>
+    <label><strong>Display Name:</strong> {{ getValue . "display_name" }}</label>
+    <span class="input-group">
+      <label for="name">New Display Name</label>
+      <input type="text" id="name" required maxlength="50" />
+      <span class="error-message" id="name-error" aria-live="polite"></span>
+    </span>
+    <button type="submit">Update</button>
+  </form>
+  <form class="inline-form" novalidate>
+    <label><strong>Email:</strong> {{ getValue . "email" }}</label>
+    <span class="input-group">
+      <label for="email">New Email</label>
+      <input type="email" id="email" required />
+      <span class="error-message" id="email-error" aria-live="polite"></span>
+    </span>
+    <button type="submit">Request Change</button>
+  </form>
+  <form class="inline-form" novalidate>
+    <label><strong>Request Password Reset</strong></label>
+    <span class="input-group">
+      <label for="password">Email</label>
+      <input type="password" id="password" required />
+      <span class="error-message" id="password-error" aria-live="polite"></span>
+    </span>
+    <button type="submit">Request Reset</button>
+  </form>
+</section>
+
+<script type="module">
+  import { alertModal } from '/js/main.js'
+
+  const forms = document.querySelectorAll('form')
+  
+  forms.forEach((form) => {
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      const input = form.querySelector('input')
+      const error = form.querySelector('.error-message')
+
+      if (input.validity.valueMissing) {
+        error.textContent = 'This field is required'
+      }
+      else if (input.validity.typeMismatch) {
+        error.textContent = 'Input is not formatted correctly'
+      }
+      else if (input.validity.tooLong) {
+        error.textContent = 'Display name can be a maximum of 50 characters'
+      }
+      else if (input.validity.valid) {
+        error.textContent = ''
+
+        try {
+          switch(input.id) {
+            case 'name':
+              await displayName(input.value)
+              break
+            case 'email':
+              await emailChange(input.value)
+              break
+            case 'password':
+              await passwordReset(input.value)
+              break
+          }
+        }
+        catch (e) {
+          alertModal({
+            titleText: 'Error resetting password',
+            bodyText: JSON.stringify(e),
+            onConfirm: () => {},
+          })
+        }
+      }
+    })
+  })
+
+  async function passwordReset(email) {
+    await client.collection('users').requestPasswordReset(email)
+    alertModal({
+      titleText: 'Please check your email',
+      bodyText: 'We sent a password reset link to your account, please use that link to finish changing your password.',
+      onConfirm: () => { },
+    })
+  }
+
+  async function emailChange(email) {
+    await client.collection('users').requestEmailChange(email)
+    alertModal({
+      titleText: 'Please check your email',
+      bodyText: 'We sent a password reset link to your new email account, please use that link to finish changing your email.',
+      onConfirm: () => { },
+    })
+  }
+
+  async function displayName(displayName) {
+    await client.collection('users').update({{ .Id }}, { display_name: displayName })
+    alertModal({
+      titleText: 'Success',
+      bodyText: 'Your display name has been updated.',
+      onConfirm: () => location.reload(),
+    })
+  }
+</script>
+{{ end }}

@@ -1,0 +1,76 @@
+Rarity,Color,Cost,Title,Power,Health,Type,SubType,Text,Exp,Legendary,Land Average Percentage to Hit,Charges,Generates,Artist,Reminders
+S,GW,1,Ajani's Skirmisher,1,1,Creature,Cat Warrior,"Trample
+After you target this, gets +1/+0.",AJA,,,,,Wangjie Li,Trample
+S,GW,3,Leonin Kincaller,4,4,Creature,Cat Warrior,Debut: Add a copy of another friendly creature to the top of your deck.,AJA,,,,,Arthur Bozonnet,Debut
+S,GW,4,Strength of the Pride,,,Spell,,Give 2 friendly creatures +2/+2.,AJA,,,,,Arthur Bozonnet,
+S,GW,,Mentor,,,Special,,"After you target a friendly creature, give the next creature you draw +1/+1.",AJA,,,,,,
+S,BR,1,Shipwrecker,2,2,Creature,Pirate,"After this is blocked, deal 2 damage to your opponent.",ANG,,,,,Quentin de Warren,
+S,BR,3,Angrath's Deathraider,4,3,Creature,Pirate,"Trample
+Debut: If your opponent was dealt damage this turn, draw a card.",ANG,,,,,Jana Schirmer,"Trample;Debut"
+S,BR,1,Searing Chains,,,Artifact,,Activate: Deal 1 damage to your opponent.,ANG,,,3,,Arash Radkia,Activate
+S,BR,,Hammer Home,,,Special,,Creatures you summon get +1/+0 if your opponent was dealt damage this turn.,ANG,,,,,,
+S,UB,2,Shadowmage Saboteur,2,3,Creature,Rogue,Attack: Double all Nightmares you attach this turn.,ASH,,,,,Quentin de Warren,Attack
+S,UB,4,Shadowstag,4,5,Creature,Beast,Debut: Reduce the cost of each card in your hand that didn't start in your deck by 1.,ASH,,,,,Arthur Bozonnet,Debut
+S,UB,1,Extract Fear,,,Spell,,Draft a copy of a card from your opponent's starting deck and add it to your hand.,ASH,,,,,Aron Elekes,Draft
+S,UB,,Weave Nightmares,,,Special,,"After you add a card to your hand that did not start in your deck, or play one of those cards, attach a Nightmare to one of the top 15 cards of your opponent's deck.
+After a card is drawn or milled, for each of your Nightmares attached to it, drain 1 your opponent.",ASH,,,,,,
+S,R,2,Fire Elemental,3,2,Creature,Elemental,Attack: Deal 2 damage to your opponent.,CHA,,,,,Alexandra Frantseva,Attack
+S,R,3,Chandra's Firecrafter,3,3,Creature,Wizard,Debut: Add a random red spell or trap that deals damage to your hand.,CHA,,,,,David Cserkuti,Debut
+S,R,4,Flame Shot,,,Spell,,Deal 3 damage to an enemy and 1 damage to each other enemy.,CHA,,,,,David Cserkuti,
+S,R,,Torch!,,,Special,,"Before the game starts, deal 4 damage to your opponent.",CHA,,,,,,
+S,R,,Splash of Color (Chandra),,,Deckbuilding,,Your deck can have up to 6 cards of a second color.,CHA,,,,,,
+S,RG,4,Rampaging Boar,5,4,Creature,Beast,Debut: Your War Boars get +1/+1 for the rest of the game.,DOM,,,,,Aron Elekes,Debut
+S,RG,5,Rampaging Nodorog,6,5,Creature,Beast,"Debut: For the rest of the game, your War Boars get either haste or trample.",DOM,,,,"War Boar (Haste);War Boar (Trample)",Halil Ural,"Debut;Haste;Trample"
+S,RG,3,Gruul Club,,,Artifact,,Activate: Choose a friendly and enemy creature. They fight!,DOM,,,2,,Dariya Genrih (Room 8),Activate
+S,RG,,Unbridled Rage,,,Special,,"After every 5 creatures you summon, add a War Boar to your hand.",DOM,,,,War Boar,,
+S,W,1,Ardent Supporter,2,1,Creature,Soldier,Debut: Add a random white creature that costs 2 or less to your hand.,GID,,,,,Mushk Rizvi,Debut
+S,W,3,Gideon's Veteran,3,2,Creature,Soldier,Armor,GID,,,,,Room 8 Studio,Armor
+S,W,1,Gideon's Protection,,,Spell,,Give a friendly creature armor and give Gideon +1/+1 for the rest of the game.,GID,,,,,Arthur Bozonnet,Armor
+S,W,,Lead the Charge,,,Special,,"After you attack with 3 or more creatures, summon Gideon to join the fight!",GID,,,,Gideon,,
+S,W,,Splash of Color (Gideon),,,Deckbuilding,,Your deck can have up to 6 cards of a second color.,GID,,,,,,
+S,U,3,Jace's Apprentice,3,1,Creature,Wizard,"Ward
+Debut: Gets +0/+1 for each other card in your hand.",JAC,,,,,Carlos Ruiz,"Ward;Debut"
+S,U,3,Repulse,,,Spell,,Return an enemy creature to hand. Draw a card.,JAC,,,,,Aron Elekes,
+S,U,2,Remand,,,Trap,,"If your opponent plays a card that costs 3 or more, counter it and return it to their hand. Draw a card.",JAC,,,,,Arash Radkia,"Counter;Trap"
+S,U,,Multiverse Mind,,,Special,,"20 mana, Activate: Change the cost of each card in your deck to 1, then draw a card. Reduce this cost by 1 each time you draw a card.",JAC,,,,,,
+S,U,,Splash of Color (Jace),,,Deckbuilding,,Your deck can have up to 6 cards of a second color.,JAC,,,,,,
+S,WB,2,Kaya's Enforcer,2,1,Creature,Soldier,"Sneak
+Armor",KAY,,,,,Brian Valeza,"Sneak;Armor"
+S,WB,1,Cut Down,,,Spell,,"Deal 1 damage to an enemy.
+After you complete a mission, return this to your hand from your graveyard.",KAY,,,,,Jana Schirmer,
+S,WB,2,Ghost Blades,,,Artifact,,Activate: Choose a friendly creature. It steals 1 power from an enemy creature.,KAY,,,2,,Anastasia Shevchenko (Room 8),Activate
+S,WB,,Free Spirit,,,Special,,"Mission: To complete, deal 3 damage to your opponent during your turn. If you do, add a random Unchained Spirit to your hand and get a new mission that requires 1 more damage.",KAY,,,,"Sly Spirit;Somber Spirit;Stalwart Spirit",,
+S,GU,3,Kiora's Tideshaper,2,2,Creature,Merfolk,Debut: Get an empty mana gem.,KIO,,,,,Quentin de Warren,"Debut;Empty"
+S,GU,6,Octopummeler,8,8,Creature,Beast,"Attack: If you have Fish, give them +2/+2. If not, summon a Fish.",KIO,,,,Fish,Anastasia Shevchenko (Room 8),Attack
+S,GU,4,Drag Under,,,Spell,,Put an enemy creature into the top 8 cards of your opponent's deck.,KIO,,,,,Alexandra Frantseva,
+S,GU,,Beckon Behemoths,,,Special,,"Start the game with a Fish.
+After you have 10, 15, and 20 mana gems, add a random Leviathan to your hand.",KIO,,,,"Fish;Arixmethes;Tidemaker Lorthos;Tini, Puffed Doom",,
+S,B,2,Diehard Fan,3,2,Creature,Zombie,Finale: Reduce the cost of each Zombie in your hand by 1.,LIL,,,,,Aron Elekes,Finale
+S,B,4,Liliana's Goliath,4,2,Creature,Zombie,"Relentless
+After this leaves your graveyard, double its power.",LIL,,,,,Arash Radkia,Relentless
+S,B,2,Zombify,,,Spell,,Draft a Zombie from your graveyard and summon it.,LIL,,,,,Zoltan Boros,Draft
+S,B,,Grave Ambition,,,Special,,"After you return a creature from any graveyard, give it +1/+1 for the rest of the game and heal yourself for 1.",LIL,,,,,,
+S,B,,Splash of Color (Liliana),,,Deckbuilding,,Your deck can have up to 6 cards of a second color.,LIL,,,,,,
+S,RW,2,Kor Recruit,2,1,Creature,Warrior,"Armor
+Haste",NAH,,,,,Quentin de Warren,"Armor;Haste"
+S,RW,3,Willful Smith,4,3,Creature,Warrior,Debut: Give your Stoneforged Blade +1/+0 for the rest of the game.,NAH,,,,,Emrah Elmasli,"Debut;Stoneforged Blade"
+S,RW,2,Nahiri's Outburst,,,Spell,,Deal damage to an enemy creature equal to the power of the creature wielding your Stoneforged Blade.,NAH,,,,,Karina Khoroshaylo (Room 8),Stoneforged Blade
+S,RW,,Forge from Stone,,,Special,,"1 mana, Activate: Give your Stoneforged Blade to a friendly creature until your next turn.",NAH,,,,,,
+S,G,1,Scion of Ashaya,1,1,Creature,Elemental,"Trample, Ward
+Debut: Spend all your mana. Gets +1/+1 for each mana spent.",NIS,,,,,Emrah Elmasli,"Trample;Ward;Debut"
+S,G,3,Joraga Druid,3,4,Creature,Elf Mystic,"After you get a mana gem that's not from your land, draw a card.",NIS,,,,,David Cserkuti,
+S,G,2,Rampant Growth,,,Spell,,Get an empty mana gem.,NIS,,,,,Alexandra Frantseva,Empty
+S,G,,Thrive,,,Special,,"After you get a mana gem that's not from your land, heal yourself for 1.",NIS,,,,,,
+S,G,,Worldwaker,,,Deckbuilding,,You can use any land and your deck can have up to 6 cards of any colors.,NIS,,,,,,
+S,UR,0,Spark of Genius,,,Spell,,Draft a spell and add it to your hand.,RAL,,,,,David Kegg,Draft
+S,UR,3,Magnum Opus,,,Spell,,Summon a Mizzium Monstrosity.,RAL,,,,Mizzium Monstrosity,Emrah Elmasli,
+S,UR,5,Chaos Lightning,,,Spell,,Deal 1 damage at random among enemies for each spell you've played this game. Max 10.,RAL,,,,,Arthur Bozonnet,
+S,UR,,Storm Conduit,,,Special,,Every third spell you play during a turn has its cost reduced by 2 and deals 1 damage to your opponent.,RAL,,,,,,
+S,WU,3,Teferi's Acolyte,2,5,Creature,Wizard,Debut: The next trap you arm this turn costs 2 less.,TEF,,,,,Quentin de Warren,Debut
+S,WU,3,Absorb,,,Trap,,"If your opponent plays a card that costs 3 or more, counter it and heal yourself for 3.",TEF,,,,,Thomas Chamberlain-Keen,"Counter;Trap"
+S,WU,2,Teferi's Staff,,,Artifact,,Activate: Draft a trap and add it to your hand.,TEF,,,2,,Maria Poliakova,Activate
+S,WU,,Outwit,,,Special,,"After every third trap you play, draw 2 cards.",TEF,,,,,,
+S,BG,2,Vraska's Grub,3,2,Creature,Pest,Finale: Get a fragile mana gem.,VRA,,,,,Brian Valeza,"Finale;Fragile"
+S,BG,5,Turn to Stone,,,Spell,,Transform an enemy creature into a Statue and gain control of it.,VRA,,,,Statue,Alex Heath,
+S,BG,1,Vraska's Throne,,,Artifact,,Activate: Destroy a friendly creature to draft a creature with Finale and add it to your hand.,VRA,,,2,,Ani Larmina (Room 8),"Activate;Draft"
+S,BG,,Dramatic Exit,,,Special,,"During your turn, Finales of friendly creatures trigger twice.",VRA,,,,,,

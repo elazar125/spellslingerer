@@ -1,0 +1,112 @@
+{{ define "page" }}
+<!doctype html>
+<html lang="en-ca">
+
+<head>
+  <meta charset="utf-8">
+  <title>{{ .Title }}</title>
+  <meta name="description" content="{{ .Description }}">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="{{ .Title }}">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="{{ .Domain }}{{ .Url }}">
+  <meta property="og:image" content="{{ .Domain }}{{ .Image }}">
+  <meta property="og:image:alt" content="{{ .ImageAlt }}">
+  <meta property="og:description" content="{{ .Description }}">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/images/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+
+  <link rel="stylesheet" href="/css/style.css">
+
+  <link rel="manifest" href="site.webmanifest">
+  <meta name="theme-color" content="#995058">
+  <meta name="color-scheme" content="dark light">
+
+  <script src="/vendor/pocketbase.umd.js"></script>
+  <script src="/js/main.js" type="module"></script>
+</head>
+
+<body>
+  <header>
+    <button id="menu-toggle" aria-controls="primary-navigation" aria-expanded="true">
+      <span class="visually-hidden">Menu</span>
+      <div class="hamburger" aria-hidden="true"></div>
+    </button>
+    <a href="/">
+      <img src="/images/Spellslingerer.webp" alt="Spellslingerer logo" />
+    </a>
+    <a href="/login" require-no-auth class="button auth">Log In</a>
+    <a href="/signup" require-no-auth class="button auth">Sign Up</a>
+    <a href="/profile" require-auth class="button auth">Profile</a>
+    <a href="#" require-auth class="button auth" onclick="logout()">Log Out</a>
+  </header>
+
+  <nav id="primary-navigation" data-expanded="true">
+    <a href="/" {{ if eq .Url "/" }} aria-current="page" {{ end }}>Home</a>
+    <a href="/cards" {{ if hasPrefix .Url "/cards" }} aria-current="page" {{ end }}>Cards</a>
+    <a href="/spellslingers" {{ if hasPrefix .Url "/spellslingers" }} aria-current="page" {{ end }}>Spellslingers</a>
+    <a href="/decks" {{ if hasPrefix .Url "/decks" }} aria-current="page" {{ end }}>Decks</a>
+    <a require-auth href="/my-decks" {{ if hasPrefix .Url "/my-decks" }} aria-current="page" {{ end }}>My Decks</a>
+    <a require-auth href="/decks/new">New Deck</a>
+    <a href="/login" class="bottom auth" require-no-auth>Log In</a>
+    <a href="/signup" class="auth" require-no-auth>Sign Up</a>
+    <a href="/profile" class="bottom auth" require-auth>Profile</a>
+    <a href="#" class="auth" require-auth onclick="logout()">Log Out</a>
+    <a href="/integrations">Integrations</a>
+    <span class="socials">
+      <a href="https://discord.gg/RfzQJSp5uK" title="Main Spellslingers discord server">
+        <img src="/images/discord-mtg-spellslingers.webp" alt="Discord logo with Spellslingers logo in the corner" />
+      </a>
+      <a href="https://discord.gg/qspyVmvd4p" title="Discord server for spellslingerer.com support">
+        <img src="/images/discord-spellslingerer.webp" alt="Discord logo with spellslingerer.com logo in the corner" />
+      </a>
+      <a href="mailto:spellslingererdeckbuilder@gmail.com" title="Email Spellslingerer.com Support">
+        <img src="/images/email.webp" alt="Red envelope" />
+      </a>
+    </span>
+  </nav>
+
+  <main>
+    {{ template "content" .Content }}
+  </main>
+
+  <dialog id="confirm-modal">
+    <h2></h2>
+    <p class="dialog-body"></p>
+    <span class="buttons">
+      <button class="confirm-button">OK</button>
+      <button class="cancel-button">Cancel</button>
+    </span>
+  </dialog>
+
+  <dialog id="alert-modal">
+    <h2></h2>
+    <p></p>
+    <span class="buttons">
+      <button class="confirm-button">OK</button>
+    </span>
+  </dialog>
+
+  <script type="text/javascript">
+    const client = new PocketBase()
+    const loggedIn = localStorage.getItem('isLoggedIn') === 'true'
+
+    function logout() {
+      fetch('/logout').then(() => {
+        localStorage.setItem('isLoggedIn', false)
+        client.authStore.clear()
+        location.href = '/'
+      })
+    }
+
+    document.querySelectorAll('[require-auth]').forEach((x) => x.hidden = !loggedIn)
+    document.querySelectorAll('[require-no-auth]').forEach((x) => x.hidden = loggedIn)
+  </script>
+</body>
+
+</html>
+{{ end }}

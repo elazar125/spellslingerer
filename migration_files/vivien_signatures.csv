@@ -1,0 +1,6 @@
+Rarity,Color,Cost,Title,Power,Health,Type,SubType,Text,Exp,Legendary,Land Average Percentage to Hit,Charges,Artist,Reminders
+S,G,2,Beast Bonder,2,3,Creature,Elf Soldier,"After a friendly creature in the arena or in your hand gets an upgrade, this gets +1/+0.",VIV,,,,Alexandra Frantseva,Upgrade
+S,G,2,Animal Arrow,,,Spell,,Draft a creature from your deck and gift it a random upgrade.,VIV,,,,Brian Valeza,"Draft;Upgrade"
+S,G,3,Vivien's Arkbow,,,Artifact,,Activate: Choose a friendly creature. Draft an upgrade for it.,VIV,,,,Ani Larmina (Room 8),"Activate;Draft;Upgrade"
+S,G,,Nurture,,,Special,,"1 mana, Activate: Store a random upgrade. The next creature you summon gets that upgrade.",VIV,,,,,
+S,G,,Nature,,,Deckbuilding,,Your deck can have up to 8 creatures of any colors.,VIV,,,,,

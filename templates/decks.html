@@ -1,0 +1,181 @@
+{{ define "content" }}
+<h1>{{ .Title }}</h1>
+<section>
+  <details>
+    <summary>Filter Options</summary>
+    <form>
+      <h2>Filter</h2>
+      <div id="filter-fields" class="grid" style="--grid-min-width: 25ch">
+        <span class="input-group" data-field-name="name">
+          <label for="name">Name</label>
+          <input type="text" id="name" data-main-input />
+        </span>
+        <span class="input-group" data-field-name="spellslinger.name">
+          <label for="spellslinger">Spellslinger</label>
+          <input type="text" id="spellslinger" data-main-input />
+        </span>
+        <span class="input-group" data-field-name="land.name">
+          <label for="land">Land</label>
+          <input type="text" id="land" data-main-input />
+        </span>
+        <span class="input-group" data-field-name="cards.name">
+          <label for="card">Card</label>
+          <input type="text" id="card" data-main-input />
+        </span>
+        <span class="input-group" data-field-name="spellslinger.colour.name">
+          <fieldset data-main-input>
+            <legend>Colour</legend>
+            <input type="checkbox" id="white" value="White" />
+            <label for="white">White</label>
+            <input type="checkbox" id="blue" value="Blue" />
+            <label for="blue">Blue</label>
+            <input type="checkbox" id="black" value="Black" />
+            <label for="black">Black</label>
+            <input type="checkbox" id="red" value="Red" />
+            <label for="red">Red</label>
+            <input type="checkbox" id="green" value="Green" />
+            <label for="green">Green</label>
+            <input type="checkbox" id="colourless" value="Colourless" />
+            <label for="colourless">Colourless</label>
+          </fieldset>
+          <span>
+            <label for="colour-op">Operation</label>
+            <select id="colour-op" data-opcode>
+              <option value="exact">Exact match</option>
+              <option value="include">Include these colours</option>
+              <option value="at-most">At most these colours</option>
+            </select>
+          </span>
+        </span>
+      </div>
+      <h2>Sort</h2>
+      <div id="sort-fields" class="grid" style="--grid-min-width: 25ch">
+        <span class="input-group">
+          <label for="prop1">Property</label>
+          <select id="prop1" data-main-input>
+            <option value="">Unset</option>
+            <option value="created" selected>Date Created</option>
+            <option value="updated">Date Updated</option>
+            <option value="name">Name</option>
+            <option value="spellslinger.name">Spellslinger</option>
+            <option value="spellslinger.colour.sort_order">Colour</option>
+          </select>
+          <span>
+            <label for="dir1">Direction</label>
+            <select id="dir1" data-opcode>
+              <option value="+">Ascending</option>
+              <option value="-" selected>Descending</option>
+            </select>
+          </span>
+        </span>
+        <span class="input-group">
+          <label for="prop2">Property</label>
+          <select id="prop2" data-main-input>
+            <option value="">Unset</option>
+            <option value="created">Date Created</option>
+            <option value="updated">Date Updated</option>
+            <option value="name">Name</option>
+            <option value="spellslinger.name">Spellslinger</option>
+            <option value="spellslinger.colour.sort_order">Colour</option>
+          </select>
+          <span>
+            <label for="dir2">Direction</label>
+            <select id="dir2" data-opcode>
+              <option value="+">Ascending</option>
+              <option value="-">Descending</option>
+            </select>
+          </span>
+        </span>
+        <span class="input-group">
+          <label for="prop3">Property</label>
+          <select id="prop3" data-main-input>
+            <option value="">Unset</option>
+            <option value="created">Date Created</option>
+            <option value="updated">Date Updated</option>
+            <option value="name">Name</option>
+            <option value="spellslinger.name">Spellslinger</option>
+            <option value="spellslinger.colour.sort_order">Colour</option>
+          </select>
+          <span>
+            <label for="dir3">Direction</label>
+            <select id="dir3" data-opcode>
+              <option value="+">Ascending</option>
+              <option value="-">Descending</option>
+            </select>
+          </span>
+        </span>
+      </div>
+      <button type="submit">Search</button>
+    </form>
+  </details>
+</section>
+<section id="list" class="grid" style="--grid-min-width: 199px">
+</section>
+
+<script type="module">
+  import Loader from '/js/loader.js'
+
+  const list = document.querySelector('#list')
+  const form = document.querySelector('form')
+  const filterFields = document.querySelector('#filter-fields')
+  const sortFields = document.querySelector('#sort-fields')
+
+  class DeckLoader extends Loader {
+    constructor(list, filterFields, sortFields) {
+      super(list, filterFields, sortFields)
+      this.recordType = 'decks'
+      this.expandFields = 'spellslinger,spellslinger.colour,land,land.set,cards,owner'
+      {{ .Filter }}
+    }
+
+    renderer(deck) {
+      return `
+        <div class="tile" style="--deck-tile-image: url('${deck.image.replace("'", "\\'")}')" onclick="location.href = '/decks/${deck.id}'">
+          <div class="tile__details">
+            <div>
+              <h3>${deck.name}</h3>
+              <a href="/users/${deck.owner}">${deck.expand.owner.display_name}</a>
+            </div>
+            ${ deck.owner === client.authStore?.model?.id && deck.is_public ?
+              `<div>
+                <svg
+                  xmlns:svg="http://www.w3.org/2000/svg"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="138.95638mm"
+                  height="49.669559mm"
+                  viewBox="0 0 138.95637 49.66956">
+                  <title>Publicly visible</title>
+                  <g
+                    transform="translate(-39.494229,-117.2749)"
+                    style="fill-opacity:1;stroke:none">
+                    <path
+                    transform="scale(0.26458333)"
+                    d="m 149.26953,537.58008 c 44.2621,58.11207 132.41299,92.4302 236.48047,93.37109 104.06751,0.94157 212.42705,-31.37838 288.70898,-88.40039 L 434.1582,540.27734 c -1.10221,24.97816 -14.76873,46.91545 -37.31054,59.11914 -22.87952,12.38643 -50.5527,11.96154 -72.50782,-1.11328 -21.34979,-12.71466 -34.15877,-34.70529 -33.78125,-59.36523 z" />
+                    <path
+                    transform="scale(0.26458333)"
+                    d="m 385.72852,443.24414 a 337.10021,233.8018 13.939607 0 0 -236.45899,94.33594 l 141.28906,1.33789 a 72.517002,70.372845 20.644331 0 1 70.73829,-62.08789 72.517002,70.372845 20.644331 0 1 72.86132,63.44726 l 240.30078,2.27344 a 337.10021,233.8018 13.939607 0 0 -283.88281,-99.28711 337.10021,233.8018 13.939607 0 0 -4.84765,-0.0195 z" />
+                    <path
+                    d="m 106.88927,140.23543 a 12.234543,11.227546 0 0 1 -6.939644,14.52882 12.234543,11.227546 0 0 1 -15.844863,-6.34125 12.234543,11.227546 0 0 1 6.880314,-14.55255 12.234543,11.227546 0 0 1 15.870623,6.28676" />
+                  </g>
+                </svg>
+              </div>` : ''
+            }
+          </div>
+          <div class="tile__icons">
+            <img src="/images/spellslingers/${deck.expand.spellslinger.name}.webp" alt="Spellslinger: ${deck.expand.spellslinger.name}" />
+            <img src="/images/cards/full_art/${deck.expand.land.name}.webp" alt="Land: ${deck.expand.land.name}"/>
+          </div>
+        </div>`
+    }
+  }
+
+  const deckLoader = new DeckLoader(list, filterFields, sortFields)
+  deckLoader.init()
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+  
+    deckLoader.updateFilter()
+  })
+</script>
+{{ end }}

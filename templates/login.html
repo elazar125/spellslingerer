@@ -1,0 +1,80 @@
+{{ define "content" }}
+<section>
+  <form class="centre-form" novalidate>
+    <h1>Log In</h1>
+    <span class="input-group">
+      <label for="email">Email</label>
+      <input type="email" id="email" required />
+      <span class="error-message" id="email-error" aria-live="polite"></span>
+    </span>
+    <span class="input-group">
+      <label for="password">Password</label>
+      <input type="password" id="password" required minlength="8" />
+      <label>Show Password <input type="checkbox" id="show-password" /></label>
+      <span class="error-message" id="password-error" aria-live="polite"></span>
+    </span>
+    <button type="submit">Log In</button>
+    <a href="/forgot-password">Forgot Password</a>
+  </form>
+</section>
+
+<script type="module">
+  import { alertModal } from '/js/main.js'
+
+  const form = document.querySelector('form')
+  const email = document.querySelector('#email')
+  const emailError = document.querySelector('#email-error')
+  const password = document.querySelector('#password')
+  const passwordError = document.querySelector('#password-error')
+  const showPassword = document.querySelector('#show-password')
+  const elements = [
+    { input: email, output: emailError },
+    { input: password, output: passwordError },
+  ]
+
+  showPassword.addEventListener('change', () => {
+    password.type = showPassword.checked ? 'text' : 'password'
+  })
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    elements.forEach((elem) => {
+      if (elem.input.validity.valid) {
+        elem.output.textContent = ''
+      }
+      else if (elem.input.validity.valueMissing) {
+        elem.output.textContent = 'This field is required'
+      }
+      else if (elem.input.validity.typeMismatch) {
+        elem.output.textContent = 'Email is not formatted correctly'
+      }
+      else if (elem.input.validity.tooShort) {
+        elem.output.textContent = 'Password must be at least 8 characters'
+      }
+    })
+
+    if (elements.every((elem) => elem.input.validity.valid)) {
+      try {
+        const { record, token } = await client.collection('users').authWithPassword(email.value, password.value)
+        localStorage.setItem('isLoggedIn', true)
+        location.href = '/'
+      }
+      catch (e) {
+        alertModal({
+          titleText: 'Error logging in',
+          bodyText: JSON.stringify(e),
+          onConfirm: () => {},
+        })
+      }
+    }
+  })
+</script>
+
+<style>
+main {
+  place-content: center;
+  min-height: calc(100% - var(--header-size) - 2*var(--gutter));
+}
+</style>
+{{ end }}

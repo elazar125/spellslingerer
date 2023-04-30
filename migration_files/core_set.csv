@@ -1,0 +1,129 @@
+Rarity,Color,Cost,Title,Power,Health,Type,SubType,Text,Exp,Legendary,Land Average Percentage to Hit,Charges,Generates,Artist,Reminders
+B,W,1,Elite Vanguard,3,1,Creature,Soldier,,Core Set,,,,,Alexandra Frantseva,
+B,W,1,Lingering Spirit,1,1,Creature,Spirit,Flying,Core Set,,,,,Maria Poliakova,Flying
+B,W,2,Devoted Steed,2,2,Creature,Beast,Debut: Give a friendly creature +1/+1.,Core Set,,,,,Pablo Carpio,Debut
+B,W,2,Frontline Paladin,1,3,Creature,Soldier,Armor,Core Set,,,,,Carlos Ruiz,Armor
+B,W,2,Leonin Healer,2,3,Creature,Cleric,Debut: Heal 3.,Core Set,,,,,Alexandra Frantseva,Debut
+B,W,3,Chapel Geist,2,3,Creature,Spirit,Flying,Core Set,,,,,Quentin Regnes,Flying
+B,W,3,Towering Shieldbearer,1,7,Creature,Giant Soldier,,Core Set,,,,,Quientin Regnes,
+B,W,4,Ceremonial Guard,5,6,Creature,Giant Soldier,,Core Set,,,,,Arthur Bozonnet,
+B,W,4,Knight Militant,4,4,Creature,Soldier,Debut: Summon a Soldier.,Core Set,,,,Soldier,Zoltan Boros,Debut
+B,W,5,Knight of the Tusk,5,4,Creature,Soldier,Armor,Core Set,,,,,Arthur Bozonnet,Armor
+B,W,5,Rhox Pit Fighter,5,5,Creature,Beast Soldier,Debut: Stun an enemy creature.,Core Set,,,,,David Cserkuti,"Debut;Stun"
+B,W,6,Armored Angel,4,4,Creature,Angel,"Flying
+Armor",Core Set,,,,,Ahmed Aldoori,"Flying;Armor"
+B,W,1,Destabilize,,,Spell,,Set an enemy creature's health to 1.,Core Set,,,,,Karina Khoroshaylo (Room 8),
+B,W,2,Mend,,,Spell,,Heal 5.,Core Set,,,,,Emrah Elmasli,
+B,W,3,Glorious Anthem,,,Spell,,Give all friendly creatures +1/+1.,Core Set,,,,,Zoltan Boros,
+B,W,3,Smite the Monstrous,,,Spell,,Destroy an enemy creature with power 5 or greater.,Core Set,,,,,Wangjie Li,
+B,W,4,Thwack!,,,Spell,,Stun up to 2 enemy creatures.,Core Set,,,,,John Donahue,Stun
+B,W,1,Shields Up,,,Trap,,"Before a friendly creature fights, give it armor.",Core Set,,,,,Room 8 Studio,"Armor;Trap"
+B,W,2,Elixir of Vitality,,,Artifact,,Activate: Heal 2.,Core Set,,,3,,Sam Burley,Activate
+B,W,,Plains,,,Land,Basic,,Core Set,,,,,Brian Valeza,
+B,U,1,Runeshell Crab,3,3,Creature,Beast,CantAttack,Core Set,,,,,Emrah Elmasli,
+B,U,2,Snapshell Turtle,2,4,Creature,Beast,"After you play a trap, gets +1/+0.",Core Set,,,,,Stanislav Lunin (Room 8),
+B,U,2,Stone Turtle,0,6,Creature,Beast,,Core Set,,,,,Arthur Bozonnet,
+B,U,2,Welkin Tern,2,2,Creature,Bird,Flying,Core Set,,,,,John Thacker,Flying
+B,U,3,Stardust Moth,1,5,Creature,Pest,Flying,Core Set,,,,,Jana Schirmer,Flying
+B,U,4,Frost Lynx,4,3,Creature,Cat Elemental,Debut: Stun an enemy creature.,Core Set,,,,,Arthur Bozonnet,"Debut;Stun"
+B,U,4,Mage of Insight,3,4,Creature,Wizard,Debut: Draw a card.,Core Set,,,,,Brian Valeza,Debut
+B,U,4,Phantom Monster,3,3,Creature,Illusion Monster,Flying,Core Set,,,,,Kudaman,Flying
+B,U,5,Shimmering Komodo,6,6,Creature,Mystic Beast,Ward,Core Set,,,,,Kudaman,Ward
+B,U,6,Mahamoti Djinn,5,6,Creature,Monster,Flying,Core Set,,,,,Emrah Elmasli,Flying
+B,U,7,Megapiranha,7,11,Creature,Monster,Ward,Core Set,,,,,Kudaman,Ward
+B,U,1,Chill Wind,,,Spell,,Stun an enemy creature.,Core Set,,,,,Zoltan Boros,Stun
+B,U,2,Arcane Flight,,,Spell,,Give a friendly creature flying.,Core Set,,,,,John Donahue,Flying
+B,U,2,Unsummon,,,Spell,,Return any creature to hand.,Core Set,,,,,Zoltan Boros,
+B,U,3,Divination,,,Spell,,Draw 2 cards.,Core Set,,,,,Arash Radkia,
+B,U,4,Shell Game,,,Spell,,Transform an enemy creature into a Stone Turtle.,Core Set,,,,Stone Turtle,Pablo Carpio,
+B,U,1,Disorient,,,Trap,,"After your opponent attacks, the strongest attacking creature gets -3/-0.",Core Set,,,,,Karina Khoroshaylo (Room 8),"Strongest;Trap"
+B,U,3,Call the Wind,,,Trap,,"At the end of your opponent's turn, summon a Wind Elemental.",Core Set,,,,Wind Elemental,Dariya Genrih (Room 8),Trap
+B,U,3,Icy Manipulator,,,Artifact,,Activate: Stun an enemy creature.,Core Set,,,2,,Ben Maier,"Activate;Stun"
+B,U,,Island,,,Land,Basic,,Core Set,,,,,Yangtian Li,
+B,B,1,Decaying Ghoul,1,1,Creature,Zombie,Relentless,Core Set,,,,,David Kegg,Relentless
+B,B,2,Daggerclaw Imp,3,1,Creature,Demon,"Flying
+Can't block",Core Set,,,,,Kudaman,Flying
+B,B,2,Famished Fiend,2,3,Creature,Vampire,Attack: Drain 1 from your opponent.,Core Set,,,,,Quentin de Warren,"Attack;Drain"
+B,B,2,Merchant of Death,2,1,Creature,Zombie,Finale: Draw a card.,Core Set,,,,,Emrah Elmasli,Finale
+B,B,3,Courtly Killer,3,3,Creature,Vampire Rogue,Sneak,Core Set,,,,,Aron Elekes,Sneak
+B,B,3,Recycled Grotesque,6,6,Creature,Zombie,Destroy a friendly creature to summon this from your hand.,Core Set,,,,,Aron Elekes,
+B,B,3,Rotting Baboon,3,5,Creature,Zombie Beast,,Core Set,,,,,Carlos Ruiz,
+B,B,4,Deathspeaker Naga,5,3,Creature,Snake,Finale: Add a Zombie to your hand.,Core Set,,,,Zombie,Zoltan Boros,Finale
+B,B,4,Gravedigger,3,4,Creature,Zombie,Debut: Return the strongest creature from your graveyard to your hand.,Core Set,,,,,David Kegg,"Debut;Strongest"
+B,B,4,Peafoul,2,2,Creature,Zombie Bird,"Flying
+Relentless",Core Set,,,,,Alex Heath,"Flying;Relentless"
+B,B,5,Bloodlord,4,4,Creature,Vampire,Debut: Drain 3 from your opponent.,Core Set,,,,,Arthur Bozonnet,"Debut;Drain"
+B,B,5,Dark Gladiator,6,5,Creature,Zombie Soldier,Debut: Give an enemy creature -1/-1.,Core Set,,,,,Halil Ural,Debut
+B,B,6,Hulking Zombie,7,3,Creature,Zombie,Relentless,Core Set,,,,,Zoltan Boros,Relentless
+B,B,1,Tragic Trip,,,Spell,,Give an enemy creature -1/-1.,Core Set,,,,,David Kegg,
+B,B,2,Drain Blood,,,Spell,,Drain 2 from an enemy creature.,Core Set,,,,,Quentin de Warren,Drain
+B,B,4,Flagrant Foul,,,Spell,,Destroy an enemy creature.,Core Set,,,,,Zoltan Boros,
+B,B,5,Fearsome Return,,,Spell,,Summon the strongest creature in your graveyard.,Core Set,,,,,David Kegg,Strongest
+B,B,1,Grave Disturbance,,,Trap,,"After your opponent attacks, summon a Zombie.",Core Set,,,,Zombie,Robert Kim,Trap
+B,B,3,Blood Chalice,,,Artifact,,Activate: Deal 1 damage to yourself and give a friendly creature +2/+1.,Core Set,,,2,,Yangtian Li,Activate
+B,B,,Swamp,,,Land,Basic,,Core Set,,,,,Alex Heath,
+B,R,1,Raging Goblin,2,1,Creature,Goblin Warrior,Haste,Core Set,,,,,Arash Radkia,Haste
+B,R,2,Goblin Shortcutter,2,3,Creature,Goblin,Debut: Give an enemy creature can't block this turn.,Core Set,,,,,John Thacker,Debut
+B,R,2,Goblin Vandal,3,2,Creature,Goblin,Debut: Each enemy artifact loses a charge.,Core Set,,,,,Arthur Bozonnet,Debut
+B,R,2,Regathan Firecat,5,1,Creature,Cat Elemental,,Core Set,,,,,Quentin Regnes,
+B,R,2,Sword Cannoneer,2,2,Creature,Goblin,Debut: Give a friendly creature +2/+0.,Core Set,,,,,Shapovalova Ekaterina (Room 8),Debut
+B,R,3,Blitzing Minotaur,3,3,Creature,Monster Warrior,Haste,Core Set,,,,,David Kegg,Haste
+B,R,3,Dragon Hatchling,2,2,Creature,Dragon,"Flying
+Attack: Deal 1 damage to your opponent.",Core Set,,,,,Zoltan Boros,"Flying;Attack"
+B,R,4,Axefury Minotaur,4,4,Creature,Monster Warrior,Debut: Gets +2/+2 if your opponent was dealt damage this turn.,Core Set,,,,,Dmitry Klyushkin,Debut
+B,R,4,Furnace Whelp,2,2,Creature,Dragon,"Flying
+Attack: Gets +2/+0.",Core Set,,,,,Anastasia Shevchenko (Room 8),"Flying;Attack"
+B,R,4,Seismodon,6,3,Creature,Dinosaur,Trample,Core Set,,,,,Rudy Siswanto,Trample
+B,R,5,Kylem Flamewing,5,3,Creature,Dragon,Flying,Core Set,,,,,Aron Elekes,Flying
+B,R,6,Ghirapur Giant,10,6,Creature,Giant,,Core Set,,,,,Quentin de Warren,
+B,R,8,Diving Hellkite,9,6,Creature,Dragon,Flying,Core Set,,,,,David Kegg,Flying
+B,R,1,Bombastic Boost,,,Spell,,Give a friendly creature +2/+1 and can't block.,Core Set,,,,,Ani Larmina (Room 8),
+B,R,1,Shock,,,Spell,,Deal 2 damage to an enemy.,Core Set,,,,,Quentin Regnes,
+B,R,2,Hasten,,,Spell,,Give a friendly creature haste.,Core Set,,,,,Aron Elekes,Haste
+B,R,3,Trumpet Blast,,,Spell,,Give all friendly creatures +2/+0.,Core Set,,,,,Ani Larmina (Room 8),
+B,R,2,Molten Misstep,,,Trap,,"After your opponent attacks, deal 4 damage to a random attacking creature.",Core Set,,,,,Zoltan Boros,Trap
+B,R,3,Rod of Ruin,,,Artifact,,Activate: Deal 1 damage to an enemy.,Core Set,,,3,,John Thacker,Activate
+B,R,,Mountain,,,Land,Basic,,Core Set,,,,,Kudaman,
+B,G,1,Gladecover Scout,2,2,Creature,Elf Ranger,Ward,Core Set,,,,,Aron Elekes,Ward
+B,G,2,Elvish Archer,2,4,Creature,Elf Soldier,Reach,Core Set,,,,,Ani Larmina (Room 8),Reach
+B,G,2,Elvish Infuser,2,2,Creature,Elf Wizard,Debut: Give a friendly creature +0/+2.,Core Set,,,,,Zoltan Boros,Debut
+B,G,2,Kalonian Tusker,4,3,Creature,Beast,,Core Set,,,,,Quentin Regnes,
+B,G,3,Soul of the Wood,3,3,Creature,Elemental,"Reach
+Finale: Heal yourself for 3.",Core Set,,,,,Brian Valeza,"Reach;Finale"
+B,G,3,Spiked Baloth,4,4,Creature,Beast,Trample,Core Set,,,,,Emrah Elmasli,Trample
+B,G,4,Centaur Archer,3,6,Creature,Beast Warrior,Reach,Core Set,,,,,Armand Serrano,Reach
+B,G,4,Ironskin Troll,5,4,Creature,Monster,Ward,Core Set,,,,,Tishenin Roman (Room 8),Ward
+B,G,4,Ornery Leotau,6,5,Creature,Cat Beast,,Core Set,,,,,David Cserkuti,
+B,G,5,Briarhorn,4,4,Creature,Elemental,Debut: Give a friendly creature +3/+3.,Core Set,,,,,Quentin Regnes,Debut
+B,G,6,Colossal Dreadmaw,6,6,Creature,Dinosaur,Trample,Core Set,,,,,Kudaman,Trample
+B,G,8,Megasaurus,12,12,Creature,Dinosaur,,Core Set,,,,,John Thacker,
+B,G,1,Naturalize,,,Spell,,Destroy an enemy artifact.,Core Set,,,,,Brian Valeza,
+B,G,2,Forest Patrol,,,Spell,,Summon 2 Elves.,Core Set,,,,Elf,Halil Ural,
+B,G,2,Grudge Match,,,Spell,,"Give a friendly creature +1/+1, then choose an enemy creature. They fight!",Core Set,,,,,Arash Radkia,
+B,G,8,Overrun,,,Spell,,Give all friendly creatures +3/+0 and trample this turn.,Core Set,,,,,Arash Radkia,Trample
+B,G,2,Giant Growth,,,Trap,,"Before a friendly creature fights, give it +3/+2.",Core Set,,,,,John Thacker,Trap
+B,G,2,Horncharge Lantern,,,Artifact,,Activate: Give a friendly creature trample.,Core Set,,,2,,Quentin Regnes,"Activate;Trample"
+B,G,4,Sylvan Shrine,,,Artifact,,Activate: Get an empty mana gem.,Core Set,,,2,,Zoltan Boros,"Activate;Empty"
+B,G,,Forest,,,Land,Basic,,Core Set,,,,,Thomas Chamberlain-Keen,
+B,WU,,Tundra,,,Land,Basic,,Core Set,,,,,Arthur Bozonnet,
+B,UB,,Underground Sea,,,Land,Basic,,Core Set,,,,,Ani Larmina (Room 8),
+B,BR,,Badlands,,,Land,Basic,,Core Set,,,,,Emrah Elmasli,
+B,RG,,Taiga,,,Land,Basic,,Core Set,,,,,Arthur Bozonnet,
+B,GW,,Savannah,,,Land,Basic,,Core Set,,,,,Maria Poliakova,
+B,WB,,Scrubland,,,Land,Basic,,Core Set,,,,,Ben Maier,
+B,UR,,Volcanic Island,,,Land,Basic,,Core Set,,,,,Ani Larmina (Room 8),
+B,BG,,Bayou,,,Land,Basic,,Core Set,,,,,Thomas Chamberlain-Keen,
+B,RW,,Plateau,,,Land,Basic,,Core Set,,,,,David Kegg,
+B,GU,,Tropical Island,,,Land,Basic,,Core Set,,,,,Yangtian Li,
+B,C,1,Defensive Construct,0,4,Creature,Construct,,Core Set,,,,,Aron Elekes,
+B,C,1,Filigree Fox,2,2,Creature,Construct,,Core Set,,,,,Rudy Siswanto,
+B,C,2,Sparring Automaton,2,3,Creature,Construct,,Core Set,,,,,Rudy Siswanto,
+B,C,3,Crafted Glider,2,2,Creature,Bird Construct,Flying,Core Set,,,,,Quentin Regnes,Flying
+B,C,4,Iron Automaton,5,5,Creature,Construct,,Core Set,,,,,Kudaman,
+B,C,4,Piston-Fist Pummeler,4,2,Creature,Construct,Debut: Deal 1 damage to an enemy.,Core Set,,,,,Frankie Perez,Debut
+B,C,6,Reflective Golem,5,5,Creature,Construct,"Debut: If your starting deck and Spellslinger are 1 color, double this creature's power and health.",Core Set,,,,,Brian Valeza,Debut
+B,C,7,Arena Sentinel,8,8,Creature,Construct,,Core Set,,,,,Ahmed Aldoori,
+B,C,2,Spill Over,,,Spell,,Mill each player for 2.,Core Set,,,,,Brian Valeza,Mill
+B,C,3,Collaborate,,,Spell,,Each player gets an empty mana gem.,Core Set,,,,,John Donahue,Empty
+B,C,5,Ejected!,,,Spell,,Put an enemy creature into your opponent's deck.,Core Set,,,,,Aron Elekes,
+B,C,3,Scoreboard,,,Artifact,,Activate: Each player draws a card.,Core Set,,,3,,Yangtian Li,Activate

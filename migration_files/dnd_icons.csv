@@ -1,0 +1,64 @@
+Rarity,Color,Cost,Title,Power,Health,Type,SubType,Text,Exp,Legendary,Land Average Percentage to Hit,Charges,Generates,Artist,Reminders
+C,W,2,Blink Dog Pack,1,1,Creature,Dog,Debut: Summon a copy of this creature.,D&D: Icons,,,,,Mooncolony,Debut
+C,W,1,Healer's Kit,,,Artifact,,Activate: Heal anything 1.,D&D: Icons,,,5,,Maria Poliakova,Activate
+R,W,4,Redeemed Thief,3,4,Creature,Vampire Rogue,"Flying during your turn.
+Can't trigger traps.",D&D: Icons,,,,,Matt Zeilinger,Flying
+R,W,4,Power Word Stun,,,Spell,,Stun an enemy creature for the rest of the game.,D&D: Icons,,,,,Mooncolony,Permanent Stun
+E,W,8,Icingdeath,6,8,Creature,Dragon,"Flying
+Debut: Destroy all creatures with power greater than their health.",D&D: Icons,Y,,,,Ben Maier,"Flying;Debut;Legendary"
+M,W,,Oath of the Paladin,,,Skill,Class,"You are a Paladin.
+At the start of the game, Level Up.",D&D: Icons,Y,,,"Faithful Steed;Divine Smite;Aura of Courage",Mooncolony,"Level Up;Class"
+C,U,2,Acolyte of Shadow,3,2,Creature,Monk,"Sneak
+After this damages your opponent, return it to your hand.",D&D: Icons,,,,,Andrea De Dominicis,Sneak
+C,U,5,Wizard's Spellbook,,,Artifact,,Activate: Draw 2 cards.,D&D: Icons,,,2,,Mooncolony,Activate
+R,U,4,Pixie Trickster,3,1,Creature,Monster,"Flying
+Debut: Transform any creature into a Giant Frog.",D&D: Icons,,,,Giant Frog,Felipe Martini,"Flying;Debut"
+R,U,1,Resilient Sphere,,,Trap,,"If your opponent plays a legendary creature, counter it.",D&D: Icons,,,,,Room 8 Studio,"Counter;Trap"
+E,U,3,Iymrith,1,4,Creature,Dragon Wizard,"Flying
+Attack: Mill yourself for 2, then Iymrith gets +1/+0 for every 5 cards in your graveyard.",D&D: Icons,Y,,,,Rudy Siswanto,"Flying;Attack;Mill;Legendary"
+M,U,,School of the Wizard,,,Skill,Class,"You are a Wizard.
+At the start of the game, Level Up.",D&D: Icons,Y,,,"Wizard's Familiar;Signature Spell;Elemental Mastery;Water Elemental",Room 8 Studio,"Level Up;Class"
+C,B,2,Ray of Enfeeblement,,,Spell,,Give an enemy creature -3/-1.,D&D: Icons,,,,,Maria Poliakova,
+C,B,3,Transparent Hallway,,,Trap,,"After your opponent attacks, summon a Gelatinous Cube.",D&D: Icons,,,,Gelatinous Cube,Ben Maier,Trap
+R,B,4,Sadistic Mindflayer,4,4,Creature,Monster,Debut: Give another friendly creature +4/+4 and destroy it at the end of this turn.,D&D: Icons,,,,,Konstantin Porubov,Debut
+R,B,3,Bag of Devouring,,,Artifact,,Activate: Discard the creature in your hand with the lowest cost to draw a card.,D&D: Icons,,,3,,Arthur Bozonnet,Activate
+E,B,8,Ebondeath,6,5,Creature,Zombie Dragon,"Flying
+Debut: Summon the strongest creature in any graveyard.",D&D: Icons,Y,,,,Wayne Wu,"Flying;Debut;Strongest;Legendary"
+M,B,,Pact of the Warlock,,,Skill,Class,"You are a Warlock.
+At the start of the game, Level Up.",D&D: Icons,Y,,,"Pactbound Quasit;Sign of Ill Omen;Whispers of the Grave",Room 8 Studio,"Level Up;Class"
+C,R,6,Adult Behir,6,5,Creature,Monster,"Haste
+Debut: Give an enemy creature can't block this turn.",D&D: Icons,,,,,Mihai Radu,"Haste;Debut"
+C,R,2,Bag of Tricks,,,Artifact,,Activate: Add a random Beast that costs 3 or less to your hand.,D&D: Icons,,,2,,Brian Valeza,Activate
+R,R,3,Storm Seeker,4,3,Creature,Sorcerer,"Debut: If your opponent has more cards in hand, deal damage to them equal to the difference.",D&D: Icons,,,,,Kudaman,Debut
+R,R,1,Ancestor's Vengeance,,,Trap,,"After a friendly creature takes damage from an enemy, deal that much damage back.",D&D: Icons,,,,,Room 8 Studio,Trap
+E,R,4,Inferno,2,2,Creature,Dragon,"Flying, Haste
+Attack: Summon a random artifact with cost equal to Inferno's power and set its charges to 1.",D&D: Icons,Y,,,,Adam Vehige,"Flying;Haste;Attack;Legendary"
+M,R,,Path of the Barbarian,,,Skill,Class,"You are a Barbarian.
+At the start of the game, Level Up.",D&D: Icons,Y,,,"Axe of Vengeance;Mindless Rage;Indomitable Strength",Emrah Elmasli,"Level Up;Class"
+C,G,3,Ornery Owlbear,4,4,Creature,Beast,Attack: Gets +1/+1 if your opponent controls a legendary creature.,D&D: Icons,,,,,Angelo Bortolini,Attack
+C,G,4,Gauntlets of Ogre Power,,,Artifact,,Activate: Set the power of a friendly creature to 5.,D&D: Icons,,,2,,Konstantin Porubov,Activate
+R,G,4,Vinesnare Hunter,5,4,Creature,Ranger,"Reach
+Debut: All enemy creatures lose flying.",D&D: Icons,,,,,Eric Kenji,"Reach;Debut;Flying"
+R,G,2,Regenerate,,,Spell,,"Give a friendly creature +1/+1 and ""At the end of your turn, fully heal this.""",D&D: Icons,,,,,Angelo Bortolini,Fully heal
+E,G,6,Old Gnawbones,5,4,Creature,Dragon,"Flying
+After Old Gnawbones damages your opponent, get mana equal to its power until your next turn.",D&D: Icons,Y,,,,Brian Valeza,"Flying;Legendary"
+M,G,,Circle of the Druid,,,Skill,Class,"You are a Druid.
+At the start of the game, Level Up.",D&D: Icons,Y,,,"Wildshape Wolf;Barkhide Growth;Wildshape Brontosaurus",Brian Valeza,"Level Up;Class"
+E,WU,4,Davil Starsong,2,2,Creature,Elf Bard,"Armor
+After a friendly creature loses armor, draw a card.",D&D: Icons,Y,,,,David Kegg,"Armor;Legendary"
+E,UB,1,Matron Malice,3,1,Creature,Drow Cleric,"Ward, Can't Block
+At the end of your turn, if 4 or more creatures entered the graveyard this turn, summon Malice from your graveyard.",D&D: Icons,Y,,,,Maria Poliakova,Ward
+E,BR,2,"Yeenoghu, Beast of Butchery",2,2,Creature,Demon,"Haste, Trample
+Debut: Destroy all other friendly creatures. Then Yeenoghu gets +2/+2 for each creature he destroyed.",D&D: Icons,Y,,,,Zoltan Boros,"Haste;Trample;Debut;Legendary"
+E,RG,3,Wulfgar,3,5,Creature,Barbarian,"After Wulfgar takes damage, deal 1 damage to your opponent.",D&D: Icons,Y,,,,Felipe Martini,Legendary
+E,GW,6,Catti-Brie,4,4,Creature,Fighter,Debut: Set the power of all friendly creatures to that of the strongest friendly creature.,D&D: Icons,Y,,,,Maria Poliakova,"Debut;Strongest;Legendary"
+E,WB,10,"Strahd, Lord of Ravenloft",10,10,Creature,Vampire Wizard,"Flying
+Debut: Set both players' health to 10.",D&D: Icons,Y,,,,Konstantin Porubov,"Flying;Debut;Legendary"
+E,UR,4,"Karazikar, the Eye Tyrant",1,4,Creature,Monster,"Ward, Flying
+Attack: Fire a Ray, then switch to a new one.",D&D: Icons,Y,,,,David Kegg,"Ward;Flying;Attack;Legendary;Rays"
+E,BG,7,The Tarrasque,8,2,Creature,Monster,"Always has Relentless.
+Finale: Gets +1/+0 for the rest of the game.",D&D: Icons,Y,,,,Kudaman,"Relentless;Finale;Legendary"
+E,RW,4,Oswald Fiddlebender,4,3,Creature,Artificer,"Debut: Add a Sharp Sword or a Sturdy Shield to your hand at random.
+After you play a spell, give all other friendly creatures +1/+0.",D&D: Icons,Y,,,"Sharp Sword;Sturdy Shield",Matt Zeilinger,"Debut;Legendary"
+E,GU,7,"Hlaavin, Lord of the Unseen",8,8,Creature,Monster,Debut: Gets keywords based on all creatures.,D&D: Icons,Y,,,,Angelo Bortolini,"Debut;Keywords;Legendary"
+M,C,,The Yawning Portal,,,Land,,"Starting turn 6, you have a chance to add a random legendary creature to your hand instead of drawing a card. If so, this turn's mana gem is empty.",D&D: Icons,,30,,,Room 8 Studio,Empty

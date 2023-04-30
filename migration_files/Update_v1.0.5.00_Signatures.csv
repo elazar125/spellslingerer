@@ -1,0 +1,13 @@
+Rarity,Color,Cost,Title,Power,Health,Type,SubType,Text,Exp,Legendary,Land Average Percentage to Hit,Charges,Generates,Artist,Reminders
+S,B,2,Night's Whisper,,,Spell,,Draw 2 spells from your deck and deal 2 damage to yourself.,DAV,,,,,Emrah Elmasli,
+S,B,3,Davriel's Scourge,2,2,Creature,Demon,"Flying
+After you play a spell, Drain 1 from your opponent.",DAV,,,,,Anastasia Shevchenko (Room 8),"Flying;Drain"
+S,B,3,Paincast Demon,3,3,Creature,Demon Warrior,"Trample
+Costs 2 less if you've dealt damage to yourself this turn.",DAV,,,,,Aron Elekes,Trample
+S,B,,Shadow Syphon,,,Special,,Spells in your hand that include a color other than black cost 1 less and have Paincast 2,DAV,,,,,,
+S,B,,Demon Contract,,,Deckbuilding,,Your deck can have a single copy of up to 10 spells of other colors.,DAV,,,,,,
+S,BG,2,Cursebearer,2,3,Creature,Beast,"Trample
+At the end of your turn, if a creature died, this gets +1/+1.",GRK,,,,,Gabor Szikszai,Trample
+S,BG,3,Wildspeaker's Fury,,,Spell,,"Destroy an enemy creature and deal damage to yourself equal to its power. If a creature died this turn, take no damage instead.",GRK,,,,,Rudy Siswanto,
+S,BG,5,Veil-Cursed Predator,5,4,Creature,Beast,"Debut: Fights the enemy creature with the least power. If this survives, repeat.",GRK,,,,,Arthur Bozonnet,Debut
+S,BG,,Predator's Instinct,,,Special,,"Activate: Give a friendly creature +1/-1. If a creature died this turn, give +2/-1 instead.",GRK,,,,,,

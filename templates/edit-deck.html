@@ -1,0 +1,589 @@
+{{ define "content" }}
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<span style="grid-area: title">
+  <h1><input id="deck-title" type="text" value="{{ getValue .Deck "name" }}" /></h1>
+</span>
+
+<span class="flex flex--row" style="grid-area: actions">
+  <label id="is-public-button" for="is-public" class="button">
+    Display publicly
+    <input id="is-public" type="checkbox" {{ if (getValue .Deck "is_public") }} checked {{ end }} />
+  </label>
+  <button id="select-tile-image">Choose Background Image</button>
+  <button id="reselect-spellslinger">Reselect Spellslinger</button>
+  <button id="reselect-splash">Reselect Splash</button>
+</span>
+
+<ssrr-deck style="grid-area: deck"></ssrr-deck>
+
+<section style="grid-area: description">
+  <h2>Description</h2>
+  <textarea id="deck-description">{{ getValue .Deck "description" }}</textarea>
+</section>
+
+<section style="grid-area: code">
+  <h2>Import Code</h2>
+  <p>Will be auto-generated!</p>
+</section>
+
+<section style="grid-area: charts">
+  <h2>Charts</h2>
+  <div class="grid" style="--grid-min-width: 200px">
+    <ssrr-chart id="ManaCostChart"></ssrr-chart>
+    <ssrr-chart id="CardTypeChart"></ssrr-chart>
+    <ssrr-chart id="RarityChart"></ssrr-chart>
+  </div>
+</section>
+
+<section style="grid-area: filter">
+  <details>
+    <summary>Filter and Sort Options</summary>
+    <form>
+      <h2>Filter</h2>
+      <div id="filter-fields" class="grid" style="--grid-min-width: 25ch">
+        <div class="input-group" data-field-name="name">
+          <label for="name">Name</label>
+          <input type="text" id="name" data-main-input />
+        </div>
+        <div class="input-group" data-field-name="ability">
+          <label for="ability">Ability</label>
+          <input type="text" id="ability" data-main-input />
+        </div>
+        <div class="input-group" data-field-name="cost">
+          <label for="cost">Cost</label>
+          <input type="number" id="cost" data-main-input />
+          <div>
+            <label for="cost-op">Operation</label>
+            <select id="cost-op" data-opcode>
+              <option value="=">=</option>
+              <option value="!=">!=</option>
+              <option value=">">&gt;</option>
+              <option value=">=">&gt;=</option>
+              <option value="<">&lt;</option>
+              <option value="<=">&lt;=</option>
+            </select>
+          </div>
+        </div>
+        <div class="input-group" data-field-name="power">
+          <label for="power">Power</label>
+          <input type="number" id="power" data-main-input />
+          <div>
+            <label for="power-op">Operation</label>
+            <select id="power-op" data-opcode>
+              <option value="=">=</option>
+              <option value="!=">!=</option>
+              <option value=">">&gt;</option>
+              <option value=">=">&gt;=</option>
+              <option value="<">&lt;</option>
+              <option value="<=">&lt;=</option>
+            </select>
+          </div>
+        </div>
+        <div class="input-group" data-field-name="health">
+          <label for="health">Health</label>
+          <input type="number" id="health" data-main-input />
+          <div>
+            <label for="health-op">Operation</label>
+            <select id="health-op" data-opcode>
+              <option value="=">=</option>
+              <option value="!=">!=</option>
+              <option value=">">&gt;</option>
+              <option value=">=">&gt;=</option>
+              <option value="<">&lt;</option>
+              <option value="<=">&lt;=</option>
+            </select>
+          </div>
+        </div>
+        <div class="input-group" data-field-name="colour.name">
+          <fieldset data-main-input>
+            <legend>Colour</legend>
+            <input type="checkbox" id="white" value="White" />
+            <label for="white">White</label>
+            <input type="checkbox" id="blue" value="Blue" />
+            <label for="blue">Blue</label>
+            <input type="checkbox" id="black" value="Black" />
+            <label for="black">Black</label>
+            <input type="checkbox" id="red" value="Red" />
+            <label for="red">Red</label>
+            <input type="checkbox" id="green" value="Green" />
+            <label for="green">Green</label>
+            <input type="checkbox" id="colourless" value="Colourless" />
+            <label for="colourless">Colourless</label>
+          </fieldset>
+          <div>
+            <label for="colour-op">Operation</label>
+            <select id="colour-op" data-opcode>
+              <option value="exact">Exact match</option>
+              <option value="include">Include these colours</option>
+              <option value="at-most">At most these colours</option>
+            </select>
+          </div>
+          <div>
+            <input id="multicoloured" type="checkbox" data-additional-filter="colour:length>1" />
+            <label for="multicoloured">Multicoloured Only</label>
+          </div>
+        </div>
+        <div class="input-group" data-field-name="rarity.name">
+          <fieldset data-main-input>
+            <legend>Rarity</legend>
+            <input type="checkbox" id="core" value="Core" checked />
+            <label for="core">Core</label>
+            <input type="checkbox" id="signature" value="Signature" checked />
+            <label for="signature">Signature</label>
+            <input type="checkbox" id="token" value="Token" />
+            <label for="token">Token</label>
+            <input type="checkbox" id="common" value="Common" checked />
+            <label for="common">Common</label>
+            <input type="checkbox" id="rare" value="Rare" checked />
+            <label for="rare">Rare</label>
+            <input type="checkbox" id="epic" value="Epic" checked />
+            <label for="epic">Epic</label>
+            <input type="checkbox" id="mythic" value="Mythic" checked />
+            <label for="mythic">Mythic</label>
+          </fieldset>
+        </div>
+        <div class="input-group" data-field-name="set.name">
+          <fieldset data-main-input>
+            <legend>Set</legend>
+            <input type="checkbox" id="core_set" value="Core Set" />
+            <label for="core_set">Core Set</label>
+            <input type="checkbox" id="signatures" value="Signatures" />
+            <label for="signatures">Signatures</label>
+            <input type="checkbox" id="opening_ceremony" value="Opening Ceremony" />
+            <label for="opening_ceremony">Opening Ceremony</label>
+            <input type="checkbox" id="dd_icons" value="D&D: Icons" />
+            <label for="dd_icons">D&amp;D: Icons</label>
+            <input type="checkbox" id="helvault_unsealed" value="Helvault Unsealed" />
+            <label for="helvault_unsealed">Helvault Unsealed</label>
+          </fieldset>
+        </div>
+        <div class="input-group" data-field-name="type.name">
+          <fieldset data-main-input>
+            <legend>Type</legend>
+            <input type="checkbox" id="creature" value="Creature" />
+            <label for="creature">Creature</label>
+            <input type="checkbox" id="spell" value="Spell" />
+            <label for="spell">Spell</label>
+            <input type="checkbox" id="artifact" value="Artifact" />
+            <label for="artifact">Artifact</label>
+            <input type="checkbox" id="trap" value="Trap" />
+            <label for="trap">Trap</label>
+            <input type="checkbox" id="skill" value="Skill" />
+            <label for="skill">Skill</label>
+            <input type="checkbox" id="land" value="Land" />
+            <label for="land">Land</label>
+          </fieldset>
+        </div>
+        <div class="input-group" data-field-name="subtype.name">
+          <label for="subtype">Subtype</label>
+          <input type="text" id="subtype" data-main-input />
+        </div>
+        <div class="input-group" data-field-name="chance">
+          <label for="chance">Chance</label>
+          <input type="number" id="chance" data-main-input />
+          <div>
+            <label for="chance-op">Operation</label>
+            <select id="chance-op" data-opcode>
+              <option value="=">=</option>
+              <option value="!=">!=</option>
+              <option value=">">&gt;</option>
+              <option value=">=">&gt;=</option>
+              <option value="<">&lt;</option>
+              <option value="<=">&lt;=</option>
+            </select>
+          </div>
+        </div>
+        <div class="input-group" data-field-name="artist">
+          <label for="artist">Artist</label>
+          <input type="text" id="artist" data-main-input />
+        </div>
+        <div class="input-group" data-field-name="legendary">
+          <label for="legendary">Legendary</label>
+          <select id="legendary" data-main-input>
+            <option value="">All</option>
+            <option value="true">Legendary</option>
+            <option value="false">Non-Legendary</option>
+          </select>
+        </div>
+        <div class="input-group" data-field-name="generates.name">
+          <label for="generates">Generates</label>
+          <input type="text" id="generates" data-main-input />
+        </div>
+        <div class="input-group" data-field-name="reminders.name">
+          <label for="reminders">Keyword with Reminder Text</label>
+          <input type="text" id="reminders" data-main-input />
+        </div>
+        <div class="input-group" data-field-name="charges">
+          <label for="charges">Charges</label>
+          <input type="number" id="charges" data-main-input />
+          <div>
+            <label for="charges-op">Operation</label>
+            <select id="charges-op" data-opcode>
+              <option value="=">=</option>
+              <option value="!=">!=</option>
+              <option value=">">&gt;</option>
+              <option value=">=">&gt;=</option>
+              <option value="<">&lt;</option>
+              <option value="<=">&lt;=</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <h2>Sort</h2>
+      <div id="sort-fields" class="grid" style="--grid-min-width: 25ch">
+        <div class="input-group">
+          <label for="prop1">Property</label>
+          <select id="prop1" data-main-input>
+            <option value="">Unset</option>
+            <option value="name">Name</option>
+            <option value="ability">Ability</option>
+            <option value="cost">Cost</option>
+            <option value="power">Power</option>
+            <option value="health">Health</option>
+            <option value="colour.sort_order">Colour</option>
+            <option value="set.sort_order" selected>Set</option>
+            <option value="rarity.sort_order">Rarity</option>
+            <option value="artist">Artist</option>
+            <option value="type.name">Type</option>
+            <option value="subtype">Subtype</option>
+            <option value="chance">Chance</option>
+            <option value="legendary">Legendary</option>
+          </select>
+          <div>
+            <label for="dir1">Direction</label>
+            <select id="dir1" data-opcode>
+              <option value="+">Ascending</option>
+              <option value="-" selected>Descending</option>
+            </select>
+          </div>
+        </div>
+        <div class="input-group">
+          <label for="prop2">Property</label>
+          <select id="prop2" data-main-input>
+            <option value="">Unset</option>
+            <option value="name">Name</option>
+            <option value="ability">Ability</option>
+            <option value="cost">Cost</option>
+            <option value="power">Power</option>
+            <option value="health">Health</option>
+            <option value="colour.sort_order" selected>Colour</option>
+            <option value="set.sort_order">Set</option>
+            <option value="rarity.sort_order">Rarity</option>
+            <option value="artist">Artist</option>
+            <option value="type.name">Type</option>
+            <option value="subtype">Subtype</option>
+            <option value="chance">Chance</option>
+            <option value="legendary">Legendary</option>
+          </select>
+          <div>
+            <label for="dir2">Direction</label>
+            <select id="dir2" data-opcode>
+              <option value="+" selected>Ascending</option>
+              <option value="-">Descending</option>
+            </select>
+          </div>
+        </div>
+        <div class="input-group">
+          <label for="prop3">Property</label>
+          <select id="prop3" data-main-input>
+            <option value="">Unset</option>
+            <option value="name">Name</option>
+            <option value="ability">Ability</option>
+            <option value="cost" selected>Cost</option>
+            <option value="power">Power</option>
+            <option value="health">Health</option>
+            <option value="colour.sort_order">Colour</option>
+            <option value="set.sort_order">Set</option>
+            <option value="rarity.sort_order">Rarity</option>
+            <option value="artist">Artist</option>
+            <option value="type.name">Type</option>
+            <option value="subtype">Subtype</option>
+            <option value="chance">Chance</option>
+            <option value="legendary">Legendary</option>
+          </select>
+          <div>
+            <label for="dir3">Direction</label>
+            <select id="dir3" data-opcode>
+              <option value="+" selected>Ascending</option>
+              <option value="-">Descending</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="flex">
+        <button type="submit">Search</button>
+        <button type="reset">Reset</button>
+      </div>
+    </form>
+  </details>
+</section>
+
+<section id="list" class="grid" style="grid-area: cards; --grid-min-width: 150px">
+</section>
+
+<footer>
+  <label>Cards: <span id="current-count">{{ countCards .Deck }}</span>/30</label>
+  <button id="save-button" style="--button-colour: var(--colour-success)">Save</button>
+  <button id="reset-button" style="--button-colour: var(--colour-warning)">Reset</button>
+  <button id="delete-button" style="--button-colour: var(--colour-error)">Delete</button>
+</footer>
+
+<dialog id="spellslinger-picker">
+  <h2>Choose a Spellslinger</h2>
+  <div class="dialog-body">
+    {{ range .Spellslingers }}
+      {{ $colour := getValue . "colour" }}
+      {{ $abilities := getValue . "abilities" }}
+      {{ $signatures := getValue . "signatures" }}
+    
+      <section class="spellslinger-tile grid" style="--grid-min-width: 0">
+        <img loading="lazy" class="spellslinger-tile__image" style="grid-area: image" src="/images/spellslingers/{{ getValue . "name" }}.webp" />
+        <h3 style="grid-area: name"><a href="/spellslingers/{{ .Id }}">{{ getValue . "name" }}</a></h3>
+        <span style="grid-area: health"><label>Health:</label> {{ getValue . "health" }}</span>
+        <span style="grid-area: colour">{{ range $colour }}{{ getValue . "name" }} {{ end }}</span>
+        <span style="grid-area: ability">
+          {{ range $abilities }}
+            <p><label>{{ getValue . "name" }}:</label> {{ getValue . "ability" }}</p>
+          {{ end }}
+        </span>
+        <span style="grid-area: button">
+          <button data-spellslinger="{{ marshal . }}">Pick This Spellslinger</button>
+        </span>
+      </section>
+    {{ end }}
+  </div>
+</dialog>
+
+<dialog id="colour-picker">
+  <h2>Choose a Splash</h2>
+  <div class="dialog-body">
+    {{ range .Colours }}
+      <button data-colour="{{ marshal . }}">{{ getValue . "name" }}</button>
+    {{ end }}
+    <button data-colour="">None</button>
+  </div>
+</dialog>
+
+<dialog id="tile-image-picker">
+  <h2>Choose a Background Image</h2>
+  <form class="dialog-body"></form>
+</dialog>
+
+<script type="module">
+  import Loader from '/js/loader.js'
+  import SsrrDeck from '/js/ssrr-deck.js'
+  import SsrrChart from '/js/ssrr-chart.js'
+  import { alertModal, confirmModal } from '/js/main.js'
+  import Deck from '/js/deck.js'
+
+  const list = document.querySelector('#list')
+  const form = document.querySelector('form')
+  const filterFields = document.querySelector('#filter-fields')
+  const sortFields = document.querySelector('#sort-fields')
+  
+  const deck = new Deck(
+    {{ marshal .Deck }},
+    document.querySelector('ssrr-deck'),
+    document.querySelector('#ManaCostChart'),
+    document.querySelector('#RarityChart'),
+    document.querySelector('#CardTypeChart'),
+    document.querySelector('#deck-title'),
+    document.querySelector('#deck-description'),
+    document.querySelector('#is-public'),
+    document.querySelector('#current-count'),
+  )
+
+  class CardLoader extends Loader {
+    constructor(list, filterFields, sortFields, removeCardCallback, addCardCallback) {
+      super(list, filterFields, sortFields)
+      this.recordType = 'cards'
+      this.expandFields = 'set,type,rarity,colour'
+      this.removeCardCallback = removeCardCallback
+      this.addCardCallback = addCardCallback
+    }
+
+    postRenderer() {
+      document.querySelectorAll('[aria-label="remove card"]').forEach((button) => {
+        button.addEventListener('click', (e) => this.removeCardCallback(e.target.getAttribute('data-card')))
+      })
+      document.querySelectorAll('[aria-label="add card"]').forEach((button) => {
+        button.addEventListener('click', (e) => this.addCardCallback(e.target.getAttribute('data-card')))
+      })
+    }
+
+    renderer(card) {
+      return `
+      <div class="card">
+        <picture>
+          <source
+            srcset="/images/cards/text/${card.name.replaceAll(' ', '%20')}.webp"
+            type="image/webp"
+          />
+          <source
+            srcset="/images/cards/text/${card.name.replaceAll(' ', '%20')}.png"
+            type="image/png"
+          />
+          <img
+            loading="lazy"
+            srcset="/images/cards/text/${card.name.replaceAll(' ', '%20')}.webp"
+            alt="${card.name}"
+          />
+        </picture>
+        <span class="card__buttons">
+          <button aria-label="remove card" data-card="${encodeURIComponent(JSON.stringify(card))}">-</button>
+          <button aria-label="add card" data-card="${encodeURIComponent(JSON.stringify(card))}">+</button>
+        </span>
+      </div>
+      `
+    }
+  }
+
+  const cardLoader = new CardLoader(list, filterFields, sortFields, deck.removeCard.bind(deck), deck.addCard.bind(deck))
+  cardLoader.init()
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    cardLoader.updateFilter()
+  })
+
+  document.querySelector('#deck-title').addEventListener('change', (e) => deck.setName(e.target.value))
+  document.querySelector('#deck-description').addEventListener('change', (e) => deck.setDescription(e.target.value))
+  document.querySelector('#is-public').addEventListener('change', (e) => deck.setIsPublic(e.target.checked))
+
+  document.querySelector('#reset-button').addEventListener('click', () => deck.reset())
+  document.querySelector('#save-button').addEventListener('click', () => deck.save())
+  document.querySelector('#delete-button').addEventListener('click', () => deck.delete())
+
+  if (!deck.hasSpellslinger()) {
+    document.querySelector('#spellslinger-picker').showModal()
+  }
+
+  if (!deck.canSetSplash()) {
+    document.querySelector('#reselect-splash').hidden = true
+  }
+  
+  document.querySelectorAll('[data-spellslinger]').forEach((button) => {
+    button.addEventListener('click', (e) => {
+      deck.setSpellslinger(e.target.getAttribute('data-spellslinger'))
+      document.querySelector('#spellslinger-picker').close()
+      if (deck.canSetSplash()) {
+        document.querySelector('#colour-picker').showModal()
+        document.querySelector('#reselect-splash').hidden = false
+      }
+      else {
+        document.querySelector('#reselect-splash').hidden = true
+      }
+    })
+  })
+
+  document.querySelector('#reselect-spellslinger').addEventListener('click', (e) => {
+    document.querySelector('#spellslinger-picker').showModal()
+  })
+ 
+  document.querySelector('#reselect-splash').addEventListener('click', (e) => {
+    document.querySelector('#colour-picker').showModal()
+  })
+
+  document.querySelector('#select-tile-image').addEventListener('click', (e) => {
+    document.querySelector('#tile-image-picker form').innerHTML = deck.getCards().map((card) => {
+      return `
+        <div class="flex flex--row">
+          <input type="radio" name="tile-image" id="tile-image-${card.name}" value="/images/cards/tiles/${card.name}.jpeg" />
+          <label class="flex flex--row" for="tile-image-${card.name}">
+            ${card.name}
+            <img class="tile-thumbnail" alt="" src="/images/cards/tiles/${card.name}.jpeg" />
+          </label>
+        </div>
+      `
+    }).join('')
+    document.querySelector('#tile-image-picker form').innerHTML += '<button type="submit">Choose</button>'
+    document.querySelector('#tile-image-picker').showModal()
+  })
+
+  document.querySelector('#tile-image-picker form').addEventListener('submit', (e) => {
+    e.preventDefault()
+
+    deck.setImage(e.target.querySelector('[name=tile-image]:checked').value)
+    document.querySelector('#tile-image-picker').close()
+  })
+
+  document.querySelectorAll('[data-colour]').forEach((button) => {
+    button.addEventListener('click', (e) => {
+      deck.setSplash(e.target.getAttribute('data-colour'))
+      document.querySelector('#colour-picker').close()
+    })
+  })
+
+  document.querySelector('[data-colour]').addEventListener('click', (e) => {
+    deck.setSplash(e.target.getAttribute('data-colour'))
+    document.querySelector('#colour-picker').close()
+  })
+</script>
+
+<style>
+  /* TODO: solve grid layout correctly instead of naming a "gap" area */
+  main {
+    grid-template: "title title"
+                   "actions actions"
+                   "deck description"
+                   "deck code"
+                   "deck charts"
+                   "deck filter"
+                   "deck cards";
+    grid-template-columns: auto 1fr;
+  }
+
+  ssrr-deck {
+    position: sticky;
+    top: -20px;
+  }
+
+  #list,
+  ssrr-deck {
+    margin-bottom: 150px;
+  }
+
+  #is-public-button {
+    background-color: var(--secondary-colour);
+    color: black;
+  }
+
+  #is-public {
+    margin: 0;
+    accent-color: black;
+  }
+
+  /* TODO: pick correct size */
+  @media(max-width: 800px) {
+    main {
+      grid-template: "title"
+                     "actions"
+                     "deck"
+                     "description"
+                     "code"
+                     "charts"
+                     "filter"
+                     "cards";
+    }
+  }
+
+  .spellslinger-tile {
+    grid-template: "image name"
+                   "image health"
+                   "image colour"
+                   "ability ability"
+                   "button button";
+  }
+
+  /* TODO: pick correct size */
+  @media(min-width: 800px) {
+    .spellslinger-tile {
+      grid-template: "image name health colour"
+                     "image ability ability ability"
+                     "image button button button";
+    }
+  }
+</style>
+{{ end }}

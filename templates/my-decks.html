@@ -1,0 +1,67 @@
+{{ define "content" }}
+<h1>Deck Search</h1>
+<section>
+  <details>
+    <summary>Filter Options</summary>
+    <form></form>
+  </details>
+</section>
+<section class="grid" style="--grid-min-width: 199px">
+</section>
+
+<script type="text/javascript">
+  const cards = [];
+  for (let i = 1; i <= 30; i++) {
+    cards.push({
+      name:`Card ${i}`,
+      image: '/images/defaults/card.png',
+      colour: ['red'],
+      cost: 1,
+      rarity: 'common',
+      type: 'creature',
+    });
+  }
+
+  const decks = [];
+  for (let i = 1; i <= 100; i++) {
+    decks.push({
+      id: i,
+      tileImage: '/images/defaults/tile.jpg',
+      user: `User ${i}`,
+      name: `Deck ${i}`,
+      spellslinger: '/images/defaults/vin.png',
+      land: '/images/defaults/card.png',
+      colour: [],
+      isPublic: true,
+      cards: cards,
+      description: 'As of Go 1.13, the go command by default downloads and authenticates modules using the Go module mirror and Go checksum database run by Google. See https://proxy.golang.org/privacy for privacy information about these services and the go command documentation for configuration details including how to disable the use of these servers or use different ones. ',
+      code: 'DV1H4sIAAAAAAAAA23OMQrAMAwDwL2vkWJiO2PX0rE0Y/7/i07FGbQdQgJd53E/a75cCf4kIAikILc0TdAsBcEmaNusyNEFUeweggxF5BBs6XVSsUd1BwXdfeMH3+ovvVcBAAA=',
+    });
+  }
+
+  function renderDeck(deck) {
+    return `
+      <div class="tile" style="--deck-tile-image: url(${deck.tileImage})" data-deck-id="${deck.id}">
+        <div class="tile__details">
+          <div>
+            <h3>${deck.name}</h3>
+            <a>${deck.user}</a>
+          </div>
+          ${deck.isPublic ? '<img src="/images/defaults/vin.png" />' : ''}
+        </div>
+        <div class="tile__icons">
+          <img src="${deck.spellslinger}" />
+          <img src="${deck.land}" />
+        </div>
+      </div>`
+  }
+
+  const list = document.querySelector('[class="grid"]')
+  list.innerHTML = decks.map(renderDeck).join('')
+
+  const tiles = document.querySelectorAll('.tile')
+  tiles.forEach((tile) => tile.addEventListener('click', (e) => {
+    window.location.href = `/my-decks/${tile.attributes['data-deck-id'].nodeValue}`
+  }))
+</script>
+{{ end }}

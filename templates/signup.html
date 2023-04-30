@@ -1,0 +1,130 @@
+{{ define "content" }}
+<section>
+  <form class="centre-form" novalidate>
+    <h1>Sign Up</h1>
+    <span class="input-group">
+      <label for="username">Display Name</label>
+      <input type="text" id="username" required maxlength="50" />
+      <span class="error-message" id="username-error" aria-live="polite"></span>
+    </span>
+    <span class="input-group">
+      <label for="email">Email <em>(Will not be publicly visible)</em></label>
+      <input type="email" id="email" required />
+      <span class="error-message" id="email-error" aria-live="polite"></span>
+    </span>
+    <span class="input-group">
+      <label for="password">Password</label>
+      <input type="password" id="password" required minlength="8" />
+      <label>Show Password <input type="checkbox" id="show-password" /></label>
+      <span class="error-message" id="password-error" aria-live="polite"></span>
+    </span>
+    <span class="input-group">
+      <label for="confirm-password">Confirm Password</label>
+      <input type="password" id="confirm-password" required minlength="8" />
+      <label>Show Password <input type="checkbox" id="show-confirm-password" /></label>
+      <span class="error-message" id="confirm-password-error" aria-live="polite"></span>
+    </span>
+    <span class="input-group">
+      <label>Password rules:</label>
+      <ul>
+        <li>Minimum 8 characters</li>
+        <li>Consider using a different password from other sites</li>
+        <li>Consider adding numbers and special characters</li>
+      </ul>
+    </span>
+    <button type="submit">Sign Up</button>
+  </form>
+</section>
+
+<script type="module">
+  import { alertModal } from '/js/main.js'
+
+  const form = document.querySelector('form')
+  const username = document.querySelector('#username')
+  const usernameError = document.querySelector('#username-error')
+  const email = document.querySelector('#email')
+  const emailError = document.querySelector('#email-error')
+  const password = document.querySelector('#password')
+  const passwordError = document.querySelector('#password-error')
+  const showPassword = document.querySelector('#show-password')
+  const confirmPassword = document.querySelector('#confirm-password')
+  const confirmPasswordError = document.querySelector('#confirm-password-error')
+  const showConfirmPassword = document.querySelector('#show-confirm-password')
+  const elements = [
+    { input: username, output: usernameError },
+    { input: email, output: emailError },
+    { input: password, output: passwordError },
+    { input: confirmPassword, output: confirmPasswordError },
+  ]
+
+  showPassword.addEventListener('change', () => {
+    password.type = showPassword.checked ? 'text' : 'password'
+  })
+
+  showConfirmPassword.addEventListener('change', () => {
+    confirmPassword.type = showConfirmPassword.checked ? 'text' : 'password'
+  })
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    elements.forEach((elem) => {
+      if (elem.input.validity.valid) {
+        elem.output.textContent = ''
+      }
+      else if (elem.input.validity.valueMissing) {
+        elem.output.textContent = 'This field is required'
+      }
+      else if (elem.input.validity.typeMismatch) {
+        elem.output.textContent = 'Email is not formatted correctly'
+      }
+      else if (elem.input.validity.tooShort) {
+        elem.output.textContent = 'Password must be at least 8 characters'
+      }
+      else if (elem.input.validity.tooLong) {
+        elem.output.textContent = 'Display name can be a maximum of 50 characters'
+      }
+    })
+
+    if (password.value !== confirmPassword.value) {
+      confirmPasswordError.textContent = 'Passwords do not match'
+    }
+
+    if (elements.every((elem) => elem.input.validity.valid)) {
+      try {
+        await client.collection('users').create({
+          display_name:  username.value,
+          email: email.value,
+          password: password.value,
+          passwordConfirm: confirmPassword.value,
+        })
+        await client.collection('users').requestVerification(email.value)
+
+        alertModal({
+          titleText: 'Please check your email',
+          bodyText: 'We sent you an email to verify your account, please follow the link in that message to finish setting up your account. You will need to do this before you can create decks.',
+          onConfirm: async () => {
+            await client.collection('users').authWithPassword(email.value, password.value)
+            localStorage.setItem('isLoggedIn', true)
+            location.href = '/'
+          },
+        })
+      }
+      catch (e) {
+        alertModal({
+          titleText: 'Error signing up',
+          bodyText: JSON.stringify(e),
+          onConfirm: () => { },
+        })
+      }
+    }
+  })
+</script>
+
+<style>
+main {
+  place-content: center;
+  min-height: calc(100% - var(--header-size) - 2*var(--gutter));
+}
+</style>
+{{ end }}

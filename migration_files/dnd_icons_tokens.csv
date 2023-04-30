@@ -1,0 +1,32 @@
+Rarity,Color,Cost,Title,Power,Health,Type,SubType,Text,Exp,Legendary,Land Average Percentage to Hit,Charges,Generates
+T,W,4,Aura of Courage,,,Spell,,"For the rest of the game, after a friendly creature attacks, it gets +1/+1.",D&D: Icons,,,,
+T,W,3,Divine Smite,,,Spell,,"Level Up — Aura of Courage
+Deal damage to an enemy creature equal to the number of friendly creatures.",D&D: Icons,,,,Aura of Courage
+T,W,1,Faithful Steed,1,2,Creature,Beast,"Level Up — Divine Smite
+Debut: Give a friendly creature +0/+1.",D&D: Icons,,,,Divine Smite
+T,U,2,Giant Frog,3,3,Creature,Beast,,D&D: Icons,,,,
+T,U,5,Water Elemental,5,4,Creature,Elemental,Sneak,D&D: Icons,,,,
+T,U,6,Elemental Mastery,,,Spell,,"For the rest of the game, if you spend 6 or more mana on spells during your turn, summon a Water Elemental at the end of it.",D&D: Icons,,,,Water Elemental
+T,U,2,Signature Spell,,,Spell,,"Level Up — Elemental Mastery
+Draft a signature spell and add it to your hand.",D&D: Icons,,,,Elemental Mastery
+T,U,2,Wizard's Familiar,1,1,Creature,Bird,"Level Up — Signature Spell
+Flying
+Debut: Reduce the cost of a random spell in your hand by 1.",D&D: Icons,,,,Signature Spell
+T,B,3,Gelatinous Cube,3,6,Creature,Ooze Monster,,D&D: Icons,,,,
+T,B,3,Whispers of the Grave,,,Spell,,"For the rest of the game, after a friendly creature dies during your turn, drain 1 from your opponent.",D&D: Icons,,,,
+T,B,3,Sign of Ill Omen,,,Spell,,"Level Up — Whispers of the Grave
+Give an enemy creature -3/-3. If a creature died this turn, give it -5/-5 instead.",D&D: Icons,,,,Whispers of the Grave
+T,B,1,Pactbound Quasit,2,3,Creature,Demon,"Level Up — Sign of Ill Omen
+At the start of your turn, drain 1 from this creature.",D&D: Icons,,,,Sign of Ill Omen
+T,R,4,Indomitable Strength,,,Spell,,"For the rest of the game, after one or more friendly creatures with 5 or more power attacks, deal 5 damage to the opponent.",D&D: Icons,,,,
+T,R,3,Mindless Rage,,,Spell,,"Level Up — Indomitable Strength
+Deal damage to a random enemy creature equal to the power of the strongest friendly creature.",D&D: Icons,,,,Indomitable Strength
+T,R,1,Axe of Vengeance,,,Artifact,,"Level Up — Mindless Rage
+Activate: Give a friendly creature +1/+0 until your next turn.",D&D: Icons,,,3,Mindless Rage
+T,G,8,Wildshape Brontosaurus,8,10,Creature,Dinosaur,"Trample, Ward
+Damage is dealt to this creature instead of you.
+At the start of your turn, heal this for 2.",D&D: Icons,,,,
+T,G,3,Barkhide Growth,,,Spell,,"Level Up — Wildshape Brontosaurus
+Get an empty mana gem and give a random friendly creature +1/+1.",D&D: Icons,,,,Wildshape Brontosaurus
+T,G,2,Wildshape Wolf,3,2,Creature,Beast,"Level Up — Barkhide Growth
+Debut: Heal yourself for 2.",D&D: Icons,,,,Barkhide Growth

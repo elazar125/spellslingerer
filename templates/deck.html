@@ -1,0 +1,129 @@
+{{ define "content" }}
+
+{{ $owner := getValue .Deck "owner" }}
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<span style="grid-area: title">
+  <h1>{{ getValue .Deck "name" }}</h1>
+  <a href="/users/{{ $owner.Id }}">By {{ getValue $owner "display_name" }}</a>
+</span>
+
+<ssrr-deck style="grid-area: deck"></ssrr-deck>
+
+<section style="grid-area: description">
+  <h2>Description</h2>
+  {{ range (split (getValue .Deck "description") "\n") }}
+    <p>{{ . }}</p>
+  {{ end }}
+</section>
+
+<section style="grid-area: code">
+  <div id="code-header" class="flex flex--row">
+    <h2>Import Code</h2>
+    <button id="code-copy-button">Copy</button>
+  </div>
+  <p>{{ getValue .Deck "code" }}</p>
+</section>
+
+<section style="grid-area: charts">
+  <h2>Charts</h2>
+  <div class="grid" style="--grid-min-width: 200px">
+    <ssrr-chart id="ManaCostChart"></ssrr-chart>
+    <ssrr-chart id="CardTypeChart"></ssrr-chart>
+    <ssrr-chart id="RarityChart"></ssrr-chart>
+  </div>
+</section>
+
+{{ if eq $owner.Id .CurrentUser.Id }}
+  <footer>
+    <a href="/decks/{{ .Deck.Id }}/edit" class="button" style="--button-colour: var(--colour-info)">Edit</a>
+  </footer>
+{{ end }}
+
+<script type="module">
+  import SsrrDeck from "/js/ssrr-deck.js"
+  import SsrrChart from "/js/ssrr-chart.js"
+
+  function formatManaCostData(deck) {
+    const result = []
+
+    deck.expand.cards.forEach((c) => {
+      if (!result[c.cost]) result[c.cost] = { label: `${c.cost}`, value: 0, colour: 'rgb(153, 80, 88)' }
+      result[c.cost].value += getQuantity(deck, c.id)
+    })
+
+    // TODO: Fill in gaps in mana cost
+    result.forEach((r, i) => { if(!r) result[i] = { label: `${i}`, value: 0, colour: 'rgb(153, 80, 88)' } })
+
+    return result
+  }
+
+  function formatRarityData(deck) {
+    const result = {
+      Core: { label: 'Core', value: 0, colour: 'rgb(150,150,150)' },
+      Signature: { label: 'Signature', value: 0, colour: 'rgb(187, 172, 41)' },
+      Common: { label: 'Common', value: 0, colour: 'rgb(187,187,187)' },
+      Rare: { label: 'Rare', value: 0, colour: 'rgb(57, 20, 100)' },
+      Epic: { label: 'Epic', value: 0, colour: 'rgb(136, 11, 115)' },
+      Mythic: { label: 'Mythic', value: 0, colour: 'rgb(177, 121, 18)' },
+    }
+
+    deck.expand.cards.forEach((c) => result[c.expand.rarity.name].value += getQuantity(deck, c.id))
+
+    return Object.values(result)
+  }
+
+  function formatCardTypeData(deck) {
+    const result = {
+      Creature: { label: 'Creature', value: 0, colour: 'rgb(126, 76, 36)' },
+      Spell: { label: 'Spell', value: 0, colour: 'rgb(42, 119, 108)' },
+      Trap: { label: 'Trap', value: 0, colour: 'rgb(30, 30, 30)' },
+      Artifact: { label: 'Artifact', value: 0, colour: 'rgb(124, 76, 68)' },
+      Skill: { label: 'Skill', value: 0, colour: 'rgb(215, 122, 73)' },
+    }
+
+    deck.expand.cards.forEach((c) => result[c.expand.type.name].value += getQuantity(deck, c.id))
+
+    return Object.values(result)
+  }
+
+  function getQuantity(deck, cardId) {
+    const card_details = deck.card_details[cardId]
+    return card_details.standard_quantity + card_details.foil_quantity
+  }
+
+  document.querySelector('ssrr-deck').render({{ marshal .Deck }})
+  document.querySelector('#ManaCostChart').render({ type: 'bar', title: 'Mana Cost', data: formatManaCostData({{ marshal .Deck }}) })
+  document.querySelector('#RarityChart').render({ type: 'bar', title: 'Rarity', data: formatRarityData({{ marshal .Deck }}) })
+  document.querySelector('#CardTypeChart').render({type: 'pie', title: 'Card Type',  data: formatCardTypeData({{ marshal .Deck }}) })
+
+  document.querySelector('[style="grid-area: code"] button').addEventListener('click', (e) => {
+    const code = document.querySelector('[style="grid-area: code"] p').textContent
+    navigator.clipboard.writeText(code)
+  })
+</script>
+
+<style>
+  /* TODO: solve grid layout correctly instead of naming a "gap" area */
+  main {
+    grid-template: "title title"
+                   "deck description"
+                   "deck code"
+                   "deck charts"
+                   "deck gap";
+    grid-template-columns: auto 1fr;
+  }
+
+  /* TODO: pick correct size */
+  @media(max-width: 800px) {
+    main {
+      grid-template: "title"
+                     "deck"
+                     "description"
+                     "code"
+                     "charts";
+    }
+  }
+</style>
+{{ end }}

@@ -1,0 +1,99 @@
+{{ define "content" }}
+
+{{ $set := getValue . "set" }}
+{{ $rarity := getValue . "rarity" }}
+{{ $type := getValue . "type" }}
+{{ $colour := getValue . "colour" }}
+{{ $subtype := getValue . "subtype" }}
+{{ $reminders := getValue . "reminders" }}
+
+<h1 style="grid-area: title">{{ getValue . "name" }}</h1>
+
+<section style="grid-area: image">
+  <img src="/images/cards/full_art/{{ getValue . "name" }}.webp" />
+</section>
+
+<section id="card-details" style="grid-area: description">
+  {{ if and (ne (getValue $type "name") "Skill") (ne (getValue $type "name") "Land") }}
+    <h3>Cost</h3>
+    <p>{{ getValue . "cost" }}</p>
+  {{ end }}
+
+  <h3>Colour</h3>
+  <p>{{ range $colour }}{{ getValue . "name" }} {{ end }}</p>
+
+  {{ if ne (getValue . "ability") "" }}
+    <h3>Ability</h3>
+    <span>
+      {{ range (split (getValue . "ability") "\n") }}
+        <p>{{ . }}</p>
+      {{ end }}
+      {{ if $reminders }}
+        <div id="card-reminders">
+          {{ range $reminders }}
+            <p><label>{{ getValue . "name" }}: </label> {{ getValue . "text" }}</p>
+          {{ end }}
+        </div>
+      {{ end }}
+    </span>
+  {{ end }}
+
+  <h3>Types</h3>
+  <p>{{ getValue $type "name" }}{{ if $subtype }} - {{ end }}{{ range $st := $subtype }}{{ getValue $st "name" }} {{ end }}</p>
+
+  {{ if ne (getValue . "chance") 0.0 }}
+    <h3>Chance</h3>
+    <p>{{ getValue . "chance" }}</p>
+  {{ end }}
+
+  {{ if eq (getValue $type "name") "Creature" }}
+    <h3><abbr title="Power / Health">P/H</abbr></h3>
+    <p>{{ getValue . "power" }}/{{ getValue . "health" }}</p>
+  {{ end }}
+
+  {{ if eq (getValue $type "name") "Artifact" }}
+    <h3>Charges</h3>
+    <p>{{ getValue . "charges" }}</p>
+  {{ end }}
+
+  <h3>Rarity</h3>
+  <p>{{ getValue $rarity "name" }}</p>
+
+  <h3>Set</h3>
+  <p>{{ getValue $set "name" }}</p>
+
+  <h3>Artist</h3>
+  <p>{{ getValue . "artist" }}</p>
+
+  {{ if ne (getValue . "legendary") false }}
+    <h3>Additional Tags</h3>
+    <p>Legendary</p>
+  {{ end }}
+
+  {{ if (getValue . "generates") }}
+    <h3>Generates</h3>
+    <span>
+      {{ range (getValue . "generates") }}
+        <a href="/cards/{{ .Id }}"><img alt="{{ getValue . "name" }}" src="/images/cards/text/{{ getValue . "name" }}.webp" /></a>
+      {{ end }}
+    </span>
+  {{ end }}
+</section>
+
+<style>
+  main {
+    grid-template: "title"
+                   "image"
+                   "description";
+  }
+  
+  /* TODO: pick correct size */
+  @media(min-width: 800px) {
+    main {
+      grid-template: "title title"
+                     "image description";
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+</style>
+{{ end }}

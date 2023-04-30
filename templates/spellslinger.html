@@ -1,0 +1,70 @@
+{{ define "content" }}
+
+{{ $colour := getValue . "colour" }}
+{{ $abilities := getValue . "abilities" }}
+{{ $signatures := getValue . "signatures" }}
+
+<h1 style="grid-area: title">{{ getValue . "name" }}</h1>
+
+<section class="spellslinger-tile grid" style="--grid-min-width: 0; grid-area: details">
+  <img class="spellslinger-tile__image" style="grid-area: image" src="/images/spellslingers/{{ getValue . "name" }}.webp" />
+  <h3 style="grid-area: name">{{ getValue . "name" }}</h3>
+  <span style="grid-area: health"><label>Health:</label> {{ getValue . "health" }}</span>
+  <span style="grid-area: colour">{{ range $colour }}{{ getValue . "name" }} {{ end }}</span>
+  <span style="grid-area: ability">
+    {{ range $abilities }}
+      <p><label>{{ getValue . "name" }}:</label> {{ getValue . "ability" }}</p>
+      <span>
+        {{ range (getValue . "generates") }}
+          <a href="/cards/{{ .Id }}"><img alt="{{ getValue . "name" }}" src="/images/cards/text/{{ getValue . "name" }}.webp" /></a>
+        {{ end }}
+      </span>
+    {{ end }}
+  </span>
+  <span class="grid" style="--grid-min-width: 0; grid-area: signatures">
+    {{ range $signatures }}
+      <a href="/cards/{{ .Id }}"><img alt="{{ getValue . "name" }}" src="/images/cards/text/{{ getValue . "name" }}.webp" /></a>
+      {{ range (getValue . "generates") }}
+        <a href="/cards/{{ .Id }}"><img alt="{{ getValue . "name" }}" src="/images/cards/text/{{ getValue . "name" }}.webp" /></a>
+      {{ end }}
+    {{ end }}
+  </span>
+</section>
+
+<ssrr-deck style="grid-area: deck"></ssrr-deck>
+
+<script type="module">
+  import SsrrDeck from "/js/ssrr-deck.js";
+  document.querySelector('ssrr-deck').render({{ marshal (getValue . "starter_deck") }})
+</script>
+
+<style>
+  .spellslinger-tile {
+    grid-template: "image name"
+                   "image health"
+                   "image colour"
+                   "ability ability"
+                   "signatures signatures";
+  }
+
+  main {
+    grid-template: "title"
+                    "details"
+                    "deck";
+  }
+
+  /* TODO: pick correct size */
+  @media(min-width: 800px) {
+    .spellslinger-tile {
+      grid-template: "image name health colour"
+                     "image ability ability ability"
+                     "signatures signatures signatures signatures";
+    }
+
+    main {
+      grid-template: "title title"
+                     "details deck";
+    }
+  }
+</style>
+{{ end }}

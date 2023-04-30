@@ -1,0 +1,46 @@
+Name,Reminder Text
+Activate,Drag out to target. Can be used once during each turn.
+Armor,Blocks incoming damage and breaks.
+Attack,Happens each time the creature attacks.
+Base copy,The card as it appears in the collection.
+Breathe Fire,Deal 3 damage to your opponent and each enemy creature without flying.
+Can't Block,This creature can't block right now.
+Class,You can only include 1 class card in your deck.
+Counter,Something that is countered has no effect.
+Debut,Happens after you play it from hand.
+Disguise,Transforms into a legendary creature but keeps sneak.
+Doom,Destroyed at the start of your next turn.
+Draft,You'll be offered 3 choices.
+Drain,Deal damage and heal yourself.
+Empty,Won't give you mana this turn.
+Finale,Happens after the creature dies.
+Fleeting,Destroyed at the end of your turn.
+Flying,Can only be blocked by creatures with flying or reach.
+Fragile,Can only be used once.
+Fully heal,Heal a creature back to its max health.
+Haste,Can attack the turn you summon it.
+Keywords,"Armor, flying, haste, reach, relentless, sneak, trample and ward."
+Legendary,Limit one per deck.
+Level Up,Add the next card in the sequence to the top 3 cards of your deck.
+Mill,Put the top card of a deck into the graveyard.
+Miracle,Happens the turn it is drawn.
+Moonlight,Flips if you end your turn with 2 available mana.
+Paincast,Deals yourself damage after you play it from hand.
+Permanent Stun,Can't attack or block.
+Rays,"Telekinetic Ray: Add a random blue or red card to your hand and deal 3 damage to your opponent.
+Paralyzing Ray: Return the strongest enemy creature to hand.
+Charm Ray: Reduce the cost of a random card in your hand by 2, and raise the cost of a random card in your opponent's hand by 2.
+Enervation Ray: Steal 1 power from each enemy creature."
+Reach,Can block creatures with flying.
+Relentless,Resummon this with can't block the first time it dies.
+Sealed,Mostly Demons and Devils.
+Sneak,Can't be blocked. Loses sneak after using.
+Spit Fire,Deal 3 damage randomly split among enemies.
+Stoneforged Blade,The creature wielding this gets +2/+0.
+Strongest,Has the most power.
+Stun,Can't attack or block until the end of your next turn.
+Temporary,Discards at the end of your turn.
+Trample,"While attacking, deals excess damage to the opponent."
+Trap,Drag up to arm or disarm. Triggers automatically.
+Upgrade,Could be a stat buff or a keyword.
+Ward,Can't be targeted by your opponent until your next turn.

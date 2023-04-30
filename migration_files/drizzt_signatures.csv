@@ -1,0 +1,11 @@
+Rarity,Color,Cost,Title,Power,Health,Type,SubType,Text,Exp,Legendary,Land Average Percentage to Hit,Charges,Generates,Artist,Reminders
+S,GW,2,Drizzt's Herald,3,2,Creature,Bard,Debut: A friendly creature becomes legendary.,DRI,,,,,Felipe Martini,"Debut;Legendary"
+T,GW,3,Strike with Icingdeath,,,Spell,,Stun an enemy creature and give a friendly creature +2/+0.,DRI,,,,,,
+S,GW,3,Defend with Twinkle,,,Spell,,"Give a friendly creature +0/+2 and ward.
+Add a Strike with Icingdeath to your hand.",DRI,,,,Strike with Icingdeath,Emrah Elmasli,Ward
+S,GW,3,Hero's Call,,,Spell,,Draft a legendary creature and add it to your hand. Reduce its cost by 2.,DRI,,,,,Wayne Wu,Draft
+T,GW,1,Guenhwyvar,0,2,Creature,Beast,"Attack: Gets +1/+0 permanently.
+Can't trigger traps.",DRI,Y,,,,,
+S,GW,,Guenhwyvar's Aid,,,Special,,"After you attack with 1 or more legendary creatures, summon an attacking Guenhwyvar.
+After Guenhwyvar deals damage or dies, she retreats to her figurine.",DRI,,,,Guenhwyvar,,
+S,GW,,Companions of the Hall,,,Deckbuilding,,Your deck can have a total of 6 legendary creatures of any colors.,DRI,,,,,,

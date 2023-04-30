@@ -1,0 +1,17 @@
+Rarity,Color,Cost,Title,Power,Health,Type,SubType,Text,Exp,Legendary,Land Average Percentage to Hit,Charges
+T,R,,War Boar (Haste),,,Skill,,Give haste.,DOM,,,
+T,G,,War Boar (Trample),,,Skill,,Give trample.,DOM,,,
+T,RG,1,War Boar,3,2,Creature,Beast,,DOM,,,
+T,W,3,Gideon,3,3,Creature,Soldier,"Invulnerable
+Can't trigger traps.",GID,,,
+T,WB,2,Sly Spirit,2,1,Creature,Spirit,Sneak,KAY,,,
+T,WB,2,Somber Spirit,2,1,Creature,Spirit,Finale: Drain 2 from your opponent.,KAY,,,
+T,WB,2,Stalwart Spirit,2,1,Creature,Spirit,Debut: Stun an enemy creature.,KAY,,,
+T,GU,1,Fish,0,1,Creature,Beast,,KIO,,,
+T,GU,10,Arixmethes,10,10,Creature,Leviathan,"Reach, Sneak, Ward
+Can't be countered.",KIO,Y,,
+T,GU,10,Tidemaker Lorthos,8,8,Creature,Leviathan,"Trample
+Debut: Give friendly creatures +1/+1 eight times at random.",KIO,Y,,
+T,GU,10,"Tini, Puffed Doom",7,7,Creature,Leviathan,Debut: Return 2 enemy creatures to your opponent's hand.,KIO,Y,,
+T,UR,3,Mizzium Monstrosity,3,3,Creature,Elemental,"After you play a spell, gets +2/+0 or +0/+2 at random.",RAL,,,
+T,C,1,Statue,2,2,Creature,Construct,Can't Attack,Opening Ceremony,,,

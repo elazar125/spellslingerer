@@ -1,0 +1,134 @@
+package router
+
+import (
+	"net/http"
+	"os"
+	"strconv"
+
+	"spellslingerer.com/m/v2/authxtns"
+
+	"github.com/labstack/echo/v5"
+	"github.com/pocketbase/pocketbase/apis"
+	"github.com/pocketbase/pocketbase/daos"
+	"github.com/pocketbase/pocketbase/models"
+	"github.com/pocketbase/pocketbase/models/settings"
+)
+
+func BindRoutes(router *echo.Echo, dao *daos.Dao, settings *settings.Settings) {
+	router.GET("/", func(c echo.Context) error {
+		return c.Render(http.StatusOK, c.Path(), DefaultViewData(c, settings))
+	})
+
+	router.GET("/login", func(c echo.Context) error {
+		return c.Render(http.StatusOK, c.Path(), DefaultViewData(c, settings))
+	}, RequireGuestOnly())
+
+	router.GET("/signup", func(c echo.Context) error {
+		return c.Render(http.StatusOK, c.Path(), DefaultViewData(c, settings))
+	}, RequireGuestOnly())
+
+	router.GET("/forgot-password", func(c echo.Context) error {
+		return c.Render(http.StatusOK, c.Path(), DefaultViewData(c, settings))
+	}, RequireGuestOnly())
+
+	router.GET("/profile", func(c echo.Context) error {
+		if vd, err := LoadCurrentUser(c, dao, settings, nil); err != nil {
+			return err
+		} else {
+			return c.Render(http.StatusOK, c.Path(), vd)
+		}
+	}, RequireRecordAuth())
+
+	router.GET("/logout", func(c echo.Context) error {
+		return authxtns.SetInvalidCookie(c, settings)
+	}, RequireRecordAuth())
+
+	router.GET("/cards", func(c echo.Context) error {
+		return c.Render(http.StatusOK, c.Path(), DefaultViewData(c, settings))
+	})
+
+	router.GET("/cards/:id", func(c echo.Context) error {
+		if vd, err := LoadCard(c, dao, settings); err != nil {
+			return err
+		} else {
+			return c.Render(http.StatusOK, c.Path(), vd)
+		}
+	})
+
+	router.GET("/spellslingers", func(c echo.Context) error {
+		if vd, err := LoadSpellslingers(c, dao, settings); err != nil {
+			return err
+		} else {
+			return c.Render(http.StatusOK, c.Path(), vd)
+		}
+	})
+
+	router.GET("/spellslingers/:id", func(c echo.Context) error {
+		if vd, err := LoadSpellslinger(c, dao, settings); err != nil {
+			return err
+		} else {
+			return c.Render(http.StatusOK, c.Path(), vd)
+		}
+	})
+
+	router.GET("/decks", func(c echo.Context) error {
+		vd := DefaultViewData(c, settings)
+		vd.Content = DeckListPageData{
+			Title:  "Deck Search",
+			Filter: "",
+		}
+		return c.Render(http.StatusOK, c.Path(), vd)
+	})
+
+	router.GET("/decks/:id", func(c echo.Context) error {
+		if vd, err := LoadDeck(c, dao, settings); err != nil {
+			return err
+		} else {
+			return c.Render(http.StatusOK, c.Path(), vd)
+		}
+	})
+
+	router.GET("/decks/new", func(c echo.Context) error {
+		if vd, err := LoadEmptyDeck(c, dao, settings); err != nil {
+			return err
+		} else {
+			return c.Render(http.StatusOK, c.Path(), vd)
+		}
+	})
+
+	router.GET("/my-decks", func(c echo.Context) error {
+		vd := DefaultViewData(c, settings)
+		vd.Content = DeckListPageData{
+			Title:  "My Decks",
+			Filter: "this.defaultFilter = `owner = '${client.authStore.model.id}'`",
+		}
+		return c.Render(http.StatusOK, c.Path(), vd)
+	}, RequireRecordAuth())
+
+	router.GET("/decks/:id/edit", func(c echo.Context) error {
+		currentUser := c.Get(apis.ContextAuthRecordKey).(*models.Record)
+		vd, err := LoadEditDeck(c, dao, settings)
+		if err != nil {
+			return err
+		} else if currentUser.Id != vd.Content.(EditDeckPageData).Deck.GetString("owner") {
+			return c.Render(http.StatusForbidden, strconv.Itoa(http.StatusForbidden), DefaultViewData(c, settings))
+		} else {
+			return c.Render(http.StatusOK, c.Path(), vd)
+		}
+	}, RequireRecordAuth())
+
+	router.GET("/users/:userid", func(c echo.Context) error {
+		if vd, err := LoadUser(c, dao, settings, nil); err != nil {
+			return err
+		} else {
+			return c.Render(http.StatusOK, c.Path(), vd)
+		}
+	})
+
+	router.GET("/integrations", func(c echo.Context) error {
+		return c.Render(http.StatusOK, c.Path(), DefaultViewData(c, settings))
+	})
+
+	router.GET("/*", apis.StaticDirectoryHandler(os.DirFS("./pb_public"), false))
+
+}

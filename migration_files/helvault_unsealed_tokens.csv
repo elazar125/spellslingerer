@@ -1,0 +1,27 @@
+Legendary,Reminders,Rarity,Title,Color,Cost,Charges,Power,SubType,Text,Health,Type,Exp,Land Average Percentage to Hit,Artist,Generates
+,"Finale;Can't Block",R,Gutfire Devil,R,2,,2,Devil,"Can't Block
+Finale: Add 2 Gutfire Devils to your deck. Deal 1 damage to your opponent for each Gutfire Devil in your graveyard.",1,Creature,Helvault Unsealed,,Zoltan Boros,
+,Paincast,R,Poisoned Veins,B,2,,,,"Until your next turn, cards your opponent plays have paincast 2.",,Spell,Helvault Unsealed,,Zoltan Boros,
+,,T,Angel,W,4,,4,Angel,Flying,3,Creature,Helvault Unsealed,,Mushk Rizvi,
+,,T,Insectile Aberration,U,2,,2,Monster,Flying,2,Creature,Helvault Unsealed,,Arthur Bozonnet,
+,,T,Awoken Horror,U,4,,6,Monster,"After this flips, stun the strongest enemy creature.",5,Creature,Helvault Unsealed,,Kudaman,
+,,T,Demonic Priest,B,2,,2,Demon,"After this deals damage, heal yourself for that much.",2,Creature,Helvault Unsealed,,Emrah Elmasli,
+,,T,Stitcher's Skaab,B,2,,2,Zombie,,2,Creature,Helvault Unsealed,,Emrah Elmasli,
+,,T,Corrupted Cathar,B,4,,2,Zombie Soldier,Relentless,2,Creature,Helvault Unsealed,,Room 8 Studio,
+,,T,Profane Palace,B,,,,,"After this flips, add a Demonic Priest to your hand.
+Each turn you have a chance to add a Demonic Priest to your hand instead of getting a mana gem.",,Land,Helvault Unsealed,30,Yangtian Li,Demonic Priest
+,,T,Emberling,R,1,,2,Elemental,"Haste
+Fleeting",1,Creature,Helvault Unsealed,,John Thacker,
+,,T,Moon Howler,R,1,,4,Werewolf,,3,Creature,Helvault Unsealed,,Maria Poliakova,
+,,T,Furious Brute,R,2,,5,Monster,,3,Creature,Helvault Unsealed,,Emrah Elmasli,
+,,T,Gatstaf Plunderers,R,3,,5,Werewolf,"After this flips, get a fragile mana gem.",1,Creature,Helvault Unsealed,,Alex Heath,
+,,T,Fangblade Eviscerator,R,4,,5,Werewolf,"After this flips, deal 2 damage to each non-Werewolf creature.",4,Creature,Helvault Unsealed,,Gabor Szikszai,
+,,T,Sheep,G,1,,1,Beast,,1,Creature,Helvault Unsealed,,Room 8 Studio,
+,,T,Estwald Prowler,G,2,,3,Werewolf,Sneak,3,Creature,Helvault Unsealed,,Maria Poliakova,
+,,T,Hungry Bear,G,2,,3,Beast,,2,Creature,Helvault Unsealed,,Karina Khoroshaylo (Room 8),
+,,T,Protector of the Meek,G,3,,4,Werewolf,"After this flips, heal yourself for 2 for each friendly Sheep.",4,Creature,Helvault Unsealed,,Ani Larmina (Room 8),
+,,T,Nightfall Predator,G,4,,5,Werewolf,"Reach
+After this flips, deal damage to the marked creature equal to this creature's power.",4,Creature,Helvault Unsealed,,Thomas Chamberlain-Keen,
+Y,,T,Ulrich the Huntmaster,RG,5,,6,Werewolf,"Trample
+After this flips, give a random upgrade to each friendly creature.",6,Creature,Helvault Unsealed,,Zoltan Boros,
+,,T,Haunted Armor,C,3,,3,Construct,"Haste, Fleeting",3,Creature,Helvault Unsealed,,Brian Valeza,

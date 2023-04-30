@@ -1,0 +1,20 @@
+{{ define "content" }}
+<h1>Integrations</h1>
+<h2>Deck Widget</h2>
+<p>To display an interactive deck on your website, you can import the "ssrr-deck" custom element and embed it in your page.</p>
+<p>You'll need to:</p>
+<ul>
+  <li>Import the javascript file</li>
+  <li>Upload your deck to this site</li>
+  <li>Copy your deck's ID from the page's URL (this part: <code>https://spellslingerer.com/decks/<mark>idcy0cz6xapt580</mark></code>)</li>
+  <li>Embed the <code>&lt;ssrr-deck deck="YOUR DECK ID"&gt;&lt;/ssrr-deck&gt;</code> tag in your page</li>
+  <li>Add the <code>display-code</code> attribute if you want to display the deck's import code</li>
+</ul>
+<p>The code to do so is as follows:</p>
+<pre><code>&lt;script type="module" src="https://spellslingerer.com/js/ssrr-deck.js"&gt;&lt;/script&gt;
+&lt;ssrr-deck deck="idcy0cz6xapt580" display-code&gt;&lt;/ssrr-deck&gt;</code></pre>
+<p>And it will result in the following:</p>
+<script type="module" src="https://spellslingerer.com/js/ssrr-deck.js"></script>
+<ssrr-deck deck="idcy0cz6xapt580" display-code></ssrr-deck>
+<h2>More documentation to come...</h2>
+{{ end }}

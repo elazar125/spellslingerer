@@ -1,0 +1,7 @@
+Rarity,Color,Cost,Title,Power,Health,Type,SubType,Text,Exp,Legendary,Land Average Percentage to Hit,Charges,Generates,Artist,Reminders
+S,W,2,Serra's Disciple,2,2,Creature,Cleric,Debut: Add a random Angel to your hand.,SER,,,,,Maria Poliakova,Debut
+S,W,3,Serra's Judgment,,,Spell,,Give an enemy creature can't attack.,SER,,,,,David Cserkuti,
+T,W,5,Serra Angel,4,4,Creature,Angel,Flying,SER,,,,,,
+S,W,4,Shrine of Valor,,,Artifact,,Activate: Summon a Knight. The next charge summons a Serra Angel.,SER,,,2,"Knight;Serra Angel",Karina Khoroshaylo (Room 8),Activate
+S,W,,Ascension,,,Special,,"At the start of your turn, heal yourself and all friendly creatures 1.",SER,,,,,,
+S,W,,Divinity,,,Deckbuilding,,Your deck can have white multicolored cards.,SER,,,,,,
