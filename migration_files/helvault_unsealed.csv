@@ -87,7 +87,7 @@ Miracle: Costs 3 less this turn.",,Spell,Helvault Unsealed,,Brian Valeza,
 ,Finale,R,Plague Hauler,B,5,,5,Zombie,"Finale: If it's your turn, give each enemy creature -1/-1.",3,Creature,Helvault Unsealed,,Anastasia Shevchenko (Room 8),
 ,Finale,R,Dodge Death,B,2,,,,Trigger a friendly creature's Finales.,,Spell,Helvault Unsealed,,Emrah Elmasli,
 ,Strongest,R,Rival Revival,B,4,,,,Summon the strongest creature in your opponent's graveyard.,,Spell,Helvault Unsealed,,Room 8 Studio,
-,"Activate;Mill",R,Corpse Conveyor,B,3,2,,,Activate: Mill the top creature from your deck and summon a Zombie.,,Artifact,Helvault Unsealed,,Brian Valeza,Zombie
+,"Activate;Mill",R,Corpse Conveyer,B,3,2,,,Activate: Mill the top creature from your deck and summon a Zombie.,,Artifact,Helvault Unsealed,,Brian Valeza,Zombie
 ,"Finale;Base copy",E,Necrotic Ooze,B,4,,5,Ooze Monster,"While in hand, marks a creature in your graveyard each turn.
 Finale: Add a base copy of the marked creature to your hand.",3,Creature,Helvault Unsealed,,John Thacker,
 ,"Attack;Drain;Miracle",E,Persecutor Demon,B,7,,6,Demon,"Attack: Drain 2 from the enemy with the least health.

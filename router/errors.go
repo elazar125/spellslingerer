@@ -7,12 +7,11 @@ import (
 	"strconv"
 
 	"github.com/labstack/echo/v5"
-	"github.com/pocketbase/pocketbase"
 	"github.com/pocketbase/pocketbase/apis"
 	"github.com/pocketbase/pocketbase/core"
 )
 
-func GetErrorHandler(app *pocketbase.PocketBase) echo.HTTPErrorHandler {
+func GetErrorHandler(app core.App) echo.HTTPErrorHandler {
 	return func(c echo.Context, err error) {
 		if c.Response().Committed {
 			return

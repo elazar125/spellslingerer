@@ -43,7 +43,7 @@ done
 
 
 build_deploy_binary() {
-  env GOOS=linux go build -o dist/spellslingerer.new
+  env CGO_ENABLED=0 GOOS=linux go build -o dist/spellslingerer.new
   scp dist/spellslingerer.new spellslingerer:~/spellslingerer
   ssh spellslingerer -t "
     systemctl stop spellslingerer

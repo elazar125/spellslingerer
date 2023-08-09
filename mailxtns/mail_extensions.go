@@ -12,7 +12,7 @@ import (
 	"github.com/sendgrid/sendgrid-go/helpers/mail"
 )
 
-func BindMailEvents(app core.App) error {
+func BindMailEvents(app core.App) {
 	app.OnMailerBeforeAdminResetPasswordSend().Add(func(e *core.MailerAdminEvent) error {
 		if err := sendMail(*e.Message); err != nil {
 			return err
@@ -37,8 +37,6 @@ func BindMailEvents(app core.App) error {
 		}
 		return hook.StopPropagation
 	})
-
-	return nil
 }
 
 func sendMail(pbMessage mailer.Message) error {

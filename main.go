@@ -4,8 +4,7 @@ import (
 	"log"
 
 	"spellslingerer.com/m/v2/authxtns"
-	"spellslingerer.com/m/v2/config"
-	"spellslingerer.com/m/v2/deck_hooks"
+	"spellslingerer.com/m/v2/hooks"
 	"spellslingerer.com/m/v2/mailxtns"
 	"spellslingerer.com/m/v2/router"
 
@@ -24,31 +23,25 @@ func main() {
 		log.Fatal("Error loading .env file")
 	}
 
-	if err := config.LoadSettings(app); err != nil {
-		log.Fatal(err)
-	}
+	migratecmd.MustRegister(app, app.RootCmd, migratecmd.Config{Automigrate: false})
 
-	migratecmd.MustRegister(app, app.RootCmd, &migratecmd.Options{Automigrate: false})
+	hooks.PreventSettingsChanges(app)
 
 	app.OnRecordAuthRequest().Add(authxtns.SetValidCookieHandler(app.Settings()))
 
-	if err := mailxtns.BindMailEvents(app); err != nil {
-		log.Fatal(err)
-	}
-
-	deck_hooks.BindDeckValidation(app)
-	deck_hooks.BindDeckCodeHooks(app)
+	mailxtns.BindMailEvents(app)
+	hooks.BindDeckHooks(app)
 
 	app.OnBeforeServe().Add(func(e *core.ServeEvent) error {
-		e.Router.HTTPErrorHandler = router.GetErrorHandler(app)
+		e.Router.HTTPErrorHandler = router.GetErrorHandler(e.App)
 
 		e.Router.Renderer = &router.TemplateRegistry{
 			Templates: router.LoadTemplates(),
 		}
 
-		e.Router.Pre(authxtns.LoadCookieContext(app))
+		e.Router.Pre(authxtns.LoadCookieContext(e.App))
 
-		router.BindRoutes(e.Router, app.Dao(), app.Settings())
+		router.BindRoutes(e.App, e.Router)
 
 		return nil
 	})

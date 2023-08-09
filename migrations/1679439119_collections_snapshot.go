@@ -239,7 +239,7 @@ func init() {
 						"name": "seismic_id",
 						"type": "text",
 						"required": false,
-						"unique": true,
+						"unique": false,
 						"options": {
 							"min": null,
 							"max": null,

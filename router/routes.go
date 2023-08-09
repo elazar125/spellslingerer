@@ -1,20 +1,24 @@
 package router
 
 import (
+	"fmt"
 	"net/http"
 	"os"
 	"strconv"
 
 	"spellslingerer.com/m/v2/authxtns"
+	m "spellslingerer.com/m/v2/models"
 
 	"github.com/labstack/echo/v5"
 	"github.com/pocketbase/pocketbase/apis"
-	"github.com/pocketbase/pocketbase/daos"
+	"github.com/pocketbase/pocketbase/core"
 	"github.com/pocketbase/pocketbase/models"
-	"github.com/pocketbase/pocketbase/models/settings"
 )
 
-func BindRoutes(router *echo.Echo, dao *daos.Dao, settings *settings.Settings) {
+func BindRoutes(app core.App, router *echo.Echo) {
+	dao := app.Dao()
+	settings := app.Settings()
+
 	router.GET("/", func(c echo.Context) error {
 		return c.Render(http.StatusOK, c.Path(), DefaultViewData(c, settings))
 	})
@@ -96,6 +100,16 @@ func BindRoutes(router *echo.Echo, dao *daos.Dao, settings *settings.Settings) {
 		}
 	})
 
+	router.POST("/decks/import", func(c echo.Context) error {
+		code := c.FormValue("code")
+		currentUser := c.Get(apis.ContextAuthRecordKey).(*models.Record)
+		deckId, err := m.ImportDeckByCode(app, code, currentUser.Id)
+		if err != nil {
+			return err
+		}
+		return c.Redirect(http.StatusSeeOther, fmt.Sprintf("/decks/%s/edit", deckId))
+	}, RequireRecordAuth())
+
 	router.GET("/my-decks", func(c echo.Context) error {
 		vd := DefaultViewData(c, settings)
 		vd.Content = DeckListPageData{
@@ -130,5 +144,4 @@ func BindRoutes(router *echo.Echo, dao *daos.Dao, settings *settings.Settings) {
 	})
 
 	router.GET("/*", apis.StaticDirectoryHandler(os.DirFS("./pb_public"), false))
-
 }
