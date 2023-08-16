@@ -33,7 +33,7 @@ class SsrrDeck extends HTMLElement {
     }
   }
   
-  #parseUrl(url) {
+  #parseUrl(inputUrl) {
     const inputPattern = /^(?<domain>[a-zA-Z0-9:./]+)\/decks\/(?<deckid>[a-zA-Z0-9]{15})$/
     const matchGroups = inputUrl.match(inputPattern)?.groups
     return {
@@ -66,7 +66,7 @@ class SsrrDeck extends HTMLElement {
     })
     if(this.hasAttribute('display-code')) {
       this.code.innerHTML = this.#renderCode(deck)
-      this.code.querySelector('button').addEventListener('click', (e) => {
+      this.code.querySelector('button').addEventListener('click', () => {
         const code = this.code.querySelector('p').textContent
         navigator.clipboard.writeText(code)
       })
