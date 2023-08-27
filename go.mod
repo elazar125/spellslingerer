@@ -6,8 +6,8 @@ require (
 	github.com/go-ozzo/ozzo-validation/v4 v4.3.0
 	github.com/joho/godotenv v1.4.0
 	github.com/labstack/echo/v5 v5.0.0-20230722203903-ec5b858dab61
-	github.com/pocketbase/dbx v1.10.0
-	github.com/pocketbase/pocketbase v0.17.5
+	github.com/pocketbase/dbx v1.10.1
+	github.com/pocketbase/pocketbase v0.17.7
 	github.com/sendgrid/sendgrid-go v3.12.0+incompatible
 	github.com/spf13/cast v1.5.1
 )

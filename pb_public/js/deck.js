@@ -11,6 +11,7 @@ class Deck {
     deckDescription,
     isPublic,
     currentCount,
+    cardList,
   ) {
     this.deck = JSON.parse(JSON.stringify(originalDeck))
     this.originalDeck = JSON.parse(JSON.stringify(originalDeck))
@@ -18,6 +19,9 @@ class Deck {
     if (!this.deck.card_details) this.deck.card_details = {}
     if (!this.deck.cards) this.deck.cards = []
     if (!this.deck.expand.cards) this.deck.expand.cards = []
+    if (!this.deck.expand.spellslinger) this.deck.expand.spellslinger = {}
+    if (!this.deck.expand.spellslinger.expand) this.deck.expand.spellslinger.expand = {}
+    if (!this.deck.expand.spellslinger.expand.colour) this.deck.expand.spellslinger.expand.colour = []
     this.ssrrDeck = ssrrDeck
     this.manaCostChart = manaCostChart
     this.rarityChart = rarityChart
@@ -26,22 +30,38 @@ class Deck {
     this.deckDescription = deckDescription
     this.isPublic = isPublic
     this.currentCount = currentCount
+    this.cardList = cardList
+    this.#initCardList()
     this.#render()
   }
 
   #render() {
-    this.ssrrDeck.render(this.deck)
-    this.manaCostChart.render({ type: 'bar', title: 'Mana Cost', data: this.#formatManaCostData(this.deck) })
-    this.rarityChart.render({ type: 'bar', title: 'Rarity', data: this.#formatRarityData(this.deck) })
-    this.cardTypeChart.render({ type: 'pie', title: 'Card Type', data: this.#formatCardTypeData(this.deck) })
+    this.ssrrDeck.forEach((deck) => deck.render(this.deck))
+    this.manaCostChart.forEach((chart) => chart.render({ type: 'bar', title: 'Mana Cost', data: this.#formatManaCostData() }))
+    this.rarityChart.forEach((chart) => chart.render({ type: 'bar', title: 'Rarity', data: this.#formatRarityData() }))
+    this.cardTypeChart.forEach((chart) => chart.render({ type: 'pie', title: 'Card Type', data: this.#formatCardTypeData() }))
     this.deckTitle.value = this.deck.name
     this.deckDescription.value = this.deck.description
     this.isPublic.checked = this.deck.is_public
   }
 
+  #initCardList() {
+    this.cardList.addCardCallback = this.addCard.bind(this)
+    this.cardList.removeCardCallback = this.removeCard.bind(this)
+    this.cardList.setSpellslinger = JSON.stringify(this.deck.expand.spellslinger)
+    if (this.canSetSplash()) {
+      this.cardList.setSplash = JSON.stringify(this.deck.expand.splash)
+    }
+    this.cardList.initLoader()
+  }
+
   setName(name) {
     this.deck.name = name
     this.#render()
+  }
+
+  getName() {
+    return this.deck.name
   }
 
   setDescription(description) {
@@ -77,11 +97,16 @@ class Deck {
   }
  
   setSplash(data) {
-    if (data === '') return
-    const splash = JSON.parse(data)
-  
-    this.deck.splash = splash.id
-    this.deck.expand.splash = splash
+    if (data === '') {
+      this.deck.splash = ''
+      delete this.deck.expand.splash
+    }
+    else {
+      const splash = JSON.parse(data)
+
+      this.deck.splash = splash.id
+      this.deck.expand.splash = splash
+    }
     this.#render()
   }
 
@@ -198,7 +223,7 @@ class Deck {
     }
   }
   
-  #formatManaCostData(deck) {
+  #formatManaCostData() {
     const result = []
 
     this.deck.expand.cards.forEach((c) => {
@@ -211,7 +236,7 @@ class Deck {
     return result
   }
 
-  #formatRarityData(deck) {
+  #formatRarityData() {
     const result = {
       core: { label: 'Core', value: 0, colour: 'rgb(150,150,150)' },
       signature: { label: 'Signature', value: 0, colour: 'rgb(187, 172, 41)' },
@@ -226,7 +251,7 @@ class Deck {
     return Object.values(result)
   }
 
-  #formatCardTypeData(deck) {
+  #formatCardTypeData() {
     const result = {
       creature: { label: 'Creature', value: 0, colour: 'rgb(126, 76, 36)' },
       spell: { label: 'Spell', value: 0, colour: 'rgb(42, 119, 108)' },

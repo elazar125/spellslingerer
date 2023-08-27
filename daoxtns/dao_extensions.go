@@ -101,6 +101,7 @@ func LoadDeckById(dao *daos.Dao, id string) (*models.Record, error) {
 		"land",
 		"land.set",
 		"spellslinger",
+		"spellslinger.colour",
 		"splash",
 		"owner",
 	}

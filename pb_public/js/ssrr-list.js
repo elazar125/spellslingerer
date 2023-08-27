@@ -10,7 +10,7 @@ class SsrrList extends HTMLElement {
   #recordType = ''
   #options = {}
   #defaultFilter = null
-	#filterHtml = {}
+  #filterHtml = {}
   #sortOptions ={}
 
   constructor() {
@@ -21,7 +21,7 @@ class SsrrList extends HTMLElement {
     if (this.#recordType !== '') {
       this.initLoader()
     }
-	}
+  }
 
   set recordType(value) {
     this.#recordType = value
@@ -50,21 +50,21 @@ class SsrrList extends HTMLElement {
 
   #initDom() {
     const shadow = this.attachShadow({ mode: 'open' })
-		const wrapper = document.createElement('section')
-		const details = document.createElement('details')
-		const summary = document.createElement('summary')
-		summary.innerText = 'Filter and Sort Options'
-		const form = document.createElement('form')
+    const wrapper = document.createElement('section')
+    const details = document.createElement('details')
+    const summary = document.createElement('summary')
+    summary.innerText = 'Filter and Sort Options'
+    const form = document.createElement('form')
 
     const filterWrapper = document.createElement('div')
-		this.#filterFields = document.createElement('div')
-		this.#filterFields.classList.add('grid')
-		this.#filterFields.id = 'filter-fields'
-		this.#filterFields.style = '--grid-min-width: 25ch'
+    this.#filterFields = document.createElement('div')
+    this.#filterFields.classList.add('grid')
+    this.#filterFields.id = 'filter-fields'
+    this.#filterFields.style = '--grid-min-width: 25ch'
     const filterTitleWrapper = document.createElement('div')
     filterTitleWrapper.classList.add('flex-apart')
-		const filterTitle = document.createElement('h2')
-		filterTitle.innerText = 'Filter'
+    const filterTitle = document.createElement('h2')
+    filterTitle.innerText = 'Filter'
     const addFilterForm = document.createElement('form')
     addFilterForm.classList.add('flex')
     this.#addFilterSelect = document.createElement('select')
@@ -79,18 +79,18 @@ class SsrrList extends HTMLElement {
     addFilterForm.appendChild(addFilterButton)
     filterTitleWrapper.appendChild(filterTitle)
     filterTitleWrapper.appendChild(addFilterForm)
-		filterWrapper.appendChild(filterTitleWrapper)
+    filterWrapper.appendChild(filterTitleWrapper)
     filterWrapper.appendChild(this.#filterFields)
 
     const sortWrapper = document.createElement('div')
-		this.#sortFields = document.createElement('div')
-		this.#sortFields.classList.add('grid')
-		this.#sortFields.id = 'sort-fields'
-		this.#sortFields.style = '--grid-min-width: 25ch'
+    this.#sortFields = document.createElement('div')
+    this.#sortFields.classList.add('grid')
+    this.#sortFields.id = 'sort-fields'
+    this.#sortFields.style = '--grid-min-width: 25ch'
     const sortTitleWrapper = document.createElement('div')
     sortTitleWrapper.classList.add('flex-apart')
-		const sortTitle = document.createElement('h2')
-		sortTitle.innerText = 'Sort'
+    const sortTitle = document.createElement('h2')
+    sortTitle.innerText = 'Sort'
     const addSortForm = document.createElement('form')
     addSortForm.classList.add('flex')
     const addSortButton = document.createElement('button')
@@ -101,35 +101,35 @@ class SsrrList extends HTMLElement {
     addSortForm.appendChild(addSortButton)
     sortTitleWrapper.appendChild(sortTitle)
     sortTitleWrapper.appendChild(addSortForm)
-		sortWrapper.appendChild(sortTitleWrapper)
+    sortWrapper.appendChild(sortTitleWrapper)
     sortWrapper.appendChild(this.#sortFields)
 
-		const formControls = document.createElement('div')
-		formControls.classList.add('flex')
-		const submitButton = document.createElement('button')
-		submitButton.type = 'submit'
-		submitButton.innerText = 'Search'
-		const resetButton = document.createElement('button')
-		resetButton.type = 'reset'
-		resetButton.innerText = 'Reset'
-		formControls.appendChild(submitButton)
-		formControls.appendChild(resetButton)
+    const formControls = document.createElement('div')
+    formControls.classList.add('flex')
+    const submitButton = document.createElement('button')
+    submitButton.type = 'submit'
+    submitButton.innerText = 'Search'
+    const resetButton = document.createElement('button')
+    resetButton.type = 'reset'
+    resetButton.innerText = 'Reset'
+    formControls.appendChild(submitButton)
+    formControls.appendChild(resetButton)
 
     this.#list = document.createElement('section')
     this.#list.classList.add('grid')
-		this.#list.style = '--grid-min-width: 150px'
+    this.#list.style = '--grid-min-width: 140px'
 
     const style = document.createElement('style')
     style.innerHTML = this.#getStyle()
 
-		form.appendChild(filterWrapper)
-		form.appendChild(sortWrapper)
-		form.appendChild(formControls)
-		details.appendChild(summary)
-		details.appendChild(form)
-		wrapper.appendChild(details)
+    form.appendChild(filterWrapper)
+    form.appendChild(sortWrapper)
+    form.appendChild(formControls)
+    details.appendChild(summary)
+    details.appendChild(form)
+    wrapper.appendChild(details)
     wrapper.appendChild(style)
-		shadow.appendChild(wrapper)
+    shadow.appendChild(wrapper)
     shadow.appendChild(this.#list)
 
     form.addEventListener('submit', async (e) => {
@@ -138,7 +138,7 @@ class SsrrList extends HTMLElement {
     })
   }
 
-	addFilter(name) {
+  addFilter(name) {
     const filterWrapper = document.createElement('div')
     filterWrapper.classList.add('input-wrapper')
     const removeButton = document.createElement('button')
@@ -148,10 +148,11 @@ class SsrrList extends HTMLElement {
     removeButton.addEventListener('click', () => this.#filterFields.removeChild(filterWrapper))
     filterWrapper.innerHTML = this.#filterHtml[name]
     filterWrapper.appendChild(removeButton)
-		this.#filterFields.appendChild(filterWrapper)
-	}
+    this.#filterFields.appendChild(filterWrapper)
+    return filterWrapper
+  }
 
-	addSort(initialValue, initialDir){
+  addSort(initialValue, initialDir){
     const count = this.#sortFields.childElementCount
     const sortWrapper = document.createElement('div')
     sortWrapper.classList.add('input-group', 'input-wrapper')
@@ -161,9 +162,9 @@ class SsrrList extends HTMLElement {
     removeButton.classList.add('small-button', 'remove-button')
     removeButton.addEventListener('click', () => this.#sortFields.removeChild(sortWrapper))
     sortWrapper.innerHTML = `
-	    <label for="prop${count}">Property</label>
-	    <select id="prop${count}" data-main-input>
-	      <option value="">Unset</option>
+      <label for="prop${count}">Property</label>
+      <select id="prop${count}" data-main-input>
+        <option value="">Unset</option>
         ${
           Object.entries(this.#sortOptions)
             .map(([name, value]) => {
@@ -171,17 +172,18 @@ class SsrrList extends HTMLElement {
             })
             .join()
         }
-	    </select>
-	    <div>
-	      <label for="dir${count}">Direction</label>
-	      <select id="dir${count}" data-opcode>
-	        <option value="+" ${initialDir === 'asc' ? 'selected' : ''}>Ascending</option>
-	        <option value="-" ${initialDir === 'desc' ? 'selected' : ''}>Descending</option>
-	      </select>
-	    </div>
-  	`
+      </select>
+      <div>
+        <label for="dir${count}">Direction</label>
+        <select id="dir${count}" data-opcode>
+          <option value="+" ${initialDir === 'asc' ? 'selected' : ''}>Ascending</option>
+          <option value="-" ${initialDir === 'desc' ? 'selected' : ''}>Descending</option>
+        </select>
+      </div>
+    `
     sortWrapper.appendChild(removeButton)
     this.#sortFields.appendChild(sortWrapper)
+    return sortWrapper
   }
 
   #loadFilter() { }
@@ -560,7 +562,6 @@ button.remove-button:hover {
 form {
   display: grid;
   gap: var(--gutter);
-  padding: var(--control-padding);
 }
 
 @media(min-width: 800px) {

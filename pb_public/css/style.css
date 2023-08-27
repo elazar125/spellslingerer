@@ -43,6 +43,12 @@
   --colour-warning: hsl(39, 86%, 36%);
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 a {
   color: #8cacff;
 }
@@ -52,12 +58,26 @@ body {
   height: 100vh;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   margin: 0;
 }
 
 [hidden] {
-  display: none;
+  display: none !important;
+}
+
+@media (max-width: 800px) {
+  [display-desktop] {
+    display: none !important;
+  }
+}
+
+@media (min-width: 800px) {
+  [display-mobile] {
+    display: none !important;
+  }
 }
 
 header {
@@ -77,11 +97,11 @@ header img {
   padding: 5px var(--gutter);
   padding-inline: var(--gutter);
   padding-block: 5px;
-  height: 50px;
+  height: var(--header-size);
   filter: drop-shadow(3px 3px 5px rgb(0 0 0 / 0.4));
 }
 
-header > a[href="/"] {
+header>a[href="/"] {
   margin-right: auto;
   margin-inline-end: auto;
 }
@@ -110,7 +130,7 @@ nav[data-expanded="true"] {
   width: var(--menu-size);
 }
 
-nav > a:first-child {
+nav>a:first-child {
   margin-top: calc(1.5 * var(--header-size));
 }
 
@@ -158,25 +178,26 @@ nav .socials svg {
 
 main {
   display: grid;
-  padding: var(--gutter); /* calc(2 * var(--gutter)); */
+  padding: var(--gutter);
+  /* calc(2 * var(--gutter)); */
   gap: var(--gutter);
   margin-top: var(--header-size);
   transition: margin-left 250ms ease-in-out;
 }
 
-nav[data-expanded="false"] + main {
+nav[data-expanded="false"]+main {
   margin-left: 0;
 }
 
-nav[data-expanded="true"] + main {
+nav[data-expanded="true"]+main {
   margin-left: var(--menu-size);
 }
 
 @media(max-width: 800px) {
-  nav[data-expanded="true"] + main {
+  nav[data-expanded="true"]+main {
     margin-left: 0;
   }
-  
+
   nav[data-expanded="true"] {
     box-shadow: 0 0 100vw 100vw rgb(0 0 0 / 0.4);
   }
@@ -185,15 +206,15 @@ nav[data-expanded="true"] + main {
     z-index: 3;
     position: fixed;
   }
-  
+
   header {
     z-index: 4;
   }
-  
+
   header .auth {
     display: none;
   }
-  
+
   nav .bottom {
     margin-top: auto;
   }
@@ -245,8 +266,16 @@ summary {
   gap: var(--gutter);
 }
 
+.flex--wrap {
+  flex-wrap: wrap;
+}
+
 .flex--row {
   align-items: center;
+}
+
+.flex--column {
+  flex-direction: column;
 }
 
 .tile-thumbnail {
@@ -258,7 +287,7 @@ summary {
   border-radius: var(--control-border-radius);
   box-shadow: var(--control-shadow);
   aspect-ratio: 4/3;
-  width: 200px;
+  width: 220px;
   padding: 1rem;
   display: flex;
   flex-direction: column;
@@ -301,19 +330,23 @@ summary {
   fill: currentColor;
 }
 
-button:hover, .button:hover {
+button:hover,
+.button:hover {
   background-color: var(--primary-colour-highlighted);
 }
 
-button:active, .button:active {
+button:active,
+.button:active {
   background-color: var(--primary-colour-highlighted);
 }
 
-button:focus-visible, .button:focus-visible {
+button:focus-visible,
+.button:focus-visible {
   background-color: var(--primary-colour-highlighted);
 }
 
-button, .button {
+button,
+.button {
   text-decoration: unset;
   color: unset;
   border: none;
@@ -331,7 +364,8 @@ button, .button {
   cursor: pointer;
 }
 
-header button, header .button {
+header button,
+header .button {
   box-shadow: unset;
   line-height: inherit;
 }
@@ -339,6 +373,9 @@ header button, header .button {
 form {
   display: grid;
   gap: var(--gutter);
+}
+
+.inline-form {
   padding: var(--control-padding);
 }
 
@@ -363,6 +400,7 @@ form {
     gap: 0.5rem;
   }
 }
+
 @media(max-width: 800px) {
   .input-group {
     max-width: 30ch;
@@ -408,15 +446,43 @@ fieldset {
 
 dialog[open] {
   margin-block: auto;
+  max-width: 90vw;
+}
+
+dialog>form {
+  padding: 0;
 }
 
 .dialog-body {
+  --height-reduction: 10rem;
   overflow-y: auto;
-  max-height: calc(100dvh - 20rem);
+  max-height: calc(100dvh - var(--height-reduction));
 }
 
 dialog:not([open]) * {
   display: none;
+}
+
+.close-button {
+  background-color: transparent;
+  box-shadow: unset;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 1rem;
+  text-transform: lowercase;
+}
+
+.close-button:hover {
+  background-color: var(--unaccented-colour-highlighted);
+}
+
+.close-button:active {
+  background-color: var(--unaccented-colour-highlighted);
+}
+
+.close-button:focus-visible {
+  background-color: var(--unaccented-colour-highlighted);
 }
 
 :modal {
@@ -528,7 +594,7 @@ pre {
 }
 
 mark {
-	background: var(--secondary-colour);
+  background: var(--secondary-colour);
 }
 
 #code-header {

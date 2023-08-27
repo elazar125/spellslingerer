@@ -1994,6 +1994,8 @@ github.com/pmezard/go-difflib v1.0.0 h1:4DBwDE0NGyQoBHbLQYPwSUPoCMWR5BEzIk/f1lZb
 github.com/pmezard/go-difflib v1.0.0/go.mod h1:iKH77koFhYxTK1pcRnkKkqfTogsbg7gZNVY4sRDYZ/4=
 github.com/pocketbase/dbx v1.10.0 h1:58VIT7r6T+BnVbYVosvGBsPjQEic3/VFRYGT823vWSQ=
 github.com/pocketbase/dbx v1.10.0/go.mod h1:xXRCIAKTHMgUCyCKZm55pUOdvFziJjQfXaWKhu2vhMs=
+github.com/pocketbase/dbx v1.10.1 h1:cw+vsyfCJD8YObOVeqb93YErnlxwYMkNZ4rwN0G0AaA=
+github.com/pocketbase/dbx v1.10.1/go.mod h1:xXRCIAKTHMgUCyCKZm55pUOdvFziJjQfXaWKhu2vhMs=
 github.com/pocketbase/pocketbase v0.16.10 h1:OyKYxPRVmwNkQbvd1rawN4k4MVjrf2Lo8howdS0MOpw=
 github.com/pocketbase/pocketbase v0.16.10/go.mod h1:vmajDvROzq//BiQ4RoNqHmjHf5i8RMgK665zQ14oo/g=
 github.com/pocketbase/pocketbase v0.17.3 h1:TscX1bx2Um3LQtzPUtmfzXvHpjDSQf8fOPqr2ovrQBs=
@@ -2002,6 +2004,10 @@ github.com/pocketbase/pocketbase v0.17.4 h1:PwT84MMoXPVdv/EC/dfanCsqfByY1xMNlaNW
 github.com/pocketbase/pocketbase v0.17.4/go.mod h1:IqsgywiDX5ewaUdeG+0NNckBLWp5mFhJSca1PH9zSp4=
 github.com/pocketbase/pocketbase v0.17.5 h1:3KwMrlSMt1rcwZK2Z1/wFa5p/rkDHpcyeCRvUDXMb+Y=
 github.com/pocketbase/pocketbase v0.17.5/go.mod h1:IqsgywiDX5ewaUdeG+0NNckBLWp5mFhJSca1PH9zSp4=
+github.com/pocketbase/pocketbase v0.17.6 h1:bbgKBKnJh/2eakf/XDKu/Foj9FpAez0Xi7254pubzMM=
+github.com/pocketbase/pocketbase v0.17.6/go.mod h1:HdS3hduJ0y/tpzvGfcU4C4OpkR+bwWEYvkIUvWXcCK8=
+github.com/pocketbase/pocketbase v0.17.7 h1:5GLcMneW8pGEv05yym+10vk+bht9RrbL8w0d1hVFuwg=
+github.com/pocketbase/pocketbase v0.17.7/go.mod h1:hQhxOYb82J0AoYSXInqS+UhRehLQxwz5+4SqNRgIxYk=
 github.com/posener/complete v1.1.1/go.mod h1:em0nMJCgc9GFtwrmVmEMR/ZL6WyhyjMBndrE9hABlRI=
 github.com/posener/complete v1.2.3/go.mod h1:WZIdtGGp+qx0sLrYKtIRAruyNpv6hFCicSgv7Sy7s/s=
 github.com/pquerna/cachecontrol v0.0.0-20171018203845-0dec1b30a021/go.mod h1:prYjPmNq4d1NPVmpShWobRqXY3q7Vp+80DqgxxUrUIA=

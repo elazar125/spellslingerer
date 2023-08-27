@@ -263,7 +263,7 @@ class SsrrDeck extends HTMLElement {
       
       .card__hover {
         display: none;
-        opactiy: 0;
+        opacity: 0;
         position: absolute;
         height: 300px;
         z-index: 2;

@@ -1,6 +1,5 @@
 {{ define "content" }}
 <h1>Welcome to Spellslingerer!</h1>
-<br>
 <form require-auth method="POST" action="/decks/import">
   <label for="deck-code">Import deck by code:</label>
   <textarea id="deck-code" name="code"></textarea>
@@ -8,8 +7,6 @@
 </form>
 <h2>Important Notes:</h2>
 <h3>This site is in beta, expect frequent downtime and for data to repeatedly be deleted</h3>
-<h3>The deckbuilder only works on desktop, I haven't designed it for mobile yet (coming soon!)</h3>
-<br>
 <p>A card database and deckbuilder site</p>
 <p>Upcoming features:</p>
 <ul>

@@ -1,4 +1,14 @@
 // ---------------------------
+// JQuery
+// ---------------------------
+
+window.$ = document.querySelector.bind(document)
+window.$$ = document.querySelectorAll.bind(document)
+HTMLElement.prototype.$ = HTMLElement.prototype.querySelector
+HTMLElement.prototype.$$ = HTMLElement.prototype.querySelectorAll
+HTMLElement.prototype.on = HTMLElement.prototype.addEventListener
+
+// ---------------------------
 // Toggle Nav
 // ---------------------------
 
@@ -33,12 +43,12 @@ document.addEventListener("touchstart", (e) => {
   }
 }, false)
 
-document.addEventListener("touchend", (e) => {
+document.addEventListener("touchend", () => {
   swipeData.x = null
   swipeData.y = null
 }, false)
 
-document.addEventListener("touchcancel", (e) => {
+document.addEventListener("touchcancel", () => {
   swipeData.x = null
   swipeData.y = null
 }, false)
@@ -72,6 +82,13 @@ function toggleNav(open) {
 // Modals
 // ---------------------------
 
+$$('dialog').forEach((dialog) => {
+  const button = dialog.$('.close-button')
+  if (button) {
+    button.on('click', () => dialog.close())
+  }
+})
+
 function confirmModal({ titleText, bodyText, onConfirm, onCancel }) {
   openModal('#confirm-modal', titleText, bodyText, onConfirm, onCancel)
 }
@@ -81,11 +98,11 @@ function alertModal({ titleText, bodyText, onConfirm }) {
 }
 
 function openModal(modalSelector, titleText, bodyText, onConfirm, onCancel) {
-  const modal = document.querySelector(modalSelector)
-  const title = modal.querySelector('h2')
-  const body = modal.querySelector('p')
-  const confirmButton = modal.querySelector('.confirm-button')
-  const cancelButton = modal.querySelector('.cancel-button')
+  const modal = $(modalSelector)
+  const title = modal.$('h2')
+  const body = modal.$('p')
+  const confirmButton = modal.$('.confirm-button')
+  const cancelButton = modal.$('.cancel-button')
 
   title.textContent = titleText
   body.innerHTML = bodyText

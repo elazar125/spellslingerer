@@ -2,38 +2,49 @@
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-<span style="grid-area: title">
-  <h1><input id="deck-title" type="text" value="{{ getValue .Deck "name" }}" /></h1>
+<span display-desktop style="grid-area: name">
+  <h1><input class="deck-name" type="text" value="{{ getValue .Deck "name" }}" /></h1>
 </span>
 
-<span class="flex flex--row" style="grid-area: actions">
+<span display-desktop class="flex flex--row flex--wrap" style="grid-area: actions">
   <label id="is-public-button" for="is-public" class="button">
     Display publicly
-    <input id="is-public" type="checkbox" {{ if (getValue .Deck "is_public") }} checked {{ end }} />
+    <input id="is-public" class="is-public" type="checkbox" {{ if (getValue .Deck "is_public") }} checked {{ end }} />
   </label>
-  <button id="select-tile-image">Choose Background Image</button>
-  <button id="reselect-spellslinger">Reselect Spellslinger</button>
-  <button id="reselect-splash">Reselect Splash</button>
+  <button class="select-tile-image">Choose Background Image</button>
+  <button class="reselect-spellslinger">Change Spellslinger</button>
+  <button class="reselect-splash">Change Splash</button>
 </span>
 
-<ssrr-deck style="grid-area: deck"></ssrr-deck>
+<div display-desktop class="deck-wrapper" style="grid-area: deck">
+  <div class="force-scroll">
+    <ssrr-deck></ssrr-deck>
+  </div>
+</div>
 
-<section style="grid-area: description">
+<div display-mobile id="mobile-deck-wrapper" class="deck-wrapper" style="grid-area: deck">
+  <div>
+    <ssrr-deck></ssrr-deck>
+  </div>
+  <button id="toggle-deck-button">Show Deck</button>
+</div>
+
+<section display-desktop style="grid-area: description">
   <h2>Description</h2>
-  <textarea id="deck-description">{{ getValue .Deck "description" }}</textarea>
+  <textarea class="deck-description">{{ getValue .Deck "description" }}</textarea>
 </section>
 
-<section style="grid-area: code">
+<section display-desktop style="grid-area: code">
   <h2>Import Code</h2>
   <p>Will be auto-generated!</p>
 </section>
 
-<section style="grid-area: charts">
+<section display-desktop style="grid-area: charts">
   <h2>Charts</h2>
   <div class="grid" style="--grid-min-width: 200px">
-    <ssrr-chart id="ManaCostChart"></ssrr-chart>
-    <ssrr-chart id="CardTypeChart"></ssrr-chart>
-    <ssrr-chart id="RarityChart"></ssrr-chart>
+    <ssrr-chart class="ManaCostChart"></ssrr-chart>
+    <ssrr-chart class="CardTypeChart"></ssrr-chart>
+    <ssrr-chart class="RarityChart"></ssrr-chart>
   </div>
 </section>
 
@@ -41,20 +52,66 @@
 
 <footer>
   <label>Cards: <span id="current-count">{{ countCards .Deck }}</span>/30</label>
-  <button id="save-button" style="--button-colour: var(--colour-success)">Save</button>
-  <button id="reset-button" style="--button-colour: var(--colour-warning)">Reset</button>
-  <button id="delete-button" style="--button-colour: var(--colour-error)">Delete</button>
+  <button display-mobile type="button" id="actions-button">More</button>
+  <button display-desktop id="desktop-save-button" class="save-button" style="--button-colour: var(--colour-success)">Save</button>
+  <button display-desktop class="reset-button" style="--button-colour: var(--colour-warning)">Reset</button>
+  <button display-desktop class="delete-button" style="--button-colour: var(--colour-error)">Delete</button>
 </footer>
 
+<dialog id="actions">
+  <button class="close-button">X</button>
+  <div class="dialog-body flex flex--column">
+    <label id="mobile-is-public-button" for="mobile-is-public" class="button">
+      Display publicly
+      <input id="mobile-is-public" class="is-public" type="checkbox" {{ if (getValue .Deck "is_public") }} checked {{ end }} />
+    </label>
+    <button id="mobile-charts-button">Charts</button>
+    <button class="select-tile-image">Change Image</button>
+    <button class="reselect-spellslinger">Change Spellslinger</button>
+    <button class="reselect-splash">Change Splash</button>
+    <button id="mobile-details-button">Name & Description</button>
+    <button class="delete-button" style="--button-colour: var(--colour-error)">Delete</button>
+    <button class="reset-button" style="--button-colour: var(--colour-warning)">Reset</button>
+    <button id="mobile-save-button" class="save-button" style="--button-colour: var(--colour-success)">Save</button>
+  </div>
+</dialog>
+
+<dialog id="details">
+  <button class="close-button">X</button>
+  <h2>Details</h2>
+  <form class="dialog-body">
+    <div class="input-group">
+      <label for="mobile-deck-name">Name</label>
+      <input id="mobile-deck-name" class="deck-name" type="text" value="{{ getValue .Deck "name" }}" />
+    </div>
+    <div class="input-group">
+      <label for="mobile-deck-description">Description</label>
+      <textarea id="mobile-deck-description" class="deck-description">{{ getValue .Deck "description" }}</textarea>
+    </div>
+    <button type="button" id="details-save-button">Save</button>
+  </form>
+</dialog>
+
+<dialog id="charts">
+  <button class="close-button">X</button>
+  <h2>Charts</h2>
+  <div class="dialog-body grid" style="--grid-min-width: 200px">
+    <ssrr-chart class="ManaCostChart"></ssrr-chart>
+    <ssrr-chart class="CardTypeChart"></ssrr-chart>
+    <ssrr-chart class="RarityChart"></ssrr-chart>
+  </div>
+</dialog>
+
 <dialog id="spellslinger-picker">
+  <button class="close-button">X</button>
   <h2>Choose a Spellslinger</h2>
-  <div class="dialog-body">
+  <div class="dialog-body flex flex--column">
     {{ range .Spellslingers }}
       {{ $colour := getValue . "colour" }}
       {{ $abilities := getValue . "abilities" }}
       {{ $signatures := getValue . "signatures" }}
-    
-      <section class="spellslinger-tile grid" style="--grid-min-width: 0">
+
+      <div class="spellslinger-tile grid" style="--grid-min-width: 0">
         <img loading="lazy" class="spellslinger-tile__image" style="grid-area: image" src="/images/spellslingers/{{ getValue . "name" }}.webp" />
         <h3 style="grid-area: name"><a href="/spellslingers/{{ .Id }}">{{ getValue . "name" }}</a></h3>
         <span style="grid-area: health"><label>Health:</label> {{ getValue . "health" }}</span>
@@ -67,14 +124,15 @@
         <span style="grid-area: button">
           <button data-spellslinger="{{ marshal . }}">Pick This Spellslinger</button>
         </span>
-      </section>
+      </div>
     {{ end }}
   </div>
 </dialog>
 
 <dialog id="colour-picker">
+  <button class="close-button">X</button>
   <h2>Choose a Splash</h2>
-  <div class="dialog-body">
+  <div class="dialog-body flex flex--column">
     {{ range .Colours }}
       <button data-colour="{{ marshal . }}">{{ getValue . "name" }}</button>
     {{ end }}
@@ -83,8 +141,12 @@
 </dialog>
 
 <dialog id="tile-image-picker">
+  <button class="close-button">X</button>
   <h2>Choose a Background Image</h2>
-  <form class="dialog-body"></form>
+  <form>
+    <div class="dialog-body" style="--height-reduction: 20rem;"></div>
+    <button type="submit">Choose</button>
+  </form>
 </dialog>
 
 <script type="module">
@@ -96,59 +158,82 @@
 
   const deck = new Deck(
     {{ marshal .Deck }},
-    document.querySelector('ssrr-deck'),
-    document.querySelector('#ManaCostChart'),
-    document.querySelector('#RarityChart'),
-    document.querySelector('#CardTypeChart'),
-    document.querySelector('#deck-title'),
-    document.querySelector('#deck-description'),
-    document.querySelector('#is-public'),
-    document.querySelector('#current-count'),
+    $$('ssrr-deck'),
+    $$('.ManaCostChart'),
+    $$('.RarityChart'),
+    $$('.CardTypeChart'),
+    $$('.deck-name'),
+    $$('.deck-description'),
+    $$('.is-public'),
+    $('#current-count'),
+    $('ssrr-cardlist'),
   )
 
-  document.querySelector('ssrr-cardlist').addCardCallback = deck.addCard.bind(deck)
-  document.querySelector('ssrr-cardlist').removeCardCallback = deck.removeCard.bind(deck)
+  let saveInProgress = false
 
-  document.querySelector('#deck-title').addEventListener('change', (e) => deck.setName(e.target.value))
-  document.querySelector('#deck-description').addEventListener('change', (e) => deck.setDescription(e.target.value))
-  document.querySelector('#is-public').addEventListener('change', (e) => deck.setIsPublic(e.target.checked))
+  $$('.deck-name').forEach((input) => input.on('change', ({target}) => deck.setName(target.value)))
+  $$('.deck-description').forEach((input) => input.on('change', ({target}) => deck.setDescription(target.value)))
+  $$('.is-public').forEach((input) => input.on('change', ({target}) => deck.setIsPublic(target.checked)))
 
-  document.querySelector('#reset-button').addEventListener('click', () => deck.reset())
-  document.querySelector('#save-button').addEventListener('click', () => deck.save())
-  document.querySelector('#delete-button').addEventListener('click', () => deck.delete())
+  $('#actions-button').on('click', () => $('#actions').showModal())
+  $$('#actions button').forEach((button) => button.on('click', () => $('#actions').close()))
+
+  $('#mobile-charts-button').on('click', () => $('#charts').showModal())
+  $$('.reset-button').forEach((button) => button.on('click', () => deck.reset()))
+  $$('.delete-button').forEach((button) => button.on('click', () => deck.delete()))
+
+  $$('.reselect-spellslinger').forEach((button) => button.on('click', () => $('#spellslinger-picker').showModal()))
+  $$('.reselect-splash').forEach((button) => button.on('click', () => $('#colour-picker').showModal()))
+  $$('.select-tile-image').forEach((button) => button.on('click', () => generateTileList()))
+
+  $('#desktop-save-button').on('click', () => deck.save())
+  $('#mobile-save-button').on('click', () => {
+    if (deck.getName()) {
+      deck.save()
+    }
+    else {
+      saveInProgress = true
+      $('#details').showModal()
+    }
+  })
+  $('#details-save-button').on('click', () => {
+    if (saveInProgress) {
+      deck.save()
+    }
+    $('#details').close()
+  })
+
+  $('#details').on('close', () => saveInProgress = false)
+
+  $('#mobile-details-button').on('click', () => $('#details').showModal())
 
   if (!deck.hasSpellslinger()) {
-    document.querySelector('#spellslinger-picker').showModal()
+    $('#spellslinger-picker').showModal()
   }
 
   if (!deck.canSetSplash()) {
-    document.querySelector('#reselect-splash').hidden = true
+    $$('.reselect-splash').forEach((button) => button.hidden = true)
   }
   
-  document.querySelectorAll('[data-spellslinger]').forEach((button) => {
-    button.addEventListener('click', (e) => {
+  $$('[data-spellslinger]').forEach((button) => {
+    button.on('click', (e) => {
       deck.setSpellslinger(e.target.getAttribute('data-spellslinger'))
-      document.querySelector('#spellslinger-picker').close()
+      $('ssrr-cardlist').setSpellslinger = e.target.getAttribute('data-spellslinger')
+      $('ssrr-cardlist').updateFilter()
+      $('#spellslinger-picker').close()
       if (deck.canSetSplash()) {
-        document.querySelector('#colour-picker').showModal()
-        document.querySelector('#reselect-splash').hidden = false
+        $('#colour-picker').showModal()
+        $$('.reselect-splash').forEach((button) => button.hidden = false)
       }
       else {
-        document.querySelector('#reselect-splash').hidden = true
+        $$('.reselect-splash').forEach((button) => button.hidden = true)
+        deck.setSplash('')
       }
     })
   })
 
-  document.querySelector('#reselect-spellslinger').addEventListener('click', (e) => {
-    document.querySelector('#spellslinger-picker').showModal()
-  })
- 
-  document.querySelector('#reselect-splash').addEventListener('click', (e) => {
-    document.querySelector('#colour-picker').showModal()
-  })
-
-  document.querySelector('#select-tile-image').addEventListener('click', (e) => {
-    document.querySelector('#tile-image-picker form').innerHTML = deck.getCards().map((card) => {
+  function generateTileList() {
+    $('#tile-image-picker .dialog-body').innerHTML = deck.getCards().map((card) => {
       return `
         <div class="flex flex--row">
           <input type="radio" name="tile-image" id="tile-image-${card.name}" value="/images/cards/tiles/${card.name}.jpeg" />
@@ -159,73 +244,135 @@
         </div>
       `
     }).join('')
-    document.querySelector('#tile-image-picker form').innerHTML += '<button type="submit">Choose</button>'
-    document.querySelector('#tile-image-picker').showModal()
-  })
+    $('#tile-image-picker').showModal()
+  }
 
-  document.querySelector('#tile-image-picker form').addEventListener('submit', (e) => {
+  $('#tile-image-picker form').on('submit', (e) => {
     e.preventDefault()
 
-    deck.setImage(e.target.querySelector('[name=tile-image]:checked').value)
-    document.querySelector('#tile-image-picker').close()
+    deck.setImage(e.target.$('[name=tile-image]:checked').value)
+    $('#tile-image-picker').close()
   })
 
-  document.querySelectorAll('[data-colour]').forEach((button) => {
-    button.addEventListener('click', (e) => {
+  $$('[data-colour]').forEach((button) => {
+    button.on('click', (e) => {
       deck.setSplash(e.target.getAttribute('data-colour'))
-      document.querySelector('#colour-picker').close()
+      $('ssrr-cardlist').setSplash = e.target.getAttribute('data-colour')
+      $('ssrr-cardlist').updateFilter()
+      $('#colour-picker').close()
     })
   })
 
-  document.querySelector('[data-colour]').addEventListener('click', (e) => {
-    deck.setSplash(e.target.getAttribute('data-colour'))
-    document.querySelector('#colour-picker').close()
+  $('#toggle-deck-button').on('click', () => {
+    const wrapper  = $('#mobile-deck-wrapper')
+    const button = $('#toggle-deck-button')
+    const scrollBox = $('#mobile-deck-wrapper > div')
+
+    if (wrapper.classList.contains('open')) {
+      button.innerText = 'Show Deck'
+    }
+    else {
+      button.innerText = 'Hide Deck'
+    }
+    wrapper.classList.toggle('open')
+    scrollBox.classList.toggle('force-scroll')
   })
 </script>
 
 <style>
-  /* TODO: solve grid layout correctly instead of naming a "gap" area */
-  main {
-    grid-template: "title title"
-                   "actions actions"
-                   "deck description"
-                   "deck code"
-                   "deck charts"
-                   "deck cards";
-    grid-template-columns: auto 1fr;
+  :root {
+    --deck-peek: 0;
   }
 
-  ssrr-deck {
-    position: sticky;
-    top: -20px;
+  /* TODO: pick correct size */
+  @media(min-width: 800px) {
+    main {
+      grid-template: "deck name"
+                     "deck actions"
+                     "deck description"
+                     "deck code"
+                     "deck charts"
+                     "deck cards";
+      grid-template-columns: 350px 1fr;
+    }
+
+    .force-scroll {
+      overflow-block: auto;
+      height: calc(100svh - var(--header-size));
+    }
+  }
+  @media (max-width: 800px) {
+    :root {
+      --deck-peek: 140px;
+    }
+    main {
+      gap: unset;
+    }
+    ssrr-cardlist {
+      padding-block-start: var(--deck-peek);
+    }
+
+    .force-scroll {
+      overflow-block: auto;
+      height: calc(100svh - var(--header-size) - var(--deck-peek));
+    }
   }
 
-  ssrr-cardlist,
-  ssrr-deck {
+  .deck-wrapper {
+    position: fixed;
+  }
+
+  #mobile-deck-wrapper {
+    justify-self: center;
+    z-index: 1;
+  }
+  #mobile-deck-wrapper:not(.open) {
+    bottom: calc(100svh - var(--header-size) - var(--deck-peek));
+  }
+
+  #toggle-deck-button {
+  	background-color: var(--control-bg-colour);
+  	width: 100%;
+  	margin-block-start: -10px;
+  	padding-block: 0.5rem;
+  }
+
+  /* TODO: pick correct size */
+  @media(min-width: 800px) {
+    ssrr-deck {
+      margin-bottom: 150px;
+    }
+  }
+  ssrr-cardlist {
     margin-bottom: 150px;
   }
 
-  #is-public-button {
+  #is-public-button,
+  #mobile-is-public-button {
     background-color: var(--secondary-colour);
     color: black;
   }
 
-  #is-public {
+  #is-public,
+  #mobile-is-public {
     margin: 0;
     accent-color: black;
   }
 
-  /* TODO: pick correct size */
-  @media(max-width: 800px) {
-    main {
-      grid-template: "title"
-                     "actions"
-                     "deck"
-                     "description"
-                     "code"
-                     "charts"
-                     "cards";
-    }
+  #mobile-deck-description {
+    height: 15rem;
+  }
+
+  #close-actions{
+    background-color: var(--unaccented-colour);
+  }
+
+  #close-actions:active {
+    background-color: var(--unaccented-colour-highlighted);
+  }
+
+  #close-actions:hover {
+    background-color: var(--unaccented-colour-highlighted);
   }
 
   .spellslinger-tile {

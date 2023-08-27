@@ -7,8 +7,9 @@ migrations=""
 templates=""
 javascript=""
 css=""
+vendor=""
 
-while getopts "btmjc" OPTION
+while getopts "btmjcv" OPTION
 do
     case "$OPTION" in
         b)
@@ -26,6 +27,9 @@ do
         c)
             css="true"
             ;;
+        v)
+            vendor="true"
+            ;;
         ?)
             echo "
 Build and Deploy Spellslingerer
@@ -35,6 +39,7 @@ Specify portions to deploy with flags:
   -m: migrations
   -j: javascript
   -c: css
+  -v: vendor
 "
             exit 1
             ;;
@@ -70,11 +75,20 @@ deploy_css() {
   scp -r pb_public/css spellslingerer:~/spellslingerer/pb_public
 }
 
-pushd "$base_dir"
+deploy_vendor() {
+  scp -r pb_public/vendor spellslingerer:~/spellslingerer/pb_public
+}
+
+pushd "$base_dir" || exit
 
 if [[ -n "$javascript" ]]
 then
   deploy_javascript
+fi
+
+if [[ -n "$vendor" ]]
+then
+  deploy_vendor
 fi
 
 if [[ -n "$css" ]]
@@ -97,4 +111,4 @@ then
   build_deploy_binary
 fi
 
-popd
+popd || exit
