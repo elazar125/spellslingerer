@@ -60,7 +60,9 @@ class SsrrCardList extends SsrrList {
   }
 
   set setSplash(colourStr) {
+    if (!colourStr) return
     const colour = JSON.parse(colourStr)
+    if (!colour?.name) return
     this.#colourFilter.querySelector(`#${colour.name.toLowerCase()}`).checked = true
   }
 
@@ -88,9 +90,9 @@ class SsrrCardList extends SsrrList {
     this.addFilter('name')
     this.#colourFilter = this.addFilter('colour')
     this.addFilter('rarity')
-    this.addSort('Set', 'desc')
-    this.addSort('Colour', 'asc')
     this.addSort('Cost', 'asc')
+    this.addSort('Colour', 'asc')
+    this.addSort('Set', 'desc')
   }
 
   postRenderer() {

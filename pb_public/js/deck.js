@@ -16,6 +16,7 @@ class Deck {
     this.deck = JSON.parse(JSON.stringify(originalDeck))
     this.originalDeck = JSON.parse(JSON.stringify(originalDeck))
     if (!this.deck.expand) this.deck.expand = {}
+    if (!this.deck.expand.splash) this.deck.expand.splash = {}
     if (!this.deck.card_details) this.deck.card_details = {}
     if (!this.deck.cards) this.deck.cards = []
     if (!this.deck.expand.cards) this.deck.expand.cards = []
